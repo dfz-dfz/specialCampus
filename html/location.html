@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/location.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header>
+        <span class="back"></span>
+        <p class="title">选择所在学校</p>
+    </header>
+
+    <div class="search_box">
+        <input class="search" type="text">
+        <p class="placeholder"><span class="icon"></span>搜索附近的学校</p>
+    </div>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/swiper.js"></script>
+<script>
+    // 搜索框控制
+    $('.search_box .search').on('focus',function() {
+        $('.placeholder').hide();
+    })
+
+    $('.search_box .search').on('blur',function() {
+        if($(this).val() != '') {
+            return;
+        }
+        $('.placeholder').show();
+    })
+
+    $('.placeholder').on('click',function() {
+        $('.search_box .search').focus();
+        $(this).hide();
+    })
+
+</script>
+</html>
