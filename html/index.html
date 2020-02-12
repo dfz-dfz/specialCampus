@@ -15,17 +15,21 @@
     <!-- 头部 -->
     <div class="header">
         <div class="top">
-            <div class="location">
-                <span class="icon"></span>
-                <p class="text ellipsis_1">中山大学电子与信息工程学院</p>
-            </div>
+            <a href="./location.html">
+                <div class="location">
+                    <span class="icon"></span>
+                    <p class="text ellipsis_1">中山大学电子与信息工程学院</p>
+                </div>
+            </a>
             <span class="person_center"></span>
         </div>
 
-        <div class="bottom">
-            <input class="search" type="text">
-            <p class="placeholder"><span class="icon"></span>搜索你需要的商品或店铺</p>
-        </div>
+        <a href="./search.html">
+            <div class="bottom">
+                <input class="search" type="text" disabled="true">
+                <p class="placeholder"><span class="icon"></span>搜索你需要的商品或店铺</p>
+            </div>
+        </a>
     </div>
     <!-- 头部 end -->
 
@@ -176,23 +180,6 @@
 <script src="../script/jquery.min.js"></script>
 <script src="../script/swiper.js"></script>
 <script>
-    // 搜索框控制
-    $('.header .search').on('focus',function() {
-        $('.placeholder').hide();
-    })
-
-    $('.header .search').on('blur',function() {
-        if($(this).val() != '') {
-            return;
-        }
-        $('.placeholder').show();
-    })
-
-    $('.placeholder').on('click',function() {
-        $('.header .search').focus();
-        $(this).hide();
-    })
-
     //轮播图
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',

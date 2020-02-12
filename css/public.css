@@ -38,6 +38,7 @@ textarea {
 }
 
 a {
+    display: contents;
     text-decoration: none;
     cursor: pointer;
 }
@@ -80,3 +81,74 @@ ul::-webkit-scrollbar  {
     filter:alpha(opacity=0);
     -moz-opacity:1;
 }
+
+/* 选择按钮弹窗 */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup .masked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.popup .content {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1.8rem;
+    width: 6.2rem;
+    background-color: #fff;
+    border-radius: .12rem;
+    z-index: 9999;
+}
+
+.popup .content .text {
+    padding: 0 .56rem;
+    font-size: .34rem;
+    color: #0A0F2D;
+    text-align: center;
+}
+
+.popup .content .btn_box {
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup .btn_box span {
+    width: 2.5rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .3rem;
+    text-align: center;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.popup .btn_box .cancle {
+    margin-right: .4rem;
+    color: #999;
+    background-color: #E7E6E9;
+}
+
+.popup .btn_box .sure {
+    color: #fff;
+    background-color: #00A47C;
+}
+/* 选择按钮弹窗 end */
