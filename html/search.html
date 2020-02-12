@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-搜索</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <!-- 输入框 -->
+    <header>
+        <input type="search" placeholder="搜索你需要的商品或店铺">
+        <a href="javascript:history.back(-1)"><span class="cancle">取消</span></a>
+    </header>
+    <!-- 输入框 end -->
+
+    <!-- 搜索历史 -->
+    <section>
+        <div class="title_box">
+            <p class="text">搜索历史</p>
+            <span class="detele"></span>
+        </div>
+
+        <!-- 搜素标签 -->
+        <ul class="search_history">
+            <li>单本书籍</li>
+            <li>强者成功法则/狼道</li>
+            <li>兰亭序整套全册</li>
+            <li>书本</li>
+            <li>老人与海</li>
+        </ul>
+        <!-- 搜素标签 end -->
+    </section>
+    <!-- 搜索历史 end -->
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    var cancle = function() {
+        alert(1)
+    }
+    $('.title_box').on('click','.detele',function() {
+        choicePopup('是否清除历史记录？','取消','确定',cancle,'');
+    })
+</script>
+</html>
