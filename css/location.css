@@ -64,3 +64,44 @@ header .title {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+section {
+    padding-top: 1.76rem;
+}
+
+.list_box {
+    padding-top: .2rem;
+}
+
+.list_box li {
+    position: relative;
+    padding: .3rem .32rem;
+    font-size: .28rem;
+    color: #05081C;
+    border-bottom: 1px solid rgba(232,232,232,1);
+}
+
+.list_box .title {
+    font-size: .3rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.list_box .other {
+    border-bottom: unset;
+}
+
+.list_box .type {
+    padding: 0 .32rem;
+    height: .6rem;
+    line-height: .6rem;
+    background-color: #F5F6FA;
+    border-bottom: unset;
+}
+
+.list_box li span {
+    position: absolute;
+    right: .32rem;
+    font-size: .28rem;
+    color: #AFB3C3;
+}
