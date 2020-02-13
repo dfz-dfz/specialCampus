@@ -74,12 +74,12 @@ a:hover {
 
 div::-webkit-scrollbar,
 ul::-webkit-scrollbar  {
-    opacity: 0;
+    /* opacity: 0;
     -webkit-opacity: 0;
     -khtml-opacity: 0;
     -ms-opacity: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter:alpha(opacity=0);
-    -moz-opacity:1;
+    -moz-opacity:1; */
 }
 
 /* 选择按钮弹窗 */
