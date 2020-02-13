@@ -4,9 +4,12 @@ header {
     top: 0;
     width: 100%;
     height: .88rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 header .back {
@@ -34,9 +37,12 @@ header .title {
     left: 0;
     padding: 0 .32rem;
     width: calc(100% - .64rem);
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .search_box .search {
@@ -49,8 +55,10 @@ header .title {
 
 .search_box .placeholder {
     position: absolute;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     font-size: .28rem;
     color: #AFB3C3;
 }

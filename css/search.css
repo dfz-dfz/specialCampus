@@ -1,9 +1,12 @@
 header  {
     position: relative;
     padding: .2rem .32rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 header::before {
@@ -29,6 +32,26 @@ header input {
     border-radius: .16rem;
 }
 
+header input::-webkit-input-placeholder {
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+header input::-moz-placeholder {
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+header input:-ms-input-placeholder {
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+header input::-ms-input-placeholder {
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
 header input::placeholder {
     font-size: .28rem;
     color: #AFB3C3;
@@ -38,7 +61,8 @@ header .cancle {
     padding-right: .1rem;
     font-size: .3rem;
     color: #0A0F2D;
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1;
     text-align: right;
     cursor: pointer;
 }
@@ -49,9 +73,12 @@ section {
 
 .title_box {
     padding-bottom: .3rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .title_box .text {
@@ -70,10 +97,15 @@ section {
 }
 
 .search_history {
+    display: -webkit-box;
     display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
+    -webkit-box-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
     flex-wrap: wrap;
 }
 
