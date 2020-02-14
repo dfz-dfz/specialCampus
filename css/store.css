@@ -15,17 +15,23 @@ html,body {
     height: calc(100% - 1.54rem);
     background-color: #fff;
     border-radius: 0 0 .36rem .36rem;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     overflow: hidden;
     z-index: 1;
 }
 
 .store_box .top {
     padding: .3rem .32rem .2rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
     border-bottom: 1px solid rgba(232,232,232,1);
 }
 
@@ -66,17 +72,24 @@ html,body {
 
 .store_box .middle_box .store_info {
     margin-bottom: .15rem;
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .store_box .store_info li {
     font-size: .22rem;
     color: #AFB3C3;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .store_box .store_info span {
@@ -128,14 +141,18 @@ html,body {
 }
 
 .store_box .main {
+    display: -webkit-box;
     display: flex;
     overflow: hidden;
 }
 
 .store_box .main .left_nav {
     width: 1.8rem;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     overflow-y: scroll;
 }
 
@@ -172,9 +189,12 @@ html,body {
     width: calc(100% - 2.44rem);
     height: .6rem;
     background-color: #fff;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     z-index: 2;
 }
 
@@ -253,8 +273,11 @@ html,body {
 
 .store_box .list_box li {
     margin-bottom: .45rem;
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
 }
 
 .store_box .list_box .shop_img {
@@ -266,8 +289,11 @@ html,body {
 }
 
 .store_box .list_box .shop_right {
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     overflow: hidden;
 }
 
@@ -282,9 +308,13 @@ html,body {
     padding: .02rem .05rem;
     font-size: .2rem;
     color: #fff;
+    line-height: 1;
+    display: -webkit-inline-box;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     background-color: #FF8F00;
     border-radius: .04rem;
 }
@@ -293,8 +323,11 @@ html,body {
     margin-bottom: .15rem;
     font-size: .2rem;
     color: #AFB3C3;
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
 }
 
 .store_box .shop_right .shop_info p {
@@ -306,21 +339,30 @@ html,body {
 }
 
 .store_box .shop_right .price_box {
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .store_box .price_box .left {
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .store_box .price_box .price {
     margin-right: .1rem;
+    display: -webkit-box;
     display: flex;
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
     font-size: .3rem;
     color: #FF8F00;
     font-weight: bold;
@@ -337,8 +379,11 @@ html,body {
 }
 
 .store_box .price_box .right {
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
 }
 
 .store_box .price_box .right .btn {
@@ -366,8 +411,11 @@ html,body {
 
 .store_box .shop_right .label_box {
     margin-top: .05rem;
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
 }
 
 .store_box .shop_right .label_box .label {
@@ -375,9 +423,12 @@ html,body {
     font-size: .2rem;
     color: #FF8F00;
     line-height: 1;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     border: 1px solid #FF8F00;
     border-radius: .04rem;
 }
@@ -390,9 +441,12 @@ html,body {
     width: calc(100% - .64rem);
     height: 1.54rem;
     background-color: #00A47C;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .store_footer .cart {
@@ -418,7 +472,7 @@ html,body {
 .store_footer .cart.active .shop_num {
     position: absolute;
     top: -.15rem;
-    right: -.15rem;
+    right: -.1rem;
     padding: 0 .05rem;
     min-width: .22rem;
     height: .32rem;
@@ -433,20 +487,31 @@ html,body {
 }
 
 .store_footer .total_price_box {
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    -webkit-box-flex: 1;
+            flex: 1;
 }
 
 .store_footer .total_price_box .total_price {
     margin-bottom: .15rem;
     line-height: 1;
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: left;
+            justify-content: left;
+    -webkit-box-align: baseline;
+            align-items: baseline;
 }
 
 .store_footer .total_price span {
