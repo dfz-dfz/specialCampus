@@ -166,20 +166,23 @@ html,body {
 }
 
 .store_box .right_box .input_box {
-    position: relative;
-    padding-top: .2rem;
-    width: 100%;
+    position: fixed;
+    padding: .2rem .32rem;
+    padding-left: 0;
+    width: calc(100% - 2.44rem);
     height: .6rem;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .store_box .input_box input {
     position: absolute;
     top: .2rem;
     left: 0;
-    width: 100%;
+    width: calc(100% - .32rem);
     height: .6rem;
     background-color: #F5F6FA;
     border-radius: .16rem;
@@ -205,8 +208,8 @@ html,body {
     background-size: 100% 100%;
 }
 
-.store_box .shop_list .list_box {
-
+.store_box .shop_list {
+    padding-top: .68rem;
 }
 
 .store_box .list_box .title {
@@ -383,7 +386,103 @@ html,body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 1.9rem;
+    padding: .36rem .32rem 0;
+    width: calc(100% - .64rem);
+    height: 1.54rem;
     background-color: #00A47C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store_footer .cart {
+    margin-right: .3rem;
+    width: .9rem;
+    height: .9rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.store_footer .cart .shop_num {
+    display: none;
+}
+
+.store_footer .cart.active {
+    position: relative;
+    background-image: url(../images/image.jpg);
+}
+
+.store_footer .cart.active .shop_num {
+    position: absolute;
+    top: -.15rem;
+    right: -.15rem;
+    padding: 0 .05rem;
+    min-width: .22rem;
+    height: .32rem;
+    line-height: .3rem;
+    font-size: .24rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: #FF8F00;
+    border-radius: 50%;
+    display: block;
+}
+
+.store_footer .total_price_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.store_footer .total_price_box .total_price {
+    margin-bottom: .15rem;
+    line-height: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: baseline;
+}
+
+.store_footer .total_price span {
+    font-size: .24rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.store_footer .total_price .price {
+    font-size: .4rem;
+}
+
+.store_footer .total_price_box .carriage {
+    font-size: .24rem;
+    color: #fff;
+    line-height: 1;
+    opacity: .5;
+}
+
+.store_footer .submit_btn {
+    position: relative;
+    padding-right: .45rem;
+    font-size: .36rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.store_footer .submit_btn span {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    right: 0;
+    width: .33rem;
+    height: .3rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
