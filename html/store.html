@@ -33,20 +33,20 @@
             <div class="main">
                 <!-- 侧边导航 -->
                 <ul class="left_nav">
-                    <li class="active">推荐</li>
-                    <li>饮料</li>
-                    <li>服饰</li>
-                    <li>小吃</li>
-                    <li>零食</li>
-                    <li>图书</li>
-                    <li>衣服</li>
-                    <li>配饰</li>
-                    <li>牛奶</li>
-                    <li>纸巾</li>
-                    <li>纸巾</li>
-                    <li>纸巾</li>
-                    <li>纸巾</li>
-                    <li>纸巾</li>
+                    <a  class="active" href="#recommend_list"><li>推荐</li></a>
+                    <a href="#drinks_list"><li>饮料</li></a>
+                    <a href=""></a><li>服饰</li></a>
+                    <a href=""></a><li>小吃</li></a>
+                    <a href=""></a><li>零食</li></a>
+                    <a href=""></a><li>图书</li></a>
+                    <a href=""></a><li>衣服</li></a>
+                    <a href=""></a><li>配饰</li></a>
+                    <a href=""></a><li>牛奶</li></a>
+                    <a href=""></a><li>纸巾</li></a>
+                    <a href=""></a><li>纸巾</li></a>
+                    <a href=""></a><li>纸巾</li></a>
+                    <a href=""></a><li>纸巾</li></a>
+                    <a href=""></a><li>纸巾</li></a>
                 </ul>
                 <!-- 侧边导航 end -->
                 
@@ -61,7 +61,7 @@
                     </div>
                     <!-- 搜索框 end -->
                     <div class="shop_list">
-                        <ul class="list_box recommend_list">
+                        <ul class="list_box recommend_list" id="recommend_list">
                             <p class="title"><span>精选推荐</span></p>
                             <li>
                                 <img class="shop_img" src="../images/image.jpg" alt="">
@@ -101,6 +101,52 @@
                                             <p class="price_original">¥18.00</p>
                                         </div>
                                         <div class="right">
+                                            <span class="minus btn hide"></span>
+                                            <span class="num hide">0</span>
+                                            <span class="add btn"></span>
+                                        </div>
+                                    </div>
+                                    <div class="label_box">
+                                        <p class="label">赠券</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="shop_img" src="../images/image.jpg" alt="">
+                                <div class="shop_right">
+                                    <p class="shop_name ellipsis_1"><span>HOT</span>全套5册你不努力没人不努力</p>
+                                    <div class="shop_info">
+                                        <p class="shop_sale"><span>月售</span>522</p>
+                                        <p class="shop_like"><span>喜欢</span>522</p>
+                                    </div>
+                                    <div class="price_box">
+                                        <div class="left">
+                                            <p class="price"><span>¥</span>16.00</p>
+                                            <p class="price_original">¥18.00</p>
+                                        </div>
+                                        <div class="right">
+                                            <span class="choice_btn btn">选规格</span>
+                                        </div>
+                                    </div>
+                                    <div class="label_box">
+                                        <p class="label">赠券</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="shop_img" src="../images/image.jpg" alt="">
+                                <div class="shop_right">
+                                    <p class="shop_name ellipsis_1"><span>HOT</span>全套5册你不努力没人不努力</p>
+                                    <div class="shop_info">
+                                        <p class="shop_sale"><span>月售</span>522</p>
+                                        <p class="shop_like"><span>喜欢</span>522</p>
+                                    </div>
+                                    <div class="price_box">
+                                        <div class="left">
+                                            <p class="price"><span>¥</span>16.00</p>
+                                            <p class="price_original">¥18.00</p>
+                                        </div>
+                                        <div class="right">
                                             <span class="minus btn"></span>
                                             <span class="num">1</span>
                                             <span class="add btn"></span>
@@ -135,6 +181,34 @@
                                     </div>
                                 </div>
                             </li>
+                            <li>
+                                <img class="shop_img" src="../images/image.jpg" alt="">
+                                <div class="shop_right">
+                                    <p class="shop_name ellipsis_1"><span>HOT</span>全套5册你不努力没人不努力</p>
+                                    <div class="shop_info">
+                                        <p class="shop_sale"><span>月售</span>522</p>
+                                        <p class="shop_like"><span>喜欢</span>522</p>
+                                    </div>
+                                    <div class="price_box">
+                                        <div class="left">
+                                            <p class="price"><span>¥</span>16.00</p>
+                                            <p class="price_original">¥18.00</p>
+                                        </div>
+                                        <div class="right">
+                                            <span class="minus btn"></span>
+                                            <span class="num">1</span>
+                                            <span class="add btn"></span>
+                                        </div>
+                                    </div>
+                                    <div class="label_box">
+                                        <p class="label">赠券</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="list_box recommend_list" id="drinks_list">
+                            <p class="title"><span>饮料</span></p>
                             <li>
                                 <img class="shop_img" src="../images/image.jpg" alt="">
                                 <div class="shop_right">
@@ -230,11 +304,24 @@
         </footer>
     </div>
 </body>
+
+<!-- 选规格弹窗 -->
+<div class="popup choice_popup">
+    <div class="masked"></div>
+    <div class="choice_box">
+
+    </div>
+</div>
+<!-- 选规格弹窗 end -->
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
 <script>
+    $(function(){
+        
+    })
+
     // 侧边导航控制
-    $('.left_nav').on('click','li',function() {
+    $('.left_nav').on('click','a',function() {
         $(this).addClass('active').siblings().removeClass('active');
     })
 
@@ -254,5 +341,28 @@
         $('.input_box .search').focus();
         $(this).hide();
     })
+
+    // 商品数量加减
+    $('.list_box li .right').on('click','.minus',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums--;
+        if(nums <= 0) {
+            $(this).hide();
+            $(this).parent().find('.num').hide();
+        }
+        $(this).parent().find('.num').text(nums);
+        console.log(nums);
+    });
+
+    $('.list_box li .right').on('click','.add',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums++;
+        if(nums > 0) {
+            $(this).parent().find('.minus').show();
+            $(this).parent().find('.num').show();
+        }
+        $(this).parent().find('.num').text(nums);
+        console.log(nums);
+    });
 </script>
 </html>

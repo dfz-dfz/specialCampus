@@ -249,6 +249,7 @@ section {
     font-size: .3rem;
     color: #0A0F2D;
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 .broadcast .title span {
@@ -367,6 +368,7 @@ section {
     margin-right: .15rem;
     font-size: .24rem;
     color: #AFB3C3;
+    flex-shrink: 0;
 }
 
 .middle .like span,

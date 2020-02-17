@@ -90,6 +90,7 @@ html,body {
     display: flex;
     -webkit-box-align: center;
             align-items: center;
+    flex-shrink: 0;
 }
 
 .store_box .store_info span {
@@ -168,7 +169,7 @@ html,body {
     cursor: pointer;
 }
 
-.store_box .main .left_nav li.active {
+.store_box .main .left_nav a.active li {
     font-size: .34rem;
     color: #0A0F2D;
     font-weight: bold;
@@ -228,7 +229,7 @@ html,body {
     background-size: 100% 100%;
 }
 
-.store_box .shop_list {
+.store_box .shop_list ul {
     padding-top: .68rem;
 }
 
@@ -409,6 +410,17 @@ html,body {
     text-align: center;
 }
 
+.store_box .price_box .right .choice_btn {
+    width: .9rem;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    font-size: .2rem;
+    color: #fff;
+    border-radius: .2rem;
+    background-color: #00A47C;
+}
+
 .store_box .shop_right .label_box {
     margin-top: .05rem;
     display: -webkit-box;
@@ -551,3 +563,16 @@ html,body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+/* 选规格弹窗 */
+.choice_popup .choice_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .32rem;
+    width: calc(100% - .64rem);
+    height: 9.24rem;
+    background-color: #fff;
+    border-radius: .36rem .36rem 0 0;
+}
+/* 选规格弹窗 end */
