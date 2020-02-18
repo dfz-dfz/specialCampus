@@ -1,3 +1,205 @@
+/* 骨架屏 */
+.skeletion {
+    padding: 0 .32rem;
+}
+
+.skeletion-head {
+    padding: .4rem 0;
+    overflow: hidden;
+}
+
+.skeletion-head div {
+    display: inline-block;
+    background-color: #F5F6FA;
+}
+
+.skeletion-head .head_left {
+    margin-right: .1rem;
+    width: .3rem;
+    height: .3rem;
+    float: left;
+}
+
+.skeletion-head .head_conte {
+    width: 3rem;
+    height: .3rem;
+    float: left;
+}
+
+.skeletion-head .head_right {
+    width: .3rem;
+    height: .3rem;
+    float: right;
+}
+
+.skeletion-input {
+    margin-bottom: .35rem;
+    width: 100%;
+    height: .7rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-swiper {
+    margin-bottom: .45rem;
+    width: 100%;
+    height: 3rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-nav {
+    margin-bottom: 1rem;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.skeletion-nav li {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+}
+
+.skeletion-nav .nav_img {
+    margin-left: .1rem;
+    margin-bottom: .2rem;
+    width: .76rem;
+    height: .76rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-nav .nav_text {
+    width: 1rem;
+    height: .24rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-module {
+    margin-top: .1rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.skeletion-module .module_block {
+    width: 3.35rem;
+    height: 1.25rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    background-color: #ebebee;
+}
+
+.skeletion-module .module_block .module_img {
+    margin-right: .2rem;
+    width: .7rem;
+    height: .7rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-module .text div {
+    margin-bottom: .15rem;
+    width: 1.5rem;
+    height: .24rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-module .text div:last-child {
+    margin-bottom: 0;
+}
+
+.skeletion-broadcast {
+    margin-top: .3rem;
+    width: 100%;
+    height: .88rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-filtrate {
+    margin-top: .8rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.skeletion-filtrate li {
+    margin-right: .5rem;
+    width: 1rem;
+    height: .36rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-content {
+    padding: .5rem 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.skeletion-content .content_img {
+    margin-right: .25rem;
+    width: 1.6rem;
+    height: 1.2rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-content .text {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.skeletion-content .text div {
+    margin-bottom: .15rem;
+    width: 100%;
+    height: .24rem;
+    background-color: #F5F6FA;
+}
+
+.skeletion-content .text .title {
+    height: .28rem;
+}
+/* 骨架屏 */
+
 .header {
     padding: 0 .32rem;
 }
