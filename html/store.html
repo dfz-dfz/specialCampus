@@ -306,10 +306,36 @@
 </body>
 
 <!-- 选规格弹窗 -->
-<div class="popup choice_popup">
+<div class="popup_box choice_popup hide">
     <div class="masked"></div>
     <div class="choice_box">
-
+        <span class="close"></span>
+        <div class="head">
+            <img src="../images/image.jpg" alt="">
+            <div class="head_right">
+                <p class="price"><span>¥</span>12.00</p>
+                <p class="num">编号：12332223322</p>
+            </div>
+        </div>
+        <div class="specifications">
+            <p class="title">规格</p>
+            <div class="lable_box">
+                <ul>
+                    <li class="active">全套12册装</li>
+                    <li>单本书籍</li>
+                    <li>强者成功法则/狼道</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom_box">
+            <p class="type">数量</p>
+            <div class="num_box">
+                <span class="btn minus"></span>
+                <span class="num">1</span>
+                <span class="btn add"></span>
+            </div>
+        </div>
+        <div class="submit">确定</div>
     </div>
 </div>
 <!-- 选规格弹窗 end -->
@@ -363,6 +389,44 @@
         }
         $(this).parent().find('.num').text(nums);
         console.log(nums);
+    });
+
+    // 选规格
+    $('.list_box li .right').on('click','.choice_btn',function() {
+        $('.choice_popup').show();
+    });
+
+    // 选规格弹窗控制
+    $('.choice_popup').on('click','.masked,.close,.submit',function() {
+        if($(this).is('.submit')) {
+            
+        }
+        $('.choice_popup').hide();
+    })
+
+    //弹窗规格选择
+    $('.choice_popup .lable_box').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+    //弹窗数量加减
+    $('.choice_popup .num_box').on('click','.minus',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums--;
+        if(nums < 0) {
+            return;
+        }
+        $(this).parent().find('.num').text(nums);
+    });
+
+    $('.choice_popup .num_box').on('click','.add',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums++;
+        if(nums > 0) {
+            $(this).parent().find('.minus').show();
+            $(this).parent().find('.num').show();
+        }
+        $(this).parent().find('.num').text(nums);
     });
 </script>
 </html>

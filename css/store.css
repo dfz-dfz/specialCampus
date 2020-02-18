@@ -575,4 +575,148 @@ html,body {
     background-color: #fff;
     border-radius: .36rem .36rem 0 0;
 }
+
+.choice_popup .choice_box .close {
+    position: absolute;
+    top: .32rem;
+    right: .32rem;
+    width: .4rem;
+    height: .4rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.choice_popup .choice_box .head {
+    margin-bottom: .6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.choice_box .head img {
+    margin-right: .15rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: .16rem;
+}
+
+.choice_box .head_right .price {
+    margin-bottom: .25rem;
+    font-size: .4rem;
+    color: #FF8F00;
+    font-weight: bold;
+}
+
+.head_right .price span {
+    font-size: .24rem;
+    font-weight: 500;
+}
+
+.choice_box .head_right .num {
+    font-size: .24rem;
+    color: #AFB3C3;
+}
+
+.choice_box .specifications .title {
+    margin-bottom: .3rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.choice_box .specifications .lable_box {
+    font-size: 0;
+    max-height: 4rem;
+    overflow: auto;
+}
+
+.choice_box .specifications ul {
+    overflow: scroll;
+}
+
+.choice_box .specifications li {
+    margin-right: .25rem;
+    margin-bottom: .25rem;
+    padding: 0 .2rem;
+    height: .6rem;
+    font-size: .24rem;
+    color: #05081C;
+    text-align: center;
+    line-height: .6rem;
+    display: inline-block;
+    background-color: #F5F6FA;
+    border:none;
+    border-radius: .3rem;
+}
+
+.choice_box .specifications li.active {
+    color: #00A47C;
+    background:rgba(0,151,107,.1);
+    border:1px solid rgba(0,151,107,1);
+}
+
+.choice_box .bottom_box {
+    margin-top: .3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choice_box .bottom_box .type {
+    font-size: .28rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.choice_box .bottom_box .num_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choice_box .num_box .btn {
+    width: .25rem;
+    height: .25rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.choice_box .num_box .minus {
+    background-image: url(../images/image.jpg);
+}
+
+.choice_box .num_box .add {
+    background-image: url(../images/image.jpg);
+}
+
+.choice_box .num_box .num {
+    margin: 0 .25rem;
+    width: .9rem;
+    height: .5rem;
+    font-size: .26rem;
+    color: #000;
+    font-weight: bold;
+    line-height: .5rem;
+    text-align: center;
+    background-color: #F5F6FA;
+}
+
+.choice_box .submit {
+    position: absolute;
+    bottom: .15rem;
+    left: .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    color: #fff;
+    font-size: .32rem;
+    font-weight: bold;
+    background-color: #00A47C;
+    border-radius: .44rem;
+}
+
 /* 选规格弹窗 end */
