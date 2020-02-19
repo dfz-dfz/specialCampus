@@ -26,7 +26,7 @@
                     <p class="business_hours">营业时间&nbsp;12:12:12</p>
                 </div>
                 <div class="btn link_btn"></div>
-                <div class="btn close_btn"></div>
+                <a href="javascript:history.back(-1)"><div class="btn close_btn"></div></a>
             </div>
             <!-- 头部信息 end -->
 
@@ -288,7 +288,7 @@
             </div>
         </section>
     
-        <footer class="store_footer">
+        <footer class="store_footer"><!-- 暂停营业加上 no_business 这个class  -->
             <div class="cart active">
                 <span class="img"></span>
                 <span class="shop_num">4</span>
@@ -301,6 +301,9 @@
                 <div class="carriage">跑腿费：¥12.00</div>
             </div>
             <div class="submit_btn">去结算<span></span></div>
+            <!-- 暂停营业 -->
+            <div class="submit_btn hide">暂停营业</div>
+            <!-- 暂停营业 end -->
         </footer>
     </div>
 </body>
@@ -336,9 +339,55 @@
             </div>
         </div>
         <div class="submit">确定</div>
+        <div class="submit no_shop">补货提醒</div>
     </div>
 </div>
 <!-- 选规格弹窗 end -->
+
+<!-- 缺货提醒弹窗 -->
+<div class="popup_box no_shop_popup hide">
+    <div class="masked"></div>
+    <div class="popup">
+        <div class="content">
+            <img src="../images/image.jpg" alt="">
+            <div class="title">已把缺货商品提交给商家</div>
+            <div class="text">预计一周内上架，敬请留意</div>
+            <div class="submit">知道了</div>
+        </div>
+    </div>
+</div>
+<!-- 缺货提醒弹窗 end -->
+
+<!-- 店铺信息弹窗 -->
+<div class="popup_box store_message_popup hide">
+    <div class="masked"></div>
+    <div class="popup">
+        <div class="content">
+            <span class="close"></span>
+            <img class="store_head" src="../images/image.jpg" alt="">
+            <p class="store_name title ellipsis_1">604尚书书院（广州中山大学)...</p>
+            <ul class="store_info">
+                <li><span class="icon_1"></span>到店自取</li>
+                <li><span class="icon_2"></span>配送8元起</li>
+                <li><span class="icon_3"></span>45252</li>
+            </ul>
+            <div class="title">店铺公告</div>
+            <p class="text">本店营业时间 12:12:12，特殊情况可以直接到我宿舍去找我，谢谢大家关照</p>
+            <div class="title">优惠信息</div>
+            <p class="text">折扣卷抵100%</p>
+        </div>
+    </div>
+</div>
+<!-- 店铺信息弹窗 end -->
+
+<!-- 购物车弹窗 -->
+<div class="popup_box cart_popup">
+    <div class="masked"></div>
+    <div class="content">
+        
+    </div>
+</div>
+<!-- 购物车弹窗 end -->
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
 <script>
@@ -401,12 +450,21 @@
         if($(this).is('.submit')) {
             
         }
+        if($(this).is('.no_shop')) {
+            $('.no_shop_popup').show();
+            return; 
+        }
         $('.choice_popup').hide();
     })
 
     //弹窗规格选择
     $('.choice_popup .lable_box').on('click','li',function() {
         $(this).addClass('active').siblings().removeClass('active');
+    })
+
+    //无货提醒弹窗
+    $('.no_shop_popup').on('click','.submit',function() {
+        $('.no_shop_popup').hide();
     })
 
     //弹窗数量加减
@@ -428,5 +486,24 @@
         }
         $(this).parent().find('.num').text(nums);
     });
+
+    // 店铺信息弹窗
+    $('.store_name').on('click',function() {
+        $('.store_message_popup').show();
+    })
+
+    $('.store_message_popup').on('click','.close',function() {
+        $('.store_message_popup').hide();
+    })
+
+    // 收藏按钮控制
+    $('.link_btn').on('click',function() {
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')) {
+            tipsPopup('收藏成功，可在我的收藏里查看');
+        }else {
+            tipsPopup('已取消收藏');
+        }
+    })
 </script>
 </html>

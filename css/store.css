@@ -32,13 +32,15 @@ html,body {
             justify-content: space-between;
     -webkit-box-align: center;
             align-items: center;
+    flex-shrink: 0;
     border-bottom: 1px solid rgba(232,232,232,1);
+    overflow: hidden;
 }
 
 .store_box .top .store_head_img {
-    margin-right: .2rem;
-    width: .6rem;
-    height: .6rem;
+    margin-right: .16rem;
+    width: .8rem;
+    height: .8rem;
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -55,6 +57,7 @@ html,body {
     font-size: .34rem;
     color: #0A0F2D;
     font-weight: bold;
+    line-height: 1;
 }
 
 .store_box .middle_box .store_name::after {
@@ -72,6 +75,7 @@ html,body {
 
 .store_box .middle_box .store_info {
     margin-bottom: .15rem;
+    line-height: 1;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -121,6 +125,7 @@ html,body {
 .store_box .middle_box .business_hours {
     font-size: .22rem;
     color: #AFB3C3;
+    line-height: 1;
 }
 
 .store_box .top .btn {
@@ -134,6 +139,10 @@ html,body {
 
 .store_box .top .link_btn {
     margin-right: .3rem;
+    background-image: url(../images/image.jpg);
+}
+
+.store_box .top .link_btn.active {
     background-image: url(../images/image.jpg);
 }
 
@@ -177,10 +186,11 @@ html,body {
 }
 
 .store_box .main .right_box {
+    position: relative;
     padding: 0 .32rem;
     width: calc(100% - 1.8rem);
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .store_box .right_box .input_box {
@@ -229,7 +239,7 @@ html,body {
     background-size: 100% 100%;
 }
 
-.store_box .shop_list ul {
+.store_box .shop_list ul:first-child {
     padding-top: .68rem;
 }
 
@@ -237,6 +247,7 @@ html,body {
     padding: .6rem 0;
     font-size: 0;
     text-align: center;
+    line-height: 1;
 }
 
 .store_box .list_box .title span {
@@ -281,6 +292,10 @@ html,body {
             flex-direction: row;
 }
 
+.store_box .list_box li:last-child {
+    margin-bottom: 0;
+}
+
 .store_box .list_box .shop_img {
     margin-right: .2rem;
     width: 1.4rem;
@@ -299,23 +314,25 @@ html,body {
 }
 
 .store_box .shop_right .shop_name {
-    margin-bottom: .15rem;
+    position: relative;
+    margin: .15rem 0;
+    padding-left: .55rem;
     font-size: .28rem;
     color: #0A0F2D;
+    line-height: 1;
 }
 
 .store_box .shop_right .shop_name span {
-    margin-right: .07rem;
-    padding: .02rem .05rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -.13rem;
+    left: 0;
+    width: .48rem;
+    height: .26rem;
+    line-height: .26rem;
+    text-align: center;
     font-size: .2rem;
     color: #fff;
-    line-height: 1;
-    display: -webkit-inline-box;
-    display: inline-flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center;
     background-color: #FF8F00;
     border-radius: .04rem;
 }
@@ -324,6 +341,7 @@ html,body {
     margin-bottom: .15rem;
     font-size: .2rem;
     color: #AFB3C3;
+    line-height: 1;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -356,6 +374,7 @@ html,body {
             flex-direction: row;
     -webkit-box-align: center;
             align-items: center;
+    line-height: 1;
 }
 
 .store_box .price_box .price {
@@ -435,12 +454,6 @@ html,body {
     font-size: .2rem;
     color: #FF8F00;
     line-height: 1;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center;
     border: 1px solid #FF8F00;
     border-radius: .04rem;
 }
@@ -459,6 +472,10 @@ html,body {
             justify-content: space-between;
     -webkit-box-align: center;
             align-items: center;
+}
+
+.store_footer.no_business {
+    background:rgba(0,164,124,.55);
 }
 
 .store_footer .cart {
@@ -550,6 +567,10 @@ html,body {
     color: #fff;
     font-weight: bold;
     line-height: 1;
+}
+
+.store_footer.no_business .submit_btn {
+    padding-right: 0;
 }
 
 .store_footer .submit_btn span {
@@ -719,4 +740,157 @@ html,body {
     border-radius: .44rem;
 }
 
+.choice_box .submit.no_shop {
+    color: #FF8E07;
+    background:rgba(255,142,7,.2);
+}
+
 /* 选规格弹窗 end */
+
+/* 缺货提醒弹窗 */
+.no_shop_popup {
+    z-index: 99999;
+}
+
+.no_shop_popup .content {
+    padding-bottom: .5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_shop_popup .content img {
+    margin-bottom: .5rem;
+    width: 3rem;
+    height: 2.5rem;
+}
+
+.no_shop_popup .content .title {
+    font-size: .32rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.no_shop_popup .content .text {
+    margin-top: .1rem;
+    margin-bottom: .7rem;
+    font-size: .24rem;
+    color: #AFB3C3;
+}
+
+.no_shop_popup .content .submit {
+    width: 4.06rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .3rem;
+    color: #fff;
+    text-align: center;
+    background-color: #00976B;
+    border-radius: .4rem;
+}
+/* 缺货提醒弹窗 end */
+
+/* 店铺信息弹窗 */
+.store_message_popup .content {
+    margin: 0 auto;
+    padding: .32rem;
+    width: 5.16rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.store_message_popup .content .close {
+    position: absolute;
+    top: .32rem;
+    right: .32rem;
+    width: .4rem;
+    height: .4rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.store_message_popup .content .store_head {
+    margin: 0 auto;
+    margin-top: .48rem;
+    margin-bottom: .65rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+}
+
+.store_message_popup .content .title {
+    margin-bottom: .22rem;
+    font-size: .32rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+}
+
+.store_message_popup .content .text {
+    margin-bottom: .6rem;
+    padding: 0 .18rem;
+    font-size: .26rem;
+    color: #AFB3C3;
+}
+
+.store_message_popup .content .store_info {
+    margin-bottom: .6rem;
+    line-height: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.store_message_popup .store_info li {
+    margin-right: .25rem;
+    font-size: .22rem;
+    color: #AFB3C3;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.store_message_popup .store_info li:last-child {
+    margin-right: 0;
+}
+
+.store_message_popup .store_info span {
+    margin-right: .08rem;
+    width: .15rem;
+    height: .2rem;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.store_message_popup .store_info .icon_1 {
+    width: .15rem;
+    height: .2rem;
+    background-image: url(../images/image.jpg);
+}
+
+.store_message_popup .store_info .icon_2 {
+    background-image: url(../images/image.jpg);
+}
+
+.store_message_popup .store_info .icon_3 {
+    width: .2rem;
+    height: .17rem;
+    background-image: url(../images/image.jpg);
+}
+/* 店铺信息弹窗 end */

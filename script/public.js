@@ -71,3 +71,17 @@ var choicePopup = function(text,cancle,sure,cancleFunction,sureFunction) {
         $html.remove();
     })
 }
+
+/*
+ * 自定义提示框弹窗
+ *
+ * content: 提示的文字内容
+ */
+var tipsPopup = function(content){
+    var htm = "<div class='tips_popup'><div class='masked'><div class='tips'>"+content+"</div></div></div>";
+    $htm = $(htm);
+    $("body").append($htm);
+    setTimeout(function() {
+        $htm.remove();
+    },2000);
+}
