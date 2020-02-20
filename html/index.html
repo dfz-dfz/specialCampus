@@ -158,8 +158,20 @@
         <!-- 广播 -->
         <div class="broadcast">
             <img src="../images/image.jpg" alt="">
-            <p class="title">校园<span>头条</span></p>
-            <p class="text ellipsis_1">三泰嘉鸿正式与各大校园合作协同校园合作协同</p>
+            <ul>
+                <li>
+                    <p class="title">校园<span>头条</span></p>
+                    <p class="text ellipsis_1">三泰嘉鸿正式与各大校园合作协同校园合作协同</p>
+                </li>
+                <li>
+                    <p class="title">校园<span>头条</span></p>
+                    <p class="text ellipsis_1">sssssssssssssssssssssssssssssssssssss</p>
+                </li>
+                <li>
+                    <p class="title">校园<span>头条</span></p>
+                    <p class="text ellipsis_1">1111111111111111111111111111111111111</p>
+                </li>
+            </ul>
         </div>
         <!-- 广播 end -->
 
@@ -239,5 +251,15 @@
     $('.filtrate_nav').on('click','li',function() {
         $(this).addClass('active').siblings().removeClass('active');
     })
+
+    // 广播轮播
+    var broadcast = function(obj,top,time) {
+        $(obj).animate({
+            marginTop:top
+        },time,function(){
+            $(this).css({marginTop:"0"}).find(":first").appendTo(this);
+        })
+    }
+    setInterval("broadcast('.broadcast ul','-.6rem',800)",2500);
 </script>
 </html>
