@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-搜索结果</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <!-- 输入框 -->
+    <header>
+        <input type="search" placeholder="搜索你需要的商品或店铺">
+        <a href="javascript:history.back(-1)"><span class="cancle">取消</span></a>
+    </header>
+    <!-- 输入框 end -->
+
+    <!-- 导航 -->
+    <ul class="nav">
+        <li class="active">综合排序</li>
+        <li>最多收藏</li>
+        <li>价格</li>
+        <li>销量</li>
+    </ul>
+    <!-- 导航 end -->
+
+    <!-- 搜索结果 -->
+    <section class="search_result">
+        <div class="content">
+            <div class="top">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name ellipsis_1">韩莫言的店铺</p>
+                    <div class="collection"><span></span><p class="num">45252</p></div>
+                </div>
+                <div class="btn">进店</div>
+            </div>
+            <ul class="shop_list">
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="top">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name ellipsis_1">韩莫言的店铺</p>
+                    <div class="collection"><span></span><p class="num">45252</p></div>
+                </div>
+                <div class="btn">进店</div>
+            </div>
+            <ul class="shop_list">
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="top">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name ellipsis_1">韩莫言的店铺</p>
+                    <div class="collection"><span></span><p class="num">45252</p></div>
+                </div>
+                <div class="btn">进店</div>
+            </div>
+            <ul class="shop_list">
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+                <li class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
+                    <p class="cost_price">¥32.00</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 搜索结果 end -->
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    // 导航切换
+    $('.nav').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+</script>
+</html>
