@@ -33,10 +33,10 @@
             <div class="main">
                 <!-- 侧边导航 -->
                 <ul class="left_nav">
-                    <a  class="active" href="#recommend_list"><li>推荐</li></a>
-                    <a href="#drinks_list"><li>饮料</li></a>
-                    <a href="#dress_list"><li>服饰</li></a>
-                    <a href="#food_list"><li>小吃</li></a>
+                    <a  class="active" href="#list_1"><li>推荐</li></a>
+                    <a href="#list_2"><li>饮料</li></a>
+                    <a href="#list_3"><li>服饰</li></a>
+                    <a href="#list_4"><li>小吃</li></a>
                     <a href="#"><li>零食</li></a>
                     <a href="#"><li>图书</li></a>
                     <a href="#"><li>衣服</li></a>
@@ -61,7 +61,7 @@
                     </div>
                     <!-- 搜索框 end -->
                     <div class="shop_list">
-                        <ul class="list_box recommend_list" id="recommend_list">
+                        <ul class="list_box recommend_list" id="list_1">
                             <p class="title"><span>精选推荐</span></p>
                             <li>
                                 <img class="shop_img" src="../images/image.jpg" alt="">
@@ -207,7 +207,7 @@
                             </li>
                         </ul>
 
-                        <ul class="list_box drinks_list" id="drinks_list">
+                        <ul class="list_box drinks_list" id="list_2">
                             <p class="title"><span>饮料</span></p>
                             <li>
                                 <img class="shop_img" src="../images/image.jpg" alt="">
@@ -283,7 +283,7 @@
                             </li>
                         </ul>
 
-                        <ul class="list_box dress_list" id="dress_list">
+                        <ul class="list_box dress_list" id="list_3">
                             <p class="title"><span>服饰</span></p>
                             <li>
                                 <img class="shop_img" src="../images/image.jpg" alt="">
@@ -335,7 +335,7 @@
                             </li>
                         </ul>
 
-                        <ul class="list_box food_list" id="food_list">
+                        <ul class="list_box food_list" id="list_4">
                             <p class="title"><span>小吃</span></p>
                             <li>
                                 <img class="shop_img" src="../images/image.jpg" alt="">
@@ -464,7 +464,69 @@
 <div class="popup_box cart_popup hide">
     <div class="masked"></div>
     <div class="content">
-        
+        <div class="top"><div class="delete"><span></span>清空购物车</div></div>
+        <div class="cart_list">
+            <div class="shop">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name">励志书籍愿你历尽</p>
+                    <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                </div>
+                <div class="right">
+                    <span class="minus btn"></span>
+                    <span class="num">1</span>
+                    <span class="add btn"></span>
+                </div>
+            </div>
+            <div class="shop">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name">励志书籍愿你历尽</p>
+                    <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                </div>
+                <div class="right">
+                    <span class="minus btn"></span>
+                    <span class="num">1</span>
+                    <span class="add btn"></span>
+                </div>
+            </div>
+            <div class="shop">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name">励志书籍愿你历尽</p>
+                    <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                </div>
+                <div class="right">
+                    <span class="minus btn"></span>
+                    <span class="num">1</span>
+                    <span class="add btn"></span>
+                </div>
+            </div>
+            <div class="shop">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name">励志书籍愿你历尽</p>
+                    <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                </div>
+                <div class="right">
+                    <span class="minus btn"></span>
+                    <span class="num">1</span>
+                    <span class="add btn"></span>
+                </div>
+            </div>
+            <div class="shop">
+                <img src="../images/image.jpg" alt="">
+                <div class="message">
+                    <p class="name">励志书籍愿你历尽</p>
+                    <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                </div>
+                <div class="right">
+                    <span class="minus btn"></span>
+                    <span class="num">1</span>
+                    <span class="add btn"></span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- 购物车弹窗 end -->
@@ -482,10 +544,10 @@
 
     // 获取每个分类到顶部的距离
     var arrOffsetTop = [
-        $('#recommend_list').offset().top,
-        $('#drinks_list').offset().top,
-        $('#dress_list').offset().top,
-        $('#food_list').offset().top
+        $('#list_1').offset().top,
+        $('#list_2').offset().top,
+        $('#list_3').offset().top,
+        $('#list_4').offset().top
     ];
 
     // 获取每个分类的平均高度
@@ -608,6 +670,49 @@
         }else {
             tipsPopup('已取消收藏');
         }
+    })
+
+    // 购物车弹窗清空购物车
+    $('.cart_popup').on('click','.delete',function() {
+        var deleteCart = function() {
+            console.log(2);
+        }
+        choicePopup('是否清空购物车？','取消','确定','',deleteCart);
+    });
+
+    // 购物车弹窗商品加减
+    $('.cart_popup .right').on('click','.minus',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums--;
+        if(nums < 0) {
+
+            return;
+        }
+        $(this).parent().find('.num').text(nums);
+    });
+
+    $('.cart_popup .right').on('click','.add',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums++;
+        if(nums > 0) {
+            $(this).parent().find('.minus').show();
+            $(this).parent().find('.num').show();
+        }
+        $(this).parent().find('.num').text(nums);
+    });
+
+    // 购物车隐藏与显示
+    $('.cart_popup').on('click','.masked',function() {
+        $('.cart_popup').hide();
+    })
+    $('footer').on('click',function(e){
+        e.preventDefault();
+        $('.cart_popup').hide();
+    })
+
+    $('footer').on('click','.cart',function(e) {
+        e.stopPropagation();
+        $('.cart_popup').show();
     })
 </script>
 </html>

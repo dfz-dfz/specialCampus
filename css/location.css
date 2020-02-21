@@ -10,6 +10,8 @@ header {
             justify-content: center;
     -webkit-box-align: center;
             align-items: center;
+    background-color: #fff;
+    z-index: 999;
 }
 
 header .back {
@@ -43,6 +45,8 @@ header .title {
             justify-content: center;
     -webkit-box-align: center;
             align-items: center;
+    background-color: #fff;
+    z-index: 999;
 }
 
 .search_box .search {

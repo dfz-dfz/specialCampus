@@ -928,9 +928,136 @@ html,body {
 /* 购物车弹窗 */
 .cart_popup {
     height: calc(100% - 1.54rem);
+    border-radius: .36rem;
+}
+
+.cart_popup .masked {
+    border-radius: 0 0 .36rem .36rem;
 }
 
 .cart_popup .content {
     position: absolute;
     padding: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.8rem;
+    border-radius: .36rem;
+    overflow: hidden;
 }
+
+.cart_popup .content .top {
+    padding: 0 .32rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid rgba(232,232,232,1);
+}
+
+.cart_popup .content .delete {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart_popup .top span {
+    margin-right: .1rem;
+    width: .28rem;
+    height: .3rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cart_popup .content .cart_list {
+    padding: 0 .32rem;
+    height: 6.8rem;
+    overflow-y: scroll;
+}
+
+.cart_popup .cart_list .shop {
+    margin-top: .4rem;
+    height: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart_popup .cart_list .shop:last-child {
+    margin-bottom: .2rem;
+}
+
+.cart_popup .shop img {
+    margin-right: .16rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: .1rem;
+    flex-shrink: 0;
+}
+
+.cart_popup .shop .message {
+    margin-right: .15rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.cart_popup .message .name {
+    margin-top: .14rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    line-height: 1;
+}
+
+.cart_popup .message .price {
+    font-weight: 400;
+    color: #FF8F00;
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+}
+
+.cart_popup .price span {
+    font-size: .24rem;
+}
+
+.cart_popup .price .num {
+    font-size: .3rem;
+}
+
+.cart_popup .shop .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart_popup .right .btn {
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cart_popup .right .minus {
+    background-image: url(../images/image.jpg);
+}
+
+.cart_popup .right .add {
+    background-image: url(../images/image.jpg);
+}
+
+.cart_popup .right .num {
+    width: .6rem;
+    font-size: .3rem;
+    color: #0A0F2D;
+    text-align: center;
+}
+/* 购物车弹窗 end */

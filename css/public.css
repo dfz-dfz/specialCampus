@@ -123,6 +123,7 @@ ul::-webkit-scrollbar  {
     padding-top: 1rem;
     padding-bottom: 1.8rem;
     width: 6.2rem;
+    height: auto;
     background-color: #fff;
     border-radius: .12rem;
     z-index: 9999;

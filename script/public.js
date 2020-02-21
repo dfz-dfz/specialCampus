@@ -65,7 +65,7 @@ var choicePopup = function(text,cancle,sure,cancleFunction,sureFunction) {
     }else {
         $('body').on('click','.popup .btn_box .cancle',cancleFunction);
     }
-    $('body').on('click','.popup .btn_box .cancle',sureFunction);
+    $('body').on('click','.popup .btn_box .sure',sureFunction);
     $("body").append($html);
     $('body').on('click','.popup .masked',function() {
         $html.remove();
