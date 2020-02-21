@@ -1,0 +1,216 @@
+body {
+    background-color: #00A47C;
+}
+
+/* 右边三角形 */
+.right_arrow{
+    position: relative;
+    width: .2rem;
+    height: .26rem;
+}
+.right_arrow::after,.right_arrow::before{
+    content: "";
+    position: absolute;
+    top: -.05rem;
+    width: 0;
+    height: 0;
+    border: .2rem solid transparent;
+    border-left-color: #00A47C;
+}
+.right_arrow::before{
+    left: .04rem;
+    border-left-color:#fff;
+    opacity: .5;
+}
+/* 右边三角形 end */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #00A47C;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.no_address,
+.has_address,
+.time_box,
+.store_box {
+    padding: .3rem .32rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.no_address .text {
+    font-size: .4rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.no_address .text .add {
+    margin-right: .15rem;
+    width: .36rem;
+    height: .36rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.has_address .message {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.has_address .message .address {
+    margin-bottom: .15rem;
+    font-size: .3rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.has_address .message .bottom {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+}
+
+.has_address .bottom p {
+    font-size: .28rem;
+    color: #fff;
+    line-height: 1;
+    opacity: .5;
+}
+
+.has_address .bottom .name {
+    margin-right: .5rem;
+}
+
+.time_box p {
+    margin-right: .15rem;
+    font-size: .3rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.time_box .title {
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.store_box .icon {
+    margin-right: .12rem;
+    width: .24rem;
+    height: .24rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.store_box .name {
+    font-size: .26rem;
+    color: #fff;
+    line-height: 1;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.shop_list {
+    margin-top: .05rem;
+}
+
+.shop_list .shop_box {
+    margin-bottom: .45rem;
+    padding: 0 .32rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.shop_list .shop_box .left {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.shop_list .shop_box img {
+    margin-right: .16rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: .1rem;
+    flex-shrink: 0;
+}
+
+.shop_list .shop_box .name {
+    width: 2.5rem;
+    font-size: .28rem;
+    color: #fff;
+}
+
+.shop_list .shop_box .num {
+    font-size: .3rem;
+    color: #fff;
+}
+
+.shop_list .shop_box .price {
+    font-size: .24rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.shop_list .price .num {
+    font-size: .3rem;
+}
