@@ -331,9 +331,12 @@ section {
 .delivery_type_popup .content .top {
     padding: 0 .32rem;
     height: .99rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
     border-bottom: 1px solid rgba(232,232,232,1);
 }
 
@@ -353,9 +356,12 @@ section {
 
 .delivery_type_popup .nav {
     padding: .4rem .32rem 0;
+    display: -webkit-box;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 
@@ -394,9 +400,12 @@ section {
 
 .delivery_type_popup .box1 li {
     padding: .4rem 0;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
     border-bottom: 1px solid rgba(232,232,232,1);
 }
 
@@ -429,9 +438,12 @@ section {
 
 .delivery_type_popup .box2 .express_type {
     margin-bottom: .2rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .delivery_type_popup .express_type li {
@@ -453,9 +465,12 @@ section {
 
 .delivery_type_popup .box2 .price {
     margin-top: .25rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: baseline;
+            align-items: baseline;
     color: #FF8F00;
     font-weight: bold;
     font-size: .4rem;
@@ -472,6 +487,7 @@ section {
     font-size: .3rem;
     color: #05081C;
     font-weight: bold;
-    text-align-last: left;
+    -moz-text-align-last: left;
+         text-align-last: left;
 }
 /* 配送方式弹窗 end */

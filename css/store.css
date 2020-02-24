@@ -900,7 +900,8 @@ html,body {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     align-items: center;
     flex-shrink: 0;
 }
@@ -962,16 +963,22 @@ html,body {
     line-height: 1rem;
     font-size: .28rem;
     color: #0A0F2D;
+    display: -webkit-box;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+            align-items: center;
     border-bottom: 1px solid rgba(232,232,232,1);
 }
 
 .cart_popup .content .delete {
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .cart_popup .top span {
@@ -992,9 +999,12 @@ html,body {
 .cart_popup .cart_list .shop {
     margin-top: .4rem;
     height: 1.2rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .cart_popup .cart_list .shop:last-child {
@@ -1012,10 +1022,15 @@ html,body {
 .cart_popup .shop .message {
     margin-right: .15rem;
     height: 100%;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+            flex: 1;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
     flex: 1;
 }
 
@@ -1030,8 +1045,10 @@ html,body {
     font-weight: 400;
     color: #FF8F00;
     line-height: 1;
+    display: -webkit-box;
     display: flex;
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
 }
 
 .cart_popup .price span {
@@ -1043,9 +1060,12 @@ html,body {
 }
 
 .cart_popup .shop .right {
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .cart_popup .right .btn {
