@@ -39,7 +39,7 @@
 
         <div class="time_box">
             <p class="title">送达方式</p>
-            <div class="right">
+            <div class="right">    <!-- 只有一项时加上 only 这个class,子元素用type -->
                 <p class="type">快递运输</p>
                 <p class="time">约09:00送达</p>
             </div>
@@ -52,6 +52,7 @@
             <b class="right_arrow"></b>
         </div>
         
+        <!-- 商品列表 -->
         <div class="shop_list">
             <div class="shop_box">
                 <div class="left">
@@ -86,6 +87,122 @@
                 <p class="price"><span>¥</span><span class="num">21.00</span></p>
             </div>
         </div>
+        <!-- 商品列表 end -->
+
+        <div class="type_box">
+            <span class="type">折扣抵扣</span>
+            <div class="right">
+                <span>-  ¥</span>
+                <p class="num">11.00</p>
+            </div>
+        </div>
+
+        <div class="type_box">
+            <span class="type">折扣抵扣</span>
+            <div class="right total">
+                <p class="num">11</p>
+                <span class="choice_btn"></span>
+            </div>
+        </div>
+
+        <div class="type_box">
+            <span class="type">总计</span>
+            <div class="right total">
+                <div class="price">
+                    <span>¥</span>
+                    <p class="num">31.00</p>
+                </div>
+                <p class="cost_price">¥31.00</p>
+            </div>
+        </div>
     </section>
+
+    <div class="submit">立即结算</div>
+
+    <!-- 送达方式弹窗 -->
+    <div class="popup_box delivery_type_popup hide">
+        <div class="masked"></div>
+        <div class="content">
+            <div class="top">
+                <p class="title">选择配送方式</p>
+                <span class="close"></span>
+            </div>
+            <ul class="nav">
+                <li class="li li_1 active">跑腿派送</li>
+                <li class="li li_2">物流配送</li>
+                <li class="li li_3">上门自提</li>
+            </ul>
+
+            <div class="section">
+                <!-- 跑腿派送 -->
+                <ul class="box box1">
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                    <li><span class="time">08:30</span><span class="check_btn"></span></li>
+                </ul>
+                <!-- 跑腿派送 end -->
+
+                <!-- 物流配送 -->
+                <div class="box box2 hide">
+                    <div class="type_title">快递方式</div>
+                    <ul class="express_type">
+                        <li class="active">申通快递</li>
+                        <li>韵达快递</li>
+                        <li>顺丰快递</li>
+                    </ul>
+                    <div class="type_title">配送费</div>
+                    <div class="price"><span>¥</span><p class="num">25.00</p></div>
+                </div>
+                <!-- 物流配送 end -->
+
+                <!-- 上门自提 -->
+                <div class="box box3 hide">
+                    <div class="type_title">付款方式</div>
+                    <p class="text">到达取货点，请扫商家收款二维码进行付款</p>
+                </div>
+                <!-- 上门自提 end -->
+            </div>
+        </div>
+    </div>
+    <!-- 送达方式弹窗 end -->
 </body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    // 开关
+    $('.choice_btn').on('click',function() {
+        $(this).toggleClass('active');
+    })
+
+    // 弹窗控制
+    $('.time_box').on('click',function() {
+        stopScroll();
+        $('.delivery_type_popup').show();
+    })
+
+    $('.delivery_type_popup').on('click','.masked,.close',function() {
+        starScroll();
+        $('.delivery_type_popup').hide();
+    })
+
+    $('.delivery_type_popup .nav').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        var indexs = $(this).index()+1;
+        for(var i=1;i<=$('.nav li').length;i++) {
+            if(indexs == i) {
+                $('.delivery_type_popup .box').hide();
+                $('.delivery_type_popup .box'+i+'').show();
+            }
+        }
+    })
+
+    $('.delivery_type_popup').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+</script>
 </html>
