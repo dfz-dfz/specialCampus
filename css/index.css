@@ -232,7 +232,7 @@
     display: inline-block;
     width: .28rem;
     height: .35rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/location.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -247,7 +247,7 @@
 .header .top .person_center {
     width: .28rem;
     height: .34rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/my_center.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -286,7 +286,7 @@
     margin-right: .1rem;
     width: .28rem;
     height: .28rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/search.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -399,8 +399,8 @@ section {
 
 .module .module_block img {
     margin-right: .2rem;
-    width: .7rem;
-    height: .7rem;
+    width: .67rem;
+    height: .74rem;
 }
 
 .module .module_block .text {
@@ -459,7 +459,7 @@ section {
 .broadcast img {
     margin-right: .2rem;
     width: .36rem;
-    height: .32rem;
+    height: .31rem;
 }
 
 .broadcast .title {
@@ -578,7 +578,7 @@ section {
 .list_box .middle .like_icon {
     margin-right: .05rem;
     width: .2rem;
-    height: .17rem;
+    height: .18rem;
     border-radius: unset;
 }
 

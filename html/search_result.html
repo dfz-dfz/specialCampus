@@ -6,11 +6,12 @@
     <title>校园专场-搜索结果</title>
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/store.css">
     <script>
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
     </script>
 </head>
-<body>
+<body class="search">
     <!-- 输入框 -->
     <header>
         <input type="search" placeholder="搜索你需要的商品或店铺">
@@ -22,19 +23,129 @@
     <ul class="nav">
         <li class="active">综合排序</li>
         <li>最多收藏</li>
-        <li>价格</li>
         <li>销量</li>
+        <li class="price">价格</li>
+        <li class="store">店铺</li>
     </ul>
     <!-- 导航 end -->
 
-    <!-- 搜索结果 -->
-    <section class="search_result">
+    <!-- 商品搜索结果 -->
+    <section class="store_box">    <!-- 首页进来的搜索加上 index_search 这个class -->
+        <div class="shop_list">
+            <ul class="list_box">
+                <li>
+                    <img class="shop_img" src="../images/image.jpg" alt="">
+                    <div class="shop_right">
+                        <div class="shop_name ellipsis_2">
+                            <span class="new">NEW</span>
+                            <p>全套5册你不努力没人不努力全套5册你不努力没人不努力</p>
+                        </div>
+                        <div class="shop_info">
+                            <p class="shop_sale"><span>月售</span>522</p>
+                            <p class="shop_like"><span>喜欢</span>522</p>
+                        </div>
+                        <div class="label_box">
+                            <p class="label">赠券</p>
+                        </div>
+                        <div class="price_box">
+                            <div class="left">
+                                <p class="price"><span>¥</span>16.00</p>
+                                <p class="price_original">¥18.00</p>
+                            </div>
+                            <div class="right">
+                                <span class="minus btn"></span>
+                                <span class="num">1</span>
+                                <span class="add btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img class="shop_img" src="../images/image.jpg" alt="">
+                    <div class="shop_right">
+                        <div class="shop_name ellipsis_2">
+                            <span>HOT</span>
+                            <p>全套5册你不努力没人不努力</p>
+                        </div>
+                        <div class="shop_info">
+                            <p class="shop_sale"><span>月售</span>522</p>
+                            <p class="shop_like"><span>喜欢</span>522</p>
+                        </div>
+                        <div class="label_box">
+                            <p class="label">赠券</p>
+                        </div>
+                        <div class="price_box">
+                            <div class="left">
+                                <p class="price"><span>¥</span>16.00</p>
+                                <p class="price_original">¥18.00</p>
+                            </div>
+                            <div class="right">
+                                <span class="minus btn"></span>
+                                <span class="num">1</span>
+                                <span class="add btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img class="shop_img" src="../images/image.jpg" alt="">
+                    <div class="shop_right">
+                        <div class="shop_name ellipsis_2">
+                            <span>HOT</span>
+                            <p>全套5册你不努力没人不努力</p>
+                        </div>
+                        <div class="shop_info">
+                            <p class="shop_sale"><span>月售</span>522</p>
+                            <p class="shop_like"><span>喜欢</span>522</p>
+                        </div>
+                        <div class="label_box">
+                            <p class="label">赠券</p>
+                        </div>
+                        <div class="price_box">
+                            <div class="left">
+                                <p class="price"><span>¥</span>16.00</p>
+                                <p class="price_original">¥18.00</p>
+                            </div>
+                            <div class="right">
+                                <span class="choice_btn btn">选规格</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="store_footer"><!-- 暂停营业加上 no_business 这个class  -->
+        <div class="cart active">
+            <span class="img"></span>
+            <span class="shop_num">4</span>
+        </div>
+        <div class="total_price_box">
+            <div class="total_price">
+                <span>总计：¥</span>
+                <span class="price">2120.00</span>
+            </div>
+            <div class="carriage">跑腿费：¥12.00</div>
+        </div>
+        <a href="./order_confirm.html"><div class="submit_btn">去结算<span></span></div></a>
+        <!-- 暂停营业 -->
+        <div class="submit_btn hide">暂停营业</div>
+        <!-- 暂停营业 end -->
+    </footer>
+    <!-- 商品搜索结果 end -->
+
+    <!-- 店铺搜索结果 -->
+    <section class="search_result store_result hide">
         <div class="content">
             <div class="top">
                 <img src="../images/image.jpg" alt="">
                 <div class="message">
                     <p class="name ellipsis_1">韩莫言的店铺</p>
-                    <div class="collection"><span></span><p class="num">45252</p></div>
+                    <div class="bottom">
+                        <div class="collection"><span></span><p class="num">45252</p></div>
+                        <div class="location"><span></span><p class="num">12m</p></div>
+                    </div>
                 </div>
                 <div class="btn">进店</div>
             </div>
@@ -61,34 +172,10 @@
                 <img src="../images/image.jpg" alt="">
                 <div class="message">
                     <p class="name ellipsis_1">韩莫言的店铺</p>
-                    <div class="collection"><span></span><p class="num">45252</p></div>
-                </div>
-                <div class="btn">进店</div>
-            </div>
-            <ul class="shop_list">
-                <li class="shop">
-                    <img src="../images/image.jpg" alt="">
-                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
-                    <p class="cost_price">¥32.00</p>
-                </li>
-                <li class="shop">
-                    <img src="../images/image.jpg" alt="">
-                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
-                    <p class="cost_price">¥32.00</p>
-                </li>
-                <li class="shop">
-                    <img src="../images/image.jpg" alt="">
-                    <p class="price"><span>¥</span><span class="num">16.00</span></p>
-                    <p class="cost_price">¥32.00</p>
-                </li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="top">
-                <img src="../images/image.jpg" alt="">
-                <div class="message">
-                    <p class="name ellipsis_1">韩莫言的店铺</p>
-                    <div class="collection"><span></span><p class="num">45252</p></div>
+                    <div class="bottom">
+                        <div class="collection"><span></span><p class="num">45252</p></div>
+                        <div class="location"><span></span><p class="num">>120m</p></div>
+                    </div>
                 </div>
                 <div class="btn">进店</div>
             </div>
@@ -111,14 +198,253 @@
             </ul>
         </div>
     </section>
-    <!-- 搜索结果 end -->
+    <!-- 店铺搜索结果 end -->
+
+    <!-- 搜索空白 -->
+    <div class="no_result hide">
+        <img src="../images/no_result.png" alt="">
+        <p class="text">你搜索的产品还没上架，敬请期待</p>
+    </div>
+    <!-- 搜索空白 end -->
+
+    <!-- 选规格弹窗 -->
+    <div class="popup_box choice_popup hide">
+        <div class="masked"></div>
+        <div class="choice_box">
+            <span class="close"></span>
+            <div class="head">
+                <img src="../images/image.jpg" alt="">
+                <div class="head_right">
+                    <p class="price"><span>¥</span>12.00</p>
+                    <p class="num">编号：12332223322</p>
+                </div>
+            </div>
+            <div class="specifications">
+                <p class="title">规格</p>
+                <div class="lable_box">
+                    <ul>
+                        <li class="active">全套12册装</li>
+                        <li>单本书籍</li>
+                        <li>强者成功法则/狼道</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_box">
+                <p class="type">数量</p>
+                <div class="num_box">
+                    <span class="btn minus active"></span>
+                    <span class="num">1</span>
+                    <span class="btn add"></span>
+                </div>
+            </div>
+            <div class="submit">确定</div>
+            <div class="submit no_shop">补货提醒</div>
+        </div>
+    </div>
+    <!-- 选规格弹窗 end -->
+
+    <!-- 购物车弹窗 -->
+    <div class="popup_box cart_popup hide">
+        <div class="masked"></div>
+        <div class="content">
+            <div class="top"><div class="delete"><span></span>清空购物车</div></div>
+            <div class="cart_list">
+                <div class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <div class="message">
+                        <p class="name">励志书籍愿你历尽</p>
+                        <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                    </div>
+                    <div class="right">
+                        <span class="minus btn"></span>
+                        <span class="num">1</span>
+                        <span class="add btn"></span>
+                    </div>
+                </div>
+                <div class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <div class="message">
+                        <p class="name">励志书籍愿你历尽</p>
+                        <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                    </div>
+                    <div class="right">
+                        <span class="minus btn"></span>
+                        <span class="num">1</span>
+                        <span class="add btn"></span>
+                    </div>
+                </div>
+                <div class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <div class="message">
+                        <p class="name">励志书籍愿你历尽</p>
+                        <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                    </div>
+                    <div class="right">
+                        <span class="minus btn"></span>
+                        <span class="num">1</span>
+                        <span class="add btn"></span>
+                    </div>
+                </div>
+                <div class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <div class="message">
+                        <p class="name">励志书籍愿你历尽</p>
+                        <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                    </div>
+                    <div class="right">
+                        <span class="minus btn"></span>
+                        <span class="num">1</span>
+                        <span class="add btn"></span>
+                    </div>
+                </div>
+                <div class="shop">
+                    <img src="../images/image.jpg" alt="">
+                    <div class="message">
+                        <p class="name">励志书籍愿你历尽</p>
+                        <div class="price"><span>¥</span><p class="num">21.00</p></div>
+                    </div>
+                    <div class="right">
+                        <span class="minus btn"></span>
+                        <span class="num">1</span>
+                        <span class="add btn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 购物车弹窗 end -->
 </body>
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
 <script>
     // 导航切换
     $('.nav').on('click','li',function() {
+        if($(this).is('.price')) {
+            $(this).addClass('select');
+            $(this).toggleClass('on');
+        }else {
+            $('.price').removeClass('select on');
+        }
+
+        if($(this).is('.store')) {
+            $('.store_result').show();
+        }else {
+            $('.store_result').hide();
+        }
+
         $(this).addClass('active').siblings().removeClass('active');
+    })
+
+     // 商品数量加减
+     $('.list_box li .right').on('click','.minus',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums--;
+        if(nums <= 0) {
+            $(this).hide();
+            $(this).parent().find('.num').hide();
+        }
+        $(this).parent().find('.num').text(nums);
+        console.log(nums);
+    });
+
+    $('.list_box li .right').on('click','.add',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums++;
+        if(nums > 0) {
+            $(this).parent().find('.minus').show();
+            $(this).parent().find('.num').show();
+        }
+        $(this).parent().find('.num').text(nums);
+        console.log(nums);
+    });
+
+     // 选规格
+     $('.list_box li .right').on('click','.choice_btn',function() {
+        $('.choice_popup').show();
+    });
+
+    // 选规格弹窗控制
+    $('.choice_popup').on('click','.masked,.close,.submit',function() {
+        if($(this).is('.submit')) {
+            
+        }
+        if($(this).is('.no_shop')) {
+            $('.no_shop_popup').show();
+            return; 
+        }
+        $('.choice_popup').hide();
+    })
+
+    //弹窗规格选择
+    $('.choice_popup .lable_box').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+    //弹窗数量加减
+    $('.choice_popup .num_box').on('click','.minus',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums--;
+        if(nums <= 0) {
+            $(this).removeClass('active');
+            if(nums < 0){
+                return;
+            }
+        }else {
+            $(this).addClass('active');
+        }
+        $(this).parent().find('.num').text(nums);
+    });
+
+    $('.choice_popup .num_box').on('click','.add',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums++;
+        if(nums > 0) {
+            $(this).parent().find('.minus').addClass('active').show();
+            $(this).parent().find('.num').show();
+        }
+        $(this).parent().find('.num').text(nums);
+    });
+
+    // 购物车弹窗清空购物车
+    $('.cart_popup').on('click','.delete',function() {
+        var deleteCart = function() {
+            console.log(2);
+        }
+        choicePopup('是否清空购物车？','取消','确定','',deleteCart);
+    });
+
+    // 购物车弹窗商品加减
+    $('.cart_popup .right').on('click','.minus',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums--;
+        if(nums < 0) {
+
+            return;
+        }
+        $(this).parent().find('.num').text(nums);
+    });
+
+    $('.cart_popup .right').on('click','.add',function() {
+        var nums = $(this).parent().find('.num').text();
+        nums++;
+        if(nums > 0) {
+            $(this).parent().find('.minus').show();
+            $(this).parent().find('.num').show();
+        }
+        $(this).parent().find('.num').text(nums);
+    });
+
+    // 购物车隐藏与显示
+    $('.cart_popup').on('click','.masked',function() {
+        $('.cart_popup').hide();
+    })
+    $('footer').on('click',function(e){
+        $('.cart_popup').hide();
+    })
+
+    $('footer').on('click','.cart',function(e) {
+        e.stopPropagation();
+        $('.cart_popup').show();
     })
 </script>
 </html>

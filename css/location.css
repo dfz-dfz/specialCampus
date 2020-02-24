@@ -21,8 +21,8 @@ header .back {
     margin-top: -.15rem;
     display: block;
     width: .32rem;
-    height: .3rem;
-    background-image: url(../images/image.jpg);
+    height: .29rem;
+    background-image: url(../images/back.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -72,7 +72,7 @@ header .title {
     margin-right: .1rem;
     width: .28rem;
     height: .28rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/search.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

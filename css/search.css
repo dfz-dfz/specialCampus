@@ -22,7 +22,7 @@ header::before {
     margin-top: -.14rem;
     width: .28rem;
     height: .28rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/search.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -97,7 +97,7 @@ section {
     width: .28rem;
     height: .3rem;
     display: block;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/detele.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -168,6 +168,35 @@ section {
     background-color: #00A47C;
     border-radius: .03rem;
 }
+
+.nav li.price {
+    padding-right: .18rem;
+}
+
+.nav .price.active::after {
+    display: none; 
+}
+
+.nav .price::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - .08rem);
+    margin-top: -.09rem;
+    right: 0;
+    width: .12rem;
+    height: .18rem;
+    background-image: url(../images/screen.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.nav .price.select::before {
+    background-image: url(../images/screen_up.png);
+}
+
+.nav .price.select.on::before {
+    background-image: url(../images/screen_down.png);
+}
 /* 导航 end */
 
 /* 搜索结果 */
@@ -204,7 +233,7 @@ section .content .top {
 }
 
 .content .top .message {
-    margin-right: .2rem;
+    margin-right: .8rem;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -222,7 +251,13 @@ section .content .top {
     line-height: 1;
 }
 
-.content .message .collection {
+.content .message .bottom {
+    display: flex;
+    align-items: center;
+}
+
+.content .message .collection,
+.content .message .location {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: start;
@@ -231,16 +266,30 @@ section .content .top {
             align-items: center;
 }
 
+.content .message .collection {
+    margin-right: .32rem;
+}
+
 .content .collection span {
     margin-right: .08rem;
     width: .2rem;
     height: .17rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/collect.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.content .collection .num {
+.content .location span {
+    margin-right: .08rem;
+    width: .2rem;
+    height: .17rem;
+    background-image: url(../images/range.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.content .collection .num,
+.content .location .num {
     font-size: .22rem;
     color: #AFB3C3;
     line-height: 1;
@@ -313,3 +362,90 @@ section .content .top {
     text-decoration: line-through;
 }
 /* 搜索结果 end */
+
+/* 搜索空 */
+.no_result {
+    padding-top: 1.84rem;
+    text-align: center;
+}
+
+.no_result img {
+    margin-top: 1rem;
+    width: 3.22rem;
+    height: 3.22rem;
+}
+
+.no_result .text {
+    font-size: .26rem;
+    color: #AFB3C3;
+    line-height: 1;
+}
+/* 搜索空end */
+
+.search .store_box {
+    top: 1.8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: calc(100% - .64rem);
+    height: calc(100% - 3.34rem);
+}
+
+.search .store_box.index_search {
+    height: calc(100% - 1.82rem);
+}
+
+.store_box .shop_list {
+    padding-top: .4rem;
+    overflow: scroll;
+}
+
+.search .store_box .shop_list ul:first-child {
+    padding-top: 0;
+}
+
+.store_box .list_box .shop_right {
+    flex: 1;
+}
+
+.search .store_box .list_box .shop_img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.search .store_box .shop_right .shop_name {
+    padding-left: unset;
+    line-height: 1.3;
+}
+
+.search .store_box .shop_right .shop_name span {
+    top: .01rem;
+    margin-top: 0;
+}
+
+.search .store_box .shop_right .shop_name p {
+    text-indent: .55rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+}
+
+.search .store_box .shop_right .shop_info {
+    font-size: .22rem;
+}
+
+.store_box .list_box .shop_right {
+    position: relative;
+}
+
+.store_box .shop_right .price_box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.search .store_box .list_box li {
+    margin-bottom: .9rem;
+}
+
+.search .store_box .price_box .price {
+    font-size: .4rem;
+}
