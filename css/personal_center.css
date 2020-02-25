@@ -1,0 +1,225 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #00A47C;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back_white.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.top {
+    background-color: #00A47C;
+}
+
+.person_message {
+    padding: .3rem .32rem .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.person_message .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.person_message .left .name {
+    position: relative;
+    margin-bottom: .2rem;
+    padding-right: .4rem;
+    font-size: .4rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    display: inline-block;
+}
+
+.person_message .left .name span {
+    position: absolute;
+    top: 50%;
+    margin-top: -.14rem;
+    right: 0;
+    width: .28rem;
+    height: .28rem;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+}
+
+.person_message .left .name .boy {
+    background-image: url(../images/boy.png);
+}
+
+.person_message .left .name .girl {
+    background-image: url(../images/girl.png);
+}
+
+.person_message .left .school {
+    font-size: .26rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.person_message .head_img {
+    width: 1.43rem;
+    height: 1.43rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.list_box {
+    padding: 0 .52rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_box li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_box li .num {
+    margin-bottom: .3rem;
+    font-size: .4rem;
+    color: #fff;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.list_box li .num span {
+    font-size: .24rem;
+}
+
+.list_box li .text {
+    padding-bottom: .96rem;
+    font-size: .28rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.bottom {
+    margin-top: -.36rem;
+    background-color: #fff;
+    border-radius: .36rem .36rem 0 0;
+    z-index: 1;
+}
+
+.bottom .order_box .order_top {
+    padding: .4rem .32rem .45rem;
+    line-height: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom .order_top .title {
+    font-size: .36rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.bottom .order_top .all_order {
+    position: relative;
+    padding-right: .22rem;
+    font-size: .26rem;
+    color: #AFB3C3;
+}
+
+.bottom .order_top .all_order::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.1rem;
+    right: 0;
+    width: .13rem;
+    height: .2rem;
+    background-image: url(../images/next_person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.list_box img {
+    margin-bottom: .25rem;
+    width: .48rem;
+    height: .48rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.list_box .txt {
+    font-size: .24rem;
+    color: #0A0F2D;
+    line-height: 1;
+}
+
+.list_box .collection {
+    position: relative;    
+}
+
+.list_box .collection.active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: .16rem;
+    height: .16rem;
+    background-color: #FF8F00;
+    border-radius: 50%;
+}
+
+.bottom .type_list {
+    padding: .4rem .32rem 0;
+}
+
+.bottom .type_list .type_box {
+    padding: .42rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid rgba(232,232,232,.5);
+}
+
+.bottom .type_box img {
+    margin-right: .3rem;
+    width: .4rem;
+    height: .4rem;
+    flex-shrink: 0;
+}
+
+.bottom .type_box .txt {
+    font-size: .32rem;
+    color: #0A0F2D;
+    line-height: 1;
+    flex: 1;
+}
+
+.bottom .type_box .right_arrow {
+    width: .13rem;
+    height: .2rem;
+    background-image: url(../images/next_person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
