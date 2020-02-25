@@ -1,0 +1,130 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+section .border_b {
+    border-bottom:1px solid rgba(232,232,232,.5);
+}
+
+.price_box {
+    margin-top: 1rem;
+    margin-bottom: .28rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.price_box span {
+    font-size: .4rem;
+}
+
+.price_box .price {
+    font-size: .8rem;
+}
+
+.pay_time {
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .26rem;
+    color: #AFB3C3;
+    line-height: 1;
+}
+
+.pay_time .time_box {
+    margin-left: .1rem;
+}
+
+.type_box {
+    padding: .35rem .32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.type_box img {
+    margin-right: .2rem;
+    width: .5rem;
+    height: .5rem;
+    border-radius: .16rem;
+    flex-shrink: 0;
+}
+
+.type_box .text {
+    font-size: .28rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+    flex: 1;
+}
+
+.type_box .check_btn {
+    width: .34rem;
+    height: .34rem;
+    background-image: url(../images/check.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+.type_box.active .check_btn {
+    background-image: url(../images/check_r.png);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    background-color: #fff;
+    z-index: 999;
+}
+
+footer .submit {
+    margin: 0 auto;
+    width: calc(100% - .64rem);
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #fff;
+    font-weight: bold;
+    background-color: #00A47C;
+    border-radius: .4rem;
+}

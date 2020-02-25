@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-订单支付</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/order_pay.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">订单支付</p>
+    </header>
+
+    <section>
+        <div class="top border_b">
+            <div class="price_box">
+                <span>¥</span>
+                <p class="price">123.00</p>
+            </div>
+            <div class="pay_time">
+                支付时间剩余:
+                <div class="time_box" id="timer">
+                    <span>00</span><span>:</span><span>00</span><span>:</span><span>00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom">
+            <div class="type_box border_b active">
+                <img src="../images/change.png" alt="">
+                <p class="text">零钱支付(余额:：¥120.00)</p>
+                <span class="check_btn"></span>
+            </div>
+            <div class="type_box border_b">
+                <img src="../images/alipay.png" alt="">
+                <p class="text">支付宝支付</p>
+                <span class="check_btn"></span>
+            </div>
+            <div class="type_box border_b">
+                <img src="../images/wechat.png" alt="">
+                <p class="text">微信支付</p>
+                <span class="check_btn"></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="submit">立即结算</div>
+    </footer>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $('.bottom').on('click','.type_box',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+    var maxtime = 2 * 60 * 60;
+
+    function CountDown() {
+        if (maxtime >= 0) {
+            var hour = Math.floor(maxtime / 3600) < 10 ? '0' + Math.floor(maxtime / 3600) : Math.floor(maxtime / 3600);
+            var minutes = Math.floor((maxtime / 60 % 60)) < 10 ? '0' + Math.floor((maxtime / 60 % 60)) : Math.floor((maxtime / 60 % 60));
+            var seconds = Math.floor((maxtime % 60)) < 10 ? '0' + Math.floor((maxtime % 60)) : Math.floor((maxtime % 60));
+            var msg = '<span>' + hour + '</span><span>:</span><span>' + minutes + '</span><span>:</span><span>' + seconds + '</span>';
+            document.getElementById("timer").innerHTML = msg;
+            --maxtime;
+        } else {
+            var msg = '<span>00</span><span>:</span><span>00</span><span>:</span><span>00</span>';
+            document.getElementById("timer").innerHTML = msg;
+            clearInterval(timer);
+        }
+    }
+    var timer = setInterval(CountDown, 1000);
+</script>
+</html>
