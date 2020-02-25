@@ -453,6 +453,7 @@ section {
             justify-content: flex-start;
     -webkit-box-align: center;
             align-items: center;
+    flex-wrap: wrap;
 }
 
 .delivery_type_popup .express_type li {
