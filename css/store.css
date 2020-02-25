@@ -448,8 +448,19 @@ html,body {
     text-align: center;
     font-size: .2rem;
     color: #fff;
-    border-radius: .2rem;
     background-color: #00A47C;
+    border-radius: .2rem;
+}
+
+.store_box .price_box .right .tips_btn {
+    width: 1.2rem;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    font-size: .2rem;
+    color: #fff;
+    background-color: #FF8C00;
+    border-radius: .2rem;
 }
 
 .store_box .shop_right .label_box {
