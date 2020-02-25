@@ -40,9 +40,12 @@ section .border_b {
 .price_box {
     margin-top: 1rem;
     margin-bottom: .28rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+            align-items: baseline;
     color: #0A0F2D;
     font-weight: bold;
     line-height: 1;
@@ -58,9 +61,12 @@ section .border_b {
 
 .pay_time {
     margin-bottom: 1.2rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     font-size: .26rem;
     color: #AFB3C3;
     line-height: 1;
@@ -72,9 +78,12 @@ section .border_b {
 
 .type_box {
     padding: .35rem .32rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .type_box img {
@@ -90,7 +99,8 @@ section .border_b {
     color: #0A0F2D;
     font-weight: bold;
     line-height: 1;
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1;
 }
 
 .type_box .check_btn {

@@ -60,6 +60,14 @@
         $(this).addClass('active').siblings().removeClass('active');
     })
 
+    // 支付失败弹窗
+    $('.submit').on('click',function() {
+        var payAgain = function() {
+            $html.remove();
+        }
+        choicePopup('支付失败，可用余额不足，请核实后再试','取消','重新支付','',payAgain);
+    })
+
     var maxtime = 2 * 60 * 60;
 
     function CountDown() {
