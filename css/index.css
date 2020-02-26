@@ -460,6 +460,7 @@ section {
     margin-right: .2rem;
     width: .36rem;
     height: .31rem;
+    flex-shrink: 0;
 }
 
 .broadcast .title {

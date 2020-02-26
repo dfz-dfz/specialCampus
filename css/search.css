@@ -34,7 +34,7 @@ header input {
     font-size: .28rem;
     color: #0A0F2D;
     background-color: #F5F6FA;
-    border-radius: .16rem;
+    border-radius: .35rem;
 }
 
 header input::-webkit-input-placeholder {
@@ -390,6 +390,11 @@ section .content .top {
     height: calc(100% - 3.34rem);
 }
 
+.search .search_store {
+    top: .88rem;
+    height: calc(100% - 2.42rem);
+}
+
 .search .store_box.index_search {
     height: calc(100% - 1.82rem);
 }
@@ -440,10 +445,6 @@ section .content .top {
     position: absolute;
     bottom: 0;
     width: 100%;
-}
-
-.search .store_box .list_box li {
-    margin-bottom: .9rem;
 }
 
 .search .store_box .price_box .price {

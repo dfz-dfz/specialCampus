@@ -209,3 +209,10 @@ ul::-webkit-scrollbar  {
     border-radius: .16rem;
 }
 /* 自定义提示弹窗 end */
+
+.flyer-img {
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+    z-index: 9999;
+}

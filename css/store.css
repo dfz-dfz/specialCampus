@@ -223,7 +223,7 @@ html,body {
     width: calc(100% - .32rem);
     height: .6rem;
     background-color: #F5F6FA;
-    border-radius: .16rem;
+    border-radius: .3rem;
 }
 
 .store_box .input_box .placeholder {
@@ -291,12 +291,31 @@ html,body {
 }
 
 .store_box .list_box li {
-    margin-bottom: .45rem;
+    margin-bottom: .6rem;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
+}
+
+.store_box .list_box li.no_shop {
+    position: relative;
+}
+
+.store_box .list_box li.no_shop::after {
+    content: '无货';
+    position: absolute;
+    top: .28rem;
+    left: .28rem;
+    width: .84rem;
+    height: .84rem;
+    line-height: .84rem;
+    text-align: center;
+    color: #fff;
+    font-size: .28rem;
+    background:rgba(0,0,0,.55);
+    border-radius: 50%;
 }
 
 .store_box .list_box li:last-child {
@@ -329,6 +348,10 @@ html,body {
     line-height: 1;
 }
 
+.store_box .no_shop .shop_right .shop_name {
+    color: #AFB3C3;
+}
+
 .store_box .shop_right .shop_name span {
     position: absolute;
     top: 50%;
@@ -342,6 +365,10 @@ html,body {
     color: #fff;
     background-color: #FF8F00;
     border-radius: .04rem;
+}
+
+.store_box .no_shop .shop_right .shop_name span {
+    opacity: .55;
 }
 
 .store_box .shop_right .shop_name .new {
@@ -399,6 +426,10 @@ html,body {
     font-weight: bold;
 }
 
+.store_box .no_shop .price_box .price {
+    color: #AFB3C3;
+}
+
 .store_box .price_box .price span {
     font-size: .2rem;
 }
@@ -445,20 +476,31 @@ html,body {
     height: .4rem;
     line-height: .4rem;
     text-align: center;
-    font-size: .2rem;
+    font-size: .22rem;
+    color: #fff;
+    background-color: #00A47C;
+    border-radius: .2rem;
+}
+
+.store_box .price_box .right .to_buy {
+    width: 1.1rem;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    font-size: .22rem;
     color: #fff;
     background-color: #00A47C;
     border-radius: .2rem;
 }
 
 .store_box .price_box .right .tips_btn {
-    width: 1.2rem;
+    width: 1.1rem;
     height: .4rem;
     line-height: .4rem;
     text-align: center;
-    font-size: .2rem;
-    color: #fff;
-    background-color: #FF8C00;
+    font-size: .22rem;
+    color: #FF8E07;
+    background:rgba(255,142,7,.2);
     border-radius: .2rem;
 }
 
@@ -476,8 +518,12 @@ html,body {
     font-size: .18rem;
     color: #FF8F00;
     line-height: .24rem;
-    border: 1px solid #FF8F00;
+    background:rgba(255,143,0,.1);
     border-radius: .04rem;
+}
+
+.store_box .no_shop .shop_right .label_box .label {
+    opacity: .55;
 }
 
 .store_footer {

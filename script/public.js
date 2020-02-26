@@ -85,3 +85,22 @@ var tipsPopup = function(content){
         $htm.remove();
     },2000);
 }
+
+// 加入购物车飞入特效
+var addCart = function(obj) {
+    var offset = $("footer .cart").offset();
+    var flyer = $('<img class="flyer-img" src="../images/add.png">'); //抛物体对象   
+    flyer.fly({   
+        start: {   
+            left: event.pageX,//抛物体起点横坐标   
+            top: event.pageY //抛物体起点纵坐标   
+        },   
+        end: {   
+            left: offset.left + 10,//抛物体终点横坐标   
+            top: offset.top + 10, //抛物体终点纵坐标   
+        },   
+        onEnd: function() {
+            $('.flyer-img').remove(); //销毁抛物体   
+        }   
+    });
+}

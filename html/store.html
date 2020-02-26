@@ -54,10 +54,12 @@
                 <div class="right_box">
                     <!-- 搜索框 -->
                     <div class="input_box">
-                        <form action="">
-                            <input class="search" type="search">
-                            <p class="placeholder">搜索本店商品</p>
-                        </form>
+                        <a href="./search_store.html">
+                            <form action="">
+                                <input class="search" type="search">
+                                <p class="placeholder">搜索本店商品</p>
+                            </form>
+                        </a>
                     </div>
                     <!-- 搜索框 end -->
                     <div class="shop_list">
@@ -133,7 +135,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="no_shop">
                                 <img class="shop_img" src="../images/image.jpg" alt="">
                                 <div class="shop_right">
                                     <p class="shop_name ellipsis_1"><span>HOT</span>全套5册你不努力没人不努力</p>
@@ -529,6 +531,8 @@
 </div>
 <!-- 购物车弹窗 end -->
 <script src="../script/jquery.min.js"></script>
+<script src="../script/fly.min.js"></script>
+<script src="../script/requestAnimationFrame.js"></script>
 <script src="../script/public.js"></script>
 <script>
     $(function(){
@@ -594,6 +598,10 @@
     });
 
     $('.list_box li .right').on('click','.add',function() {
+        var $this = $(this);
+        // 添加飞入购物车效果
+        addCart($this);
+
         var nums = $(this).parent().find('.num').text();
         nums++;
         if(nums > 0) {
