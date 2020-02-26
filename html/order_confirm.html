@@ -89,13 +89,13 @@
         </div>
         <!-- 商品列表 end -->
 
-        <div class="type_box">
+        <!-- <div class="type_box">
             <span class="type">折扣抵扣</span>
             <div class="right">
                 <span>-  ¥</span>
                 <p class="num">11.00</p>
             </div>
-        </div>
+        </div> -->
 
         <div class="type_box">
             <span class="type">折扣抵扣</span>
@@ -181,6 +181,9 @@
     // 开关
     $('.choice_btn').on('click',function() {
         $(this).toggleClass('active');
+        if($(this).hasClass('active')) {
+            tipsPopup('打开已使用折扣券');
+        }
     })
 
     // 弹窗控制

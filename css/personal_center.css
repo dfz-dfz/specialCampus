@@ -94,6 +94,10 @@ section {
     align-items: center;
 }
 
+.top_list {
+    padding-bottom: .96rem;
+}
+
 .list_box li {
     display: flex;
     flex-direction: column;
@@ -114,7 +118,6 @@ section {
 }
 
 .list_box li .text {
-    padding-bottom: .96rem;
     font-size: .28rem;
     color: #fff;
     line-height: 1;

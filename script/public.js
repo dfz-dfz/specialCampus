@@ -88,8 +88,9 @@ var tipsPopup = function(content){
 
 // 加入购物车飞入特效
 var addCart = function(obj) {
+    var url_src = '../images'
     var offset = $("footer .cart").offset();
-    var flyer = $('<img class="flyer-img" src="../images/add.png">'); //抛物体对象   
+    var flyer = $('<img class="flyer-img" src="'+url_src+'/add.png">'); //抛物体对象
     flyer.fly({   
         start: {   
             left: event.pageX,//抛物体起点横坐标   

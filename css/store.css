@@ -213,7 +213,7 @@ html,body {
             justify-content: center;
     -webkit-box-align: center;
             align-items: center;
-    z-index: 2;
+    z-index: 999;
 }
 
 .store_box .input_box input {
@@ -224,6 +224,7 @@ html,body {
     height: .6rem;
     background-color: #F5F6FA;
     border-radius: .3rem;
+    z-index: 999;
 }
 
 .store_box .input_box .placeholder {
@@ -231,6 +232,7 @@ html,body {
     padding-left: .48rem;
     font-size: .28rem;
     color: #AFB3C3;
+    z-index: 999;
 }
 
 .store_box .input_box .placeholder::after {
@@ -660,7 +662,7 @@ html,body {
     left: 0;
     padding: .32rem;
     width: calc(100% - .64rem);
-    height: 9.24rem;
+    height: 8.54rem;
     background-color: #fff;
     border-radius: .36rem .36rem 0 0;
 }

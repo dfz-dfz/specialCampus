@@ -491,13 +491,12 @@ section {
     font-size: .24rem;
 }
 
-.delivery_type_popup .box .text {
+.delivery_type_popup .section .box .text {
     padding: 0;
     margin-top: .25rem;
     font-size: .3rem;
     color: #05081C;
     font-weight: bold;
-    -moz-text-align-last: left;
-         text-align-last: left;
+    text-align: left;
 }
 /* 配送方式弹窗 end */
