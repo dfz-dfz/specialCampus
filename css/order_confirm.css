@@ -384,6 +384,10 @@ section {
     line-height: 1;
 }
 
+.delivery_type_popup .nav li.active {
+    color: #00A47C;
+}
+
 .delivery_type_popup .nav li.active::after {
     content: '';
     position: absolute;
@@ -498,5 +502,64 @@ section {
     color: #05081C;
     font-weight: bold;
     text-align: left;
+}
+
+.delivery_type_popup .box .message_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.delivery_type_popup .message_box .location {
+    margin-top: .25rem;
+    margin-right: .2rem;
+    width: .27rem;
+    height: .35rem;
+    background-image: url(../images/location.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-shrink: 0;
+}
+
+.delivery_type_popup .message_box .middle {
+    margin-right: .55rem;
+    flex: 1;
+}
+
+.delivery_type_popup .message_box .middle .text {
+    font-size: .32rem;
+    color: #05081C;
+    font-weight: bold;
+    line-height: .36rem;
+}
+
+.delivery_type_popup .message_box .middle .txt {
+    margin-top: .2rem;
+    font-size: .28rem;
+    color: #AFB3C3;
+    line-height: .36rem;
+}
+
+.delivery_type_popup .message_box .right {
+    margin-top: .65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delivery_type_popup .message_box .right .map {
+    margin-bottom: .1rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-shrink: 0;
+}
+
+.delivery_type_popup .message_box .right .txt {
+    font-size: .24rem;
+    color: #121734;
+    line-height: 1;
 }
 /* 配送方式弹窗 end */
