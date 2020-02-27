@@ -22,14 +22,18 @@
                 <p class="type">头像</p>
                 <img class="right head_img" src="../images/image.jpg" alt="">
             </li>
-            <li class="type_box">
-                <p class="type">昵称</p>
-                <p class="right">安喜娜</p>
-            </li>
-            <li class="type_box">
-                <p class="type">会员码</p>
-                <p class="right"><span class="code"></span></p>
-            </li>
+            <a href="./set_nickname.html">
+                <li class="type_box">
+                    <p class="type">昵称</p>
+                    <p class="right">安喜娜</p>
+                </li>
+            </a>
+            <a href="./member_code.html">
+                <li class="type_box">
+                    <p class="type">会员码</p>
+                    <p class="right"><span class="code"></span></p>
+                </li>
+            </a>
             <li class="type_box phone_box">
                 <p class="type">手机号</p>
                 <p class="right">13800138000</p>
@@ -53,10 +57,50 @@
             <p class="right">已绑定(安喜娜)</p>
         </div>
     </section>
+
+    <!-- 更换头像弹窗 -->
+    <div class="popup_box change_head_img hide">
+        <div class="masked"></div>
+        <div class="btn_box">
+            <div class="content_box">
+                <label class="photograph btn" for="photograph">
+                    拍照
+                    <input class="hide" id="photograph" type="file" accept="image/*" capture="camera" multiple>
+                </label>
+                <label class="album btn">
+                    相册选择
+                    <input class="hide" id="photograph" type="file" accept="image/*" multiple>
+                </label>
+            </div>
+            <div class="close btn">取消</div>
+        </div>
+    </div>
+    <!-- 更换头像弹窗 -->
 </body>
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
 <script>
-    
+    $(function(){
+    　　compatibleInput();
+    })
+
+    // 更换头像弹窗控制
+    $('.head_box').on('click',function() {
+        $('.change_head_img').show();
+    })
+
+    $('.change_head_img').on('click','.masked,.close',function() {
+        $('.change_head_img').hide();
+    })
+
+    function compatibleInput(){
+    　　//获取浏览器的userAgent,并转化为小写
+    　　var ua = navigator.userAgent.toLowerCase();
+    　　//判断是否是苹果手机，是则是true
+    　　var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
+    　　if (isIos) {
+    　　　　$("input:file").removeAttr("capture");
+    　　};
+    }
 </script>
 </html>

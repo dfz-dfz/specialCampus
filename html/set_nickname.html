@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-修改昵称</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/set.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body  class="set_nickname">
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">修改昵称</p>
+        <span class="right_btn">确定</span>
+    </header>
+
+    <section>
+        <div class="input_box">
+            <input type="text" value="安喜娜">
+            <span class="close"></span>
+        </div>
+        <div class="tips">4-20个字符，可由中英文、数字、“_”、“-”组成</div>
+    </section>
+
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $(function(){
+    
+    })
+
+    $('.input_box input').on('input propertychange',function() {
+        if($(this).val() == '') {
+            $('.close').hide();
+        }else {
+            $('.close').show();
+        }
+    })
+
+    $('.close').on('click',function() {
+        $(this).hide();
+        $(this).parent().find('input').val('');
+    })
+</script>
+</html>
