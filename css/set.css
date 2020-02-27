@@ -1,0 +1,104 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+section .type_list {
+    border-bottom: .16rem solid rgba(245,246,250,1);
+}
+
+section .type_list li:last-child {
+    border-bottom: unset;
+}
+
+section .type_box {
+    position: relative;
+    padding: .4rem .32rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    border-bottom:1px solid rgba(232,232,232,.5);
+}
+
+section .head_box {
+    padding: .3rem .32rem;
+}
+
+section .type_box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.1rem;
+    right: .32rem;
+    width: .13rem;
+    height: .2rem;
+    background-image: url(../images/next_person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section .type_box .type {
+    font-size: .32rem;
+    color: #0A0F2D;
+    line-height: 1;
+}
+
+section .type_box .right {
+    margin-right: .38rem;
+    font-size: .28rem;
+    color: #AFB3C3;
+    line-height: 1;
+}
+
+section .type_box .head_img {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+section .type_box .code {
+    width: .3rem;
+    height: .3rem;
+    display: block;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section .phone_box::after {
+    display: none;
+}
