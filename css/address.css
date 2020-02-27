@@ -1,0 +1,265 @@
+.list_box {
+    padding-left: .32rem;
+}
+
+.list_box .address_box {
+    padding: .4rem 0;
+    border-bottom:1px solid rgba(232,232,232,.5);
+}
+
+.list_box .address_box .top {
+    margin-bottom: .3rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.address_box .top .name {
+    margin-right: .4rem;
+    font-size: .34rem;
+}
+
+.address_box .top .phone {
+    position: relative;
+    padding-right: .64rem;
+    font-size: .3rem;
+}
+
+.address_box.default .top .phone::after {
+    content: '默认';
+    position: absolute;
+    top: 50%;
+    margin-top: -.13rem;
+    right: 0;
+    width: .52rem;
+    height: .26rem;
+    font-size: .2rem;
+    color: #fff;
+    line-height: .26rem;
+    text-align: center;
+    background-color: #00A47C;
+    border-radius: .04rem;
+}
+
+.list_box .address_box .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.address_box .bottom .address {
+    margin-right: .48rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    line-height: 1.2;
+}
+
+.address_box .bottom .btn_box {
+    position: relative;
+    margin-top: .02rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address_box .bottom .btn_box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: 50%;
+    width: 1px;
+    height: .3rem;
+    background-color: rgba(232,232,232,1.5);
+}
+
+.address_box .bottom .btn_box .btn {
+    margin: 0 .32rem;
+    width: .28rem;
+    height: .28rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.address_box .bottom .btn_box .edit_btn {
+    background-image: url(../images/image.jpg);
+}
+
+.address_box .bottom .btn_box .delete_btn {
+    background-image: url(../images/image.jpg);
+}
+
+/* 新建收货地址 */
+.address_add {
+    background-color: #F5F6FA;
+}
+
+header .save_btn {
+    color: #00A47C;
+}
+
+.address_add section {
+    padding-left: .32rem;
+    background-color: #fff;
+}
+
+.input_box {
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid rgba(232,232,232,.5);
+}
+
+.address_details {
+    align-items: baseline;
+}
+
+.input_box .type {
+    width: 1.8rem;
+    display: inline-block;
+    font-size: .3rem;
+    color: #0A0F2D;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.input_box .text {
+    padding-right: .32rem;
+    font-size: .3rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    flex: 1;
+}
+
+.input_box .text::placeholder {
+    font-size: .3rem;
+    color: #AFB3C3;
+    font-weight: bold;
+}
+
+.address_details .text {
+    height: 1.2rem;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.set_defaul_box {
+    padding: .4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.set_defaul_box .text {
+    color: #0A0F2D;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.set_defaul_box .text .title {
+    margin-bottom: .25rem;
+    font-size: .3rem;
+}
+
+.set_defaul_box .text .tips {
+    font-size: .26rem;
+}
+
+.set_defaul_box .choice_btn {
+    margin-right: .32rem;
+    width: .76rem;
+    height: .4rem;
+    background-image: url(../images/switch.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.set_defaul_box .choice_btn.active {
+    background-image: url(../images/switch_active.png);
+}
+
+.choice_address {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 9.18rem;
+    background-color: #fff;
+    border-radius: .32rem .32rem 0 0;
+}
+
+.choice_address .top {
+    position: relative;
+    padding: .4rem .32rem;
+}
+
+.choice_address .top {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.choice_address .top .close {
+    position: absolute;
+    top: 50%;
+    margin-top: -.2rem;
+    right: .32rem;
+    width: .4rem;
+    height: .4rem;
+    background-image: url(../images/close_btn_gray.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.choice_address .largeArea {
+    margin-top: .2rem;
+    padding-bottom: .32rem;
+}
+
+.choice_address .largeArea ul {
+    padding: 0 .32rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: .28rem;
+}
+
+.choice_address .largeArea ul li {
+    position: relative;
+    margin-right: .5rem;
+}
+
+.choice_address .largeArea ul li.active {
+    color: #00A47C;
+}
+
+.choice_address .largeArea ul li.active::after {
+    content: '';
+    position: absolute;
+    bottom: -.18rem;
+    left: 50%;
+    margin-left: -.15rem;
+    width: .3rem;
+    height: .06rem;
+    background-color: #00A47C;
+    border-radius: .03rem;
+}
+
+.choice_address .contentShow {
+    padding: 0 .32rem;
+    font-size: .28rem;
+    height: 80%;
+    overflow: scroll;
+}
+
+.choice_address .contentShow li {
+    margin-top: .55rem;
+    color: #0A0F2D;
+    line-height: 1;
+}
+/* 新建收货地址 end */

@@ -20,7 +20,7 @@
         <ul class="type_list">
             <li class="type_box head_box">
                 <p class="type">头像</p>
-                <img class="right head_img" src="../images/image.jpg" alt="">
+                <div class="right head_img" style="background-image: url(../images/image.jpg);"></div>
             </li>
             <a href="./set_nickname.html">
                 <li class="type_box">
@@ -38,15 +38,17 @@
                 <p class="type">手机号</p>
                 <p class="right">13800138000</p>
             </li>
-            <li class="type_box">
+            <li class="type_box gender_box">
                 <p class="type">性别</p>
                 <p class="right">女</p>
             </li>
         </ul>
         <ul class="type_list">
-            <li class="type_box">
-                <p class="type">地址管理</p>
-            </li>
+            <a href="./address_manage.html">
+                <li class="type_box">
+                    <p class="type">地址管理</p>
+                </li>
+            </a>
             <li class="type_box">
                 <p class="type">学校</p>
                 <p class="right">广州中山大学，一年四班</p>
@@ -59,7 +61,7 @@
     </section>
 
     <!-- 更换头像弹窗 -->
-    <div class="popup_box change_head_img hide">
+    <div class="popup_box btn_popup change_head_img hide">
         <div class="masked"></div>
         <div class="btn_box">
             <div class="content_box">
@@ -75,7 +77,21 @@
             <div class="close btn">取消</div>
         </div>
     </div>
-    <!-- 更换头像弹窗 -->
+    <!-- 更换头像弹窗 end -->
+
+    <!-- 性别设置弹窗 -->
+    <div class="popup_box btn_popup gender_set_popup hide">
+        <div class="masked"></div>
+        <div class="btn_box">
+            <div class="content_box">
+                <div class="boy btn">男</div>
+                <div class="girl btn">女</div>
+                <div class="btn">保密</div>
+            </div>
+            <div class="close btn">取消</div>
+        </div>
+    </div>
+    <!-- 性别设置弹窗 end -->
 </body>
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
@@ -91,6 +107,15 @@
 
     $('.change_head_img').on('click','.masked,.close',function() {
         $('.change_head_img').hide();
+    })
+
+    // 性别设置弹窗
+    $('.gender_box').on('click',function() {
+        $('.gender_set_popup').show();
+    })
+
+    $('.gender_set_popup').on('click','.masked,.close',function() {
+        $('.gender_set_popup').hide();
     })
 
     function compatibleInput(){

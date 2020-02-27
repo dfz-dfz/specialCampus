@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-新建收货地址</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/set.css">
+    <link rel="stylesheet" href="../css/address.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body class="address_add">
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">新建收货地址</p>
+        <span class="right_btn save_btn">保存</span>
+    </header>
+
+    <section>
+        <div class="input_box">
+            <span class="type">收货人</span>
+            <input class="text" type="text" placeholder="请填写收货人姓名">
+        </div>
+        <div class="input_box">
+            <span class="type">手机号码</span>
+            <input class="text" type="text" placeholder="请填写收货人手机号">
+        </div>
+        <div class="input_box area_box">
+            <span class="type">所在地区</span>
+            <input class="text" type="text" placeholder="省市区县、乡镇等">
+        </div>
+        <div class="input_box address_details">
+            <span class="type">详细地址</span>
+            <textarea class="text" name="" id="" placeholder="街道、楼牌号等"></textarea>
+        </div>
+        <div class="set_defaul_box">
+            <div class="text">
+                <p class="title">设置默认地址</p>
+                <p class="tips">提醒：每次下单会默认推荐使用该地址</p>
+            </div>
+            <span class="choice_btn"></span>
+        </div>
+    </section>
+
+    <!-- 选择地区弹窗 -->
+    <div class="popup_box choice_address_popup hide">
+        <div class="masked"></div>
+        <div class="choice_address">
+            <div class="top">
+                <p class="title">请选择所在地区</p>
+                <span class="close"></span>
+            </div>
+            <div class="largeArea">
+                <ul>
+                    <li class="province active" onclick="select(this,2)" data-id="" data-two-id="">广东</li>
+                    <li class="city" onclick="select(this,3)" data-id="" data-two-id="">请选择</li>
+                    <li class="district" onclick="select(this,4)" data-id="" data-two-id=""></li>
+                    <li class="town" onclick="select(this,5)" data-id=""></li>
+                </ul>
+            </div>
+            <div class="contentShow">
+                <ul class="list active">
+                    <li>潮州市</li>
+                    <li>东莞市</li>
+                    <li>佛山市</li>
+                    <li>广州市</li>
+                    <li>惠州市</li>
+                    <li>河源市</li>
+                    <li>江门市</li>
+                    <li>揭阳市</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 选择地区弹窗 end -->
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $(function(){
+    
+    })
+
+    $('.choice_btn').on('click',function() {
+        $(this).toggleClass('active');
+    })
+
+    $('.area_box').on('click',function() {
+        $('.choice_address_popup').show();
+    })
+
+    $('.choice_address_popup').on('click','.masked,.close',function() {
+        $('.choice_address_popup').hide();
+    })
+
+    //地区选择
+    function select(obj, level) {
+        var name = $(obj).find('span').html();
+        var id = $(obj).attr('data-id');
+        var status = level;
+        if (!level) {
+            var level = $(obj).attr('data-level');
+        } else {
+            $('.diqu span').text('');
+        }
+        switch (parseInt(level)) {
+            case 2:
+                $('.largeArea .province').html(name).removeClass('active');
+                $('.largeArea .province').attr('data-id', id);
+                $('.largeArea .province').attr('data-two-id', id);
+                $('.largeArea .city').html('');
+                $('.largeArea .city').attr('data-id', '');
+                $('.largeArea .district').html('');
+                $('.largeArea .district').attr('data-id', '');
+                $('.largeArea .town').html('');
+                $('.largeArea .town').attr('data-id', '');
+                if (!status) {
+                    $('.city').html('请选择').addClass('active');
+                } else {
+                    id = 1;
+                    $('.province').html('请选择').addClass('active');
+                    $('.largeArea .province').attr('data-id', '');
+                    $('.largeArea .province').attr('data-two-id', '');
+                    $('.largeArea .city').attr('data-two-id', '');
+                    $('.largeArea .district').attr('data-two-id', '');
+                }
+                break;
+            case 3:
+                $('.largeArea .city').html(name).removeClass('active');
+                $('.largeArea .city').attr('data-id', id);
+                var parentId = $('.largeArea .province').attr('data-two-id');
+                $('.largeArea .city').attr('data-two-id', parentId);
+                $('.largeArea .district').attr('data-id', '');
+                $('.largeArea .town').html('');
+                $('.largeArea .town').attr('data-id', '');
+                if (!status) {
+                    $('.district').html('请选择').addClass('active');
+                } else {
+                    id = $('.largeArea .province').attr('data-two-id');
+                    $('.city').html('请选择').addClass('active');
+                    $('.largeArea .city').attr('data-id', '');
+                    $('.largeArea .city').attr('data-two-id', '');
+                    $('.largeArea .district').html('');
+                    $('.largeArea .district').attr('data-two-id', '');
+                }
+
+                break;
+            case 4:
+                $('.largeArea .district').html(name).removeClass('active');
+                $('.largeArea .district').attr('data-id', id);
+                var parentId = $('.largeArea .city').attr('data-id');
+                $('.largeArea .district').attr('data-two-id', parentId);
+                if (!status) {
+                    $('.town').html('请选择').addClass('active');
+                } else {
+                    id = $('.largeArea .city').attr('data-id');
+                    $('.district').html('请选择').addClass('active');
+                    $('.largeArea .district').attr('data-id', '');
+                    $('.largeArea .town').html('');
+                    $('.largeArea .town').attr('data-id', '');
+                }
+                break;
+            case 5:
+                $('.largeArea .town').html(name).removeClass('active');
+                $('.largeArea .town').attr('data-id', id);
+                $('.box').css('transform', 'translate(0,100%)')
+                $('.mask').css('display', 'none')
+                var address = $('.largeArea .province').html() + $('.largeArea .city').html() + $('.largeArea .district').html() + $('.largeArea .town').html();
+                $('.diqu span').text(address.replace(/\s+/g, ""))
+                break;
+        }
+        getRegion(id, 2, level);
+    }
+
+    function getRegion(id, type, level) {
+        var html = '';
+        var data = {
+            id: id
+        }
+        ajaxRequest('https://www.zl-pay.com/servers/region/get', 'get', data, function (ret, err) {
+            if (ret) {
+                $.each(ret, function (i, item) {
+                    html += '<li onclick="select(this)" data-level="' + item.level + '" data-id="' + item.id + '"><span>' + item.name + '</span><img src="https://www.zl-pay.com/static/mobile/images/selected.png" alt=""></li>';
+                });
+                $('.list').html(html);
+                if (html.length == 0 && type == 2 && level == 4) {
+                    $('.largeArea .town').html('');
+                    $('.box').css('transform', 'translate(0,100%)')
+                    $('.mask').css('display', 'none')
+                    var address = $('.largeArea .province').html() + $('.largeArea .city').html() + $('.largeArea .district').html();
+                    $('.diqu span').text(address.replace(/\s+/g, ""))
+                }
+                if (html.length == 0 && level == null) {
+                    var id = $('.city').attr('data-id');
+                    $('.district').addClass('active');
+                    getRegion(id, 1);
+                }
+            }
+        });
+    }
+
+</script>
+</html>
