@@ -186,6 +186,55 @@
     </div>
     <!-- 搜索空白 end -->
 
+    <!-- 选规格弹窗 -->
+    <div class="popup_box choice_popup hide">
+        <div class="masked"></div>
+        <div class="choice_box">
+            <span class="close"></span>
+            <div class="head">
+                <img src="../images/image.jpg" alt="">
+                <div class="head_right">
+                    <p class="price"><span>¥</span>12.00</p>
+                    <p class="num">编号：12332223322</p>
+                </div>
+            </div>
+            <div class="specifications">
+                <p class="title">规格</p>
+                <div class="lable_box">
+                    <ul>
+                        <li class="active">全套12册装</li>
+                        <li>单本书籍</li>
+                        <li>强者成功法则/狼道</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_box">
+                <p class="type">数量</p>
+                <div class="num_box">
+                    <span class="btn minus active"></span>
+                    <span class="num">1</span>
+                    <span class="btn add"></span>
+                </div>
+            </div>
+            <div class="submit">确定</div>
+            <div class="submit no_shop">补货提醒</div>
+        </div>
+    </div>
+    <!-- 选规格弹窗 end -->
+
+    <!-- 缺货提醒弹窗 -->
+    <div class="popup_box no_shop_popup hide">
+        <div class="masked"></div>
+        <div class="popup">
+            <div class="content">
+                <img src="../images/tips_shop.png" alt="">
+                <div class="title">已把缺货商品提交给商家</div>
+                <div class="text">预计一周内上架，敬请留意</div>
+                <div class="submit">知道了</div>
+            </div>
+        </div>
+    </div>
+    <!-- 缺货提醒弹窗 end -->
 </body>
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
@@ -210,5 +259,12 @@
         $(this).addClass('active').siblings().removeClass('active');
     })
 
+    $('.to_buy').on('click',function() {
+        $('.choice_popup').show();
+    })
+
+    $('.choice_popup').on('click','.masked,.close',function() {
+        $('.choice_popup').hide();
+    })
 </script>
 </html>
