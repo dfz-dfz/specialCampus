@@ -21,6 +21,7 @@
     -webkit-box-align: center;
             align-items: center;
     background-color: #00A47C;
+    z-index: 999;
 }
 
 .state_box {
