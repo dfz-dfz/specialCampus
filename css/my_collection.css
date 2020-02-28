@@ -1,0 +1,136 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+section .store_box {
+    padding: .4rem 0 0 .4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section .store_box .store_head {
+    margin-right: .28rem;
+    width: .72rem;
+    height: .72rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.store_box .right {
+    padding-bottom: .4rem;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+}
+
+.store_box .right .top {
+    margin-bottom: .4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store_box .top .text_box {
+    margin-right: .3rem;
+    line-height: 1;
+}
+
+.store_box .top .text_box .name {
+    margin-bottom: .16rem;
+    font-size: .3rem;
+    color: #0A0F2D;
+}
+
+.store_box .top .text_box .collection_num {
+    font-size: .24rem;
+    color: #AFB3C3;
+}
+
+.store_box .top .lable {
+    position: relative;
+    margin-right: .32rem;
+    padding: 0 .35rem 0 .14rem;
+    height: .36rem;
+    font-size: .2rem;
+    color: #00A47C;
+    line-height: .36rem;
+    background-color: rgba(50,177,108,.1);
+    border-radius: .18rem;
+}
+
+.store_box .top .lable::after {
+    content: '';
+    position: absolute;
+    right: .14rem;
+    top: 50%;
+    margin-top: -.08rem;
+    width: .1rem;
+    height: .16rem;
+    background-image: url(../images/next.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.store_box .right .bottom {
+    overflow-x: scroll;
+    display: flex;
+}
+
+.store_box .bottom .shop_box {
+    margin-right: .16rem;
+    text-align: center;
+    font-size: 0;
+    flex-shrink: 0;
+}
+
+.store_box .shop_box img {
+    margin-bottom: .24rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: .16rem;
+}
+
+.store_box .shop_box .price_box {
+    color: #FF8F00;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.store_box .shop_box .price_box span {
+    font-size: .2rem;
+}
+
+.store_box .shop_box .price_box .num {
+    font-size: .3rem;
+    display: inline-block;
+}
