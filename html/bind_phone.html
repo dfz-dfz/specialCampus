@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-绑定手机</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/set.css">
+    <link rel="stylesheet" href="../css/address.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body class="bind_phone">
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">绑定手机</p>
+    </header>
+
+    <section>
+        <div class="input_box">
+            <span class="type">中国+86</span>
+            <input class="text" type="text" placeholder="请输入你的手机号码">
+        </div>
+        <div class="input_box code_box">
+            <span class="type">验证码</span>
+            <input class="text" type="text" placeholder="请输入验证码">
+            <span class="code_btn" onclick="getCode()">获取验证码</span>
+        </div>
+        <div class="input_box">
+            <span class="type">新密码</span>
+            <input class="text" type="text" placeholder="输入新密码">
+        </div>
+        <div class="input_box">
+            <span class="type">确认密码</span>
+            <input class="text" type="text" placeholder="再次输入密码">
+        </div>
+
+        <div class="submit">确认</div>
+    </section>
+
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $(function(){
+    
+    })
+
+    var countdonwn = 60;
+    function setTime(param) {
+        if(countdonwn == 0) {
+            param.css('color','#00A47C');
+            param.attr('onclick','getCode()');
+            param.text('获取验证码');
+            countdonwn = 60;
+            return
+        }else {
+            param.css('color','#c9c7c7');
+            param.removeAttr('onclick');
+            param.text('重新发送'+countdonwn+'');
+            countdonwn--;
+        }
+        setTimeout(function(){setTime(param)},1000)
+    }
+
+    function getCode(param) {
+        setTime($('.code_btn'));
+    }
+</script>
+</html>
