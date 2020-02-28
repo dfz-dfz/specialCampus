@@ -1,0 +1,209 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+section .tips {
+    padding: .28rem .32rem;
+    font-size: .26rem;
+    color: #AFB3C3;
+    line-height: 1;
+    background-color: rgba(245,246,250,1);
+}
+
+.suggestion_list {
+    padding-left: .32rem;
+    border-bottom: .16rem solid rgba(245,246,250,1);
+}
+
+.suggestion_list li {
+    position: relative;
+    padding: .4rem .32rem;
+    padding-left: 0;
+    font-size: .32rem;
+    color: #0A0F2D;
+    line-height: 1;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+}
+
+.suggestion_list li:last-child {
+    border-bottom: none;
+}
+
+.suggestion_list li.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.17rem;
+    right: .32rem;
+    width: .34rem;
+    height: .34rem;
+    border-radius: 50%;
+    background-image: url(../images/check_active.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.suggestion_area {
+    padding: 0 .32rem;
+    border-bottom: .16rem solid rgba(245,246,250,1);
+}
+
+.suggestion_area .top {
+    padding: .4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .32rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.suggestion_area textarea {
+    width: 100%;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    resize: none;
+    color: #000;
+    font-size: .28rem;
+    line-height: .4rem;
+}
+
+.suggestion_area textarea::placeholder {
+    color: #AFB3C3;
+    font-size: .28rem;
+}
+
+.suggestion_area .img_box {
+    font-size: 0;
+    padding-bottom: .4rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.suggestion_area .img_box .img_boxs {
+    display: contents;
+}
+
+.suggestion_area .img_box .take_photo {
+    position: relative;
+    margin-right: .25rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    -moz-border-radius: .04rem;
+    border-radius: .04rem;
+}
+
+.suggestion_area .img_box .take_photo img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.img_box .take_photo input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.img_boxs .take_photo .close {
+    position: absolute;
+    right: -.15rem;
+    top: -.15rem;
+    width: .3rem;
+    height: .3rem;
+    display: inline-block;
+    background-image: url(../images/close_btn_gray.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.img_box .tip {
+    font-size: .26rem;
+    color: #AFB3C3;
+    line-height: 1;
+}
+
+.link_box {
+    padding: .4rem 0;
+    padding-left: .32rem;
+    font-size: 0;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+}
+
+.link_box .title {
+    margin-bottom: .4rem;
+    font-size: .32rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.link_box input {
+    width: calc(100% - .32rem);
+    font-size: .28rem;
+    color: #0A0F2D;
+}
+
+.link_box input::placeholder{
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+.submit_box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.submit_box .submit {
+    margin: 0 auto;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .32rem;
+    color: #fff;
+    font-weight: bold;
+    background-color: #32B16C;
+    border-radius: .4rem;
+}

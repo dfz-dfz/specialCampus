@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-意见反馈</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">意见反馈</p>
+    </header>
+
+    <section>
+        <div class="tips">请选择你在使用时遇到的问题或者意见</div>
+        <ul class="suggestion_list">
+            <li class="active">操作不流畅</li>
+            <li>界面显示异常</li>
+            <li>卡顿</li>
+            <li>体验不好</li>
+            <li>其它</li>
+        </ul>
+        <div class="suggestion_area">
+            <div class="top">
+                <p class="title">问题/意见描述</p>
+                <span class="text_num">0/200</span>
+            </div>
+            <textarea name="" id="" placeholder="请填写10字以上的问题描述，以便我们更好的帮助您解决问题"></textarea>
+            <div class="img_box">
+                <div class="img_boxs"></div>
+                <div class="take_photo" id="take_photo">
+                    <img src="../images/image.jpg" alt="">
+                    <input onchange="selectImage(this)" type="file" class="upload_pic" id="upload" accept="image/*"/>
+                </div>
+                <p class="tip ellipsis_1">上传问题截图，最多4张（选填）</p>
+            </div>
+        </div>
+        <div class="link_box">
+            <p class="title">联系方式（选填）</p>
+            <input type="number" placeholder="填写您的手机号，便于我们与您联系">
+        </div>
+
+        <div class="submit_box">
+            <div class="submit">提交</div>
+        </div>
+    </section>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $('.suggestion_list').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+    // 统计输入的字数
+    $('textarea').on('input propertychange', function() {
+        var txtLength = $(this).val().length;
+        $('.text_num').html(txtLength + '/200');
+        if (txtLength >= 200) {
+            $('.text_num').css('color', 'red');
+        } else {
+            $('.text_num').css('color', '#0A0F2D');
+        }
+    });
+
+    //选择图片
+    var uploadImgIndex = 0;
+    var imgArr = [];
+    function selectImage(imgFile) {
+        var list = $('.img_box .take_photo');
+        var allFile = imgFile.files;
+        var totalLen = allFile.length;
+        if(imgArr.length && imgArr.length > 0) {
+            totalLen = totalLen + imgArr.length;
+        }
+        if(list.length >= 4) {
+            // alert("只能添加4张图片");
+            $('#take_photo').css('display','none');
+        }
+        for(var i=0;i<allFile.length;i++) {
+            var file = allFile[i];
+            if(imgArr.length && imgArr.length>0) {
+                if(imgArr.length < 9) {
+                    imgArr.push(file);
+                }
+            }else {
+                imgArr.push(file);
+            }
+            //添加一层过滤
+            var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
+            if(!rFilter.test(file.type)) {
+                tipsPopup({content:'文件格式必须为图片'});
+                return;
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file); //用文件加载器加载文件
+            //文件加载完成
+            reader.onload = function(e) {
+                //将上传的图片回显到页面上
+                var innerHtml = '';
+                    innerHtml += '<div class="take_photo">';
+                    innerHtml += '<img class="photo_img" src="'+e.target.result+'" alt="">';
+                    innerHtml += '<span class="close"></span>';
+                    innerHtml += '</div>';
+                $('.img_boxs').append(innerHtml);
+            };
+        }
+    }
+
+    //删除图片
+    $(".img_boxs").on('click','.take_photo .close',function() {
+        var this_ = $(this);
+        $(this_).parent('div').remove();
+        var list=$('.img_boxs .take_photo');
+        if(list.length < 4) {
+            $('#take_photo').css('display','inline-block');
+        }
+        $('.affirm_popup_box').hide();
+    })
+</script>
+</html>
