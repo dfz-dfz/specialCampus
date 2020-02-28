@@ -55,5 +55,13 @@
     $(function(){
     
     })
+
+    $('.address_box').on('click','.delete_btn',function() {
+        var sureDelete = function() {
+            tipsPopup('删除成功');
+            $html.remove();
+        }
+        choicePopup('是否删除改地址？','取消','确定','',sureDelete);
+    })
 </script>
 </html>

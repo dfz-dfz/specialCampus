@@ -124,6 +124,7 @@ header .save_btn {
     color: #0A0F2D;
     font-weight: 400;
     line-height: 1;
+    flex-shrink: 0; 
 }
 
 .input_box .text {
@@ -263,3 +264,53 @@ header .save_btn {
     line-height: 1;
 }
 /* 新建收货地址 end */
+
+/* 绑定手机 */
+.bind_phone .input_box {
+    padding: .4rem .32rem;
+}
+
+.bind_phone .input_box .text {
+    padding-right: 0;
+}
+
+.bind_phone .code_box {
+    position: relative;
+}
+
+.bind_phone .code_box .text {
+    padding-right: .5rem;
+    width: 2rem;
+    flex: 1;
+}
+
+.bind_phone .code_box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.2rem;
+    right: 2rem;
+    width: 1px;
+    height: .4rem;
+    background-color: rgba(232,232,232,.5);
+}
+
+.bind_phone .code_box .code_btn {
+    font-size: .28rem;
+    color: #00A47C;
+    flex-shrink: 0;
+}
+
+.submit {
+    margin: .4rem auto 0;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    font-size: .28rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: .88rem;
+    background-color: #00A47C;
+    border-radius: .44rem;
+}
+/* 绑定手机 end */
