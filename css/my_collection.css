@@ -35,8 +35,10 @@ section {
 
 section .store_box {
     padding: .4rem 0 0 .4rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
 }
 
 section .store_box .store_head {
@@ -55,9 +57,12 @@ section .store_box .store_head {
 
 .store_box .right .top {
     margin-bottom: .4rem;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .store_box .top .text_box {
@@ -103,6 +108,8 @@ section .store_box .store_head {
 
 .store_box .right .bottom {
     overflow-x: scroll;
+    overflow-y: hidden;
+    display: -webkit-box;
     display: flex;
 }
 
