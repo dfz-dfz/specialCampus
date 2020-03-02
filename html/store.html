@@ -419,7 +419,7 @@
             </div>
         </div>
         <div class="submit">确定</div>
-        <div class="submit no_shop">补货提醒</div>
+        <div class="submit no_shop hide">补货提醒</div>
     </div>
 </div>
 <!-- 选规格弹窗 end -->
@@ -472,7 +472,6 @@
                     <p class="name">励志书籍愿你历尽</p>
                     <ul class="specs">
                         <li class="active">人生系列第一部、第三部</li>
-                        <li>人生系列人生系列人生系列人生系列</li>
                     </ul>
                     <div class="price"><span>¥</span><p class="num">21.00</p></div>
                 </div>
@@ -731,14 +730,7 @@
 
     // 购物车规格选择
     $('.specs').on('click',function() {
-        $(this).toggleClass('active');
-        if($(this).hasClass('active')) {
-            $(this).find('li').show();
-        }
-    })
-
-    $('.specs').on('click','li',function() {
-        $(this).addClass('active').siblings().removeClass('active').hide();
+        $('.choice_popup').show();
     })
 </script>
 </html>
