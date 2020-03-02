@@ -81,9 +81,12 @@ section .tips {
 
 .suggestion_area .top {
     padding: .4rem 0;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
     font-size: .32rem;
     color: #0A0F2D;
     font-weight: bold;
@@ -100,6 +103,26 @@ section .tips {
     line-height: .4rem;
 }
 
+.suggestion_area textarea::-webkit-input-placeholder {
+    color: #AFB3C3;
+    font-size: .28rem;
+}
+
+.suggestion_area textarea::-moz-placeholder {
+    color: #AFB3C3;
+    font-size: .28rem;
+}
+
+.suggestion_area textarea:-ms-input-placeholder {
+    color: #AFB3C3;
+    font-size: .28rem;
+}
+
+.suggestion_area textarea::-ms-input-placeholder {
+    color: #AFB3C3;
+    font-size: .28rem;
+}
+
 .suggestion_area textarea::placeholder {
     color: #AFB3C3;
     font-size: .28rem;
@@ -108,8 +131,10 @@ section .tips {
 .suggestion_area .img_box {
     font-size: 0;
     padding-bottom: .4rem;
+    display: -webkit-box;
     display: flex;
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
 }
 
 .suggestion_area .img_box .img_boxs {
@@ -124,7 +149,6 @@ section .tips {
     text-align: center;
     display: inline-block;
     vertical-align: middle;
-    -moz-border-radius: .04rem;
     border-radius: .04rem;
 }
 
@@ -162,7 +186,7 @@ section .tips {
 
 .link_box {
     padding: .4rem 0;
-    padding-left: .32rem;
+    margin-left: .32rem;
     font-size: 0;
     border-bottom: 1px solid rgba(232,232,232,.5);
 }
@@ -178,6 +202,26 @@ section .tips {
     width: calc(100% - .32rem);
     font-size: .28rem;
     color: #0A0F2D;
+}
+
+.link_box input::-webkit-input-placeholder{
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+.link_box input::-moz-placeholder{
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+.link_box input:-ms-input-placeholder{
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+.link_box input::-ms-input-placeholder{
+    font-size: .28rem;
+    color: #AFB3C3;
 }
 
 .link_box input::placeholder{

@@ -470,6 +470,10 @@
                 <img src="../images/image.jpg" alt="">
                 <div class="message">
                     <p class="name">励志书籍愿你历尽</p>
+                    <ul class="specs">
+                        <li class="active">人生系列第一部、第三部</li>
+                        <li>人生系列人生系列人生系列人生系列</li>
+                    </ul>
                     <div class="price"><span>¥</span><p class="num">21.00</p></div>
                 </div>
                 <div class="right">
@@ -723,6 +727,18 @@
     $('footer').on('click','.cart',function(e) {
         e.stopPropagation();
         $('.cart_popup').show();
+    })
+
+    // 购物车规格选择
+    $('.specs').on('click',function() {
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')) {
+            $(this).find('li').show();
+        }
+    })
+
+    $('.specs').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active').hide();
     })
 </script>
 </html>

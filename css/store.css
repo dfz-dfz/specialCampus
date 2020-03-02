@@ -815,7 +815,7 @@ html,body {
 
 .choice_box .submit {
     position: absolute;
-    bottom: .15rem;
+    bottom: .16rem;
     left: .32rem;
     width: calc(100% - .64rem);
     height: .88rem;
@@ -1093,10 +1093,62 @@ html,body {
 }
 
 .cart_popup .message .name {
-    margin-top: .14rem;
     font-size: .28rem;
     color: #0A0F2D;
     line-height: 1;
+}
+
+.cart_popup .message .specs {
+    position: relative;
+    padding-right: .4rem;
+    width: 2.32rem;
+    height: .3rem;
+    background-color: #F5F6FA;
+    border-radius: .16rem;
+    overflow: hidden;
+}
+
+.cart_popup .message .specs.active {
+    overflow: unset;
+}
+
+.cart_popup .message .specs::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.075rem;
+    right: .12rem;
+    width: .1rem;
+    height: .15rem;
+    background-image: url(../images/next_person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.cart_popup .message .specs.active::after {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+}   
+
+.cart_popup .message .specs li {
+    padding-left: .12rem;
+    padding-right: .4rem;
+    width: 2.2rem;
+    height: .3rem;
+    line-height: .3rem;
+    font-size: .2rem;
+    color: #AFB3C3;
+    background-color: #F5F6FA;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: none;
+}
+
+.cart_popup .message .specs li.active {
+    display: block;
 }
 
 .cart_popup .message .price {
