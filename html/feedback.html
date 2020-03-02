@@ -78,6 +78,13 @@
         if(imgArr.length && imgArr.length > 0) {
             totalLen = totalLen + imgArr.length;
         }
+
+        if(list.length > 0) {
+            $('.tip').hide();
+        }else{
+            $('.tip').show();
+        }
+
         if(list.length >= 4) {
             // alert("只能添加4张图片");
             $('#take_photo').css('display','none');
@@ -117,6 +124,11 @@
         var this_ = $(this);
         $(this_).parent('div').remove();
         var list=$('.img_boxs .take_photo');
+        if(list.length > 0) {
+            $('.tip').hide();
+        }else{
+            $('.tip').show();
+        }
         if(list.length < 4) {
             $('#take_photo').css('display','inline-block');
         }
