@@ -138,3 +138,18 @@ footer .submit {
     background-color: #00A47C;
     border-radius: .4rem;
 }
+
+.weui-toast {
+    width: 2.8rem;
+    height: 2.8rem;
+    background: rgba(0,0,0,.55);
+}
+
+.weui-icon_toast.weui-loading {
+    width: 1.24rem;
+    height: 1.24rem;
+}
+
+.weui-toast__content {
+    font-size: .34rem;
+}

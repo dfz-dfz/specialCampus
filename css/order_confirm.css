@@ -406,6 +406,7 @@ section {
 }
 
 .delivery_type_popup .box {
+    position: relative;
     padding: 0 .32rem;
     height: 7.26rem;
     overflow: scroll;
@@ -478,6 +479,7 @@ section {
 }
 
 .delivery_type_popup .box2 .price {
+    padding-bottom: 1.24rem;
     margin-top: .25rem;
     display: -webkit-box;
     display: flex;
@@ -505,6 +507,7 @@ section {
 }
 
 .delivery_type_popup .box .message_box {
+    padding-bottom: 1.24rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -561,5 +564,26 @@ section {
     font-size: .24rem;
     color: #121734;
     line-height: 1;
+}
+
+.delivery_type_popup .box .submit_box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.delivery_type_popup .box .submit {
+    margin: 0 auto;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    font-size: .32rem;
+    color: #fff;
+    font-weight: bold;
+    background-color: #00A47C;
+    border-radius: .4rem;
 }
 /* 配送方式弹窗 end */
