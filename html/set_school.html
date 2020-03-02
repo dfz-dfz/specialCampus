@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-学校设置</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/set.css">
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/set_school.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">学校设置</p>
+        <span class="right_btn save">保存</span>
+    </header>
+
+    <section>
+        <ul class="type_list">
+            <a href="./location.html">
+                <li class="type_box">
+                    <p class="type">就读学校</p>
+                    <p class="right">请选择所在的学校</p>
+                </li>
+            </a>
+            <li class="type_box time_choice">
+                <p class="type">入学年份</p>
+                <p class="right">请选择入学时间</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 选择入学时间弹窗 -->
+    
+    <!-- 选择入学时间弹窗 end -->
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/weui.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $(function() {
+    
+    })
+
+    $('.time_choice').on('click', function () {
+        weui.picker([{
+            label: '2018年',
+            value: 0
+        }, {
+            label: '2019年',
+            value: 1
+        }, {
+            label: '2020年',
+            value: 2
+        }, {
+            label: '2021年',
+            value: 3
+        }], {
+            onChange: function (result) {
+                console.log(result[0].label);
+            },
+            onConfirm: function (result) {
+                console.log(result[0].label);
+                $('.time_choice .right').html(result[0].label);
+            },
+            title: '请选择入学时间'
+        });
+    });
+</script>
+</html>
