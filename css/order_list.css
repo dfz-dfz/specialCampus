@@ -343,3 +343,119 @@ section {
     color: #00A47C;
     border: 1px solid #00A47C;
 }
+
+/* 取消订单弹窗 */
+.cancel_order_popup .content_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: 9.18rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    background-color: #fff;
+    border-radius: .32rem .32rem 0 0;
+}
+
+.cancel_order_popup .content_box .top {
+    padding: .4rem 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.cancel_order_popup .top .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.cancel_order_popup .top .close_btn {
+    width: .4rem;
+    height: .4rem;
+    background-image: url(../images/close_btn_gray.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cancel_order_popup .content_box .section {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+            flex: 1;
+    overflow: hidden;
+}
+
+.cancel_order_popup .section .tips {
+    margin-bottom: .32rem;
+    padding: .16rem;
+    font-size: .24rem;
+    color: #0A0F2D;
+    line-height: 1;
+    background-color: #F5F6FA;
+}
+
+.cancel_order_popup .section .section_title {
+    margin-bottom: .32rem;
+    font-size: .28rem;
+    color: #AFB3C3;
+    line-height: 1;
+}
+
+.cancel_order_popup .section .reason_box {
+    overflow-y: scroll;
+}
+
+.cancel_order_popup .reason_box li {
+    position: relative;
+    padding: .32rem 0;
+    font-size: .3rem;
+    color: #05081C;
+    line-height: 1;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+}
+
+.cancel_order_popup .reason_box li.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.17rem;
+    right: 0;
+    width: .34rem;
+    height: .34rem;
+    background-image: url(../images/check_active.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.cancel_order_popup .content_box .submit_box {
+    width: 100%;
+    height: 1.12rem;
+    background-color: #fff;
+}
+
+.cancel_order_popup .submit_box .submit {
+    margin-top: .16rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #00A47C;
+    border-radius: .4rem;
+}
+/* 取消订单弹窗 end */

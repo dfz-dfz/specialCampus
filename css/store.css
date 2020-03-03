@@ -320,6 +320,16 @@ html,body {
     border-radius: 50%;
 }
 
+.index_search.store_box .list_box li.no_shop::after,
+.search_store.store_box .list_box li.no_shop::after {
+    top: 50%;
+    margin-top: -.6rem;
+    left: .4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+
 .store_box .list_box li:last-child {
     margin-bottom: 0;
 }

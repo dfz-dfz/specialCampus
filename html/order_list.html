@@ -67,7 +67,7 @@
                 <div class="total_box">共1件商品&nbsp;&nbsp;合计<span class="symbol">:</span>¥<span class="price">24<span>.00</span></span>(含跑腿费：¥12.00)</div>
                 <div class="btn_box">
                     <span class="btn">修改地址</span>
-                    <span class="btn">取消订单</span>
+                    <span class="btn cancel_btn">取消订单</span>
                     <span class="btn tips_btn">立即付款</span>
                 </div>
             </div>
@@ -256,6 +256,31 @@
         </div>
     </section>
 
+    <!-- 取消订单弹窗 -->
+    <div class="popup_box cancel_order_popup hide">
+        <div class="masked"></div>
+        <div class="content_box">
+            <div class="top">
+                <p class="title">取消订单</p>
+                <span class="close_btn"></span>
+            </div>
+            <div class="section">
+                <p class="tips">取消后无法恢复，折扣劵可退</p>
+                <p class="section_title">请选择取消订单的原因</p>
+                <ul class="reason_box">
+                    <li class="active">我不想买了</li>
+                    <li>信息填写错误，重新下单</li>
+                    <li>卖家缺货</li>
+                    <li>上门自提</li>
+                </ul>
+            </div>
+            <div class="submit_box">
+                <div class="submit">确定取消</div>
+            </div>
+        </div>
+    </div>
+    <!-- 取消订单弹窗 end -->
+
 </body>
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
@@ -264,7 +289,23 @@
     
     })
 
+    // 顶部导航栏切换
     $('.nav').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+    // 取消订单弹窗
+    $('.cancel_btn').on('click',function() {
+        stopScroll();
+        $('.cancel_order_popup').show();
+    })
+
+    $('.cancel_order_popup').on('click','.close_btn,.masked',function() {
+        starScroll();
+        $('.cancel_order_popup').hide();
+    })
+
+    $('.cancel_order_popup').on('click','.reason_box li',function() {
         $(this).addClass('active').siblings().removeClass('active');
     })
 </script>
