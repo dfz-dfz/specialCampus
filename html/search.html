@@ -13,7 +13,10 @@
 <body>
     <!-- 输入框 -->
     <header>
-        <input type="search" placeholder="搜索你需要的商品或店铺">
+        <div class="input_box">
+            <input type="search" placeholder="搜索你需要的商品或店铺">
+            <span class="clear_btn hide"></span>
+        </div>
         <a href="javascript:history.back(-1)"><span class="cancle">取消</span></a>
     </header>
     <!-- 输入框 end -->
@@ -41,9 +44,15 @@
     <div class="association_popup hide">
         <div class="content">
             <ul>
-                <li>11111111111111</li>
-                <li>22222222222222</li>
-                <li>33333333333333</li>
+                <a href=""><li>拉斯卡积分卡随机发开始连接发送拉斯卡积分卡随机发开始连接发送</li></a>
+                <a href=""></a><li>22222222222222</li></a>
+                <a href=""></a><li>33333333333333</li></a>
+                <!-- 无结果 -->
+                <div class="no_result hide">
+                    <div class="no_shop"></div>
+                    <p class="text">你搜索的产品还没上架，敬请期待</p>
+                </div>
+                <!-- 无结果 end -->
             </ul>
         </div>
     </div>
@@ -59,10 +68,22 @@
         choicePopup('是否清除历史记录？','取消','确定',cancle,'');
     })
 
+    $('header input').on('focus',function() {
+        if($(this).val() != '') {
+            
+        }
+    })
+
     $('header input').on('input propertychange',function() {
         if($(this).val() != ''){
             $('.association_popup').show();
+            $('.clear_btn').show();
         }
+    })
+
+    $('.clear_btn').on('click',function() {
+        $('header input').val('');
+        $('.clear_btn').hide();
     })
 
     $('header').on('blur','input',function() {

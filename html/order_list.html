@@ -17,10 +17,10 @@
     </header>
 
     <ul class="nav">
-        <li class="active">全部</li>
-        <li>待付款</li>
-        <li>待收货</li>
-        <li>已完成</li>
+        <li class="active li_1">全部</li>
+        <li class="li_2">待付款</li>
+        <li class="li_3">待收货</li>
+        <li class="li_4">已完成</li>
         <li>已取消</li>
     </ul>
 
@@ -286,7 +286,9 @@
 <script src="../script/public.js"></script>
 <script>
     $(function(){
-    
+        var type = getUrlParams('type');
+        console.log(type);
+        $('.nav .li_'+type+'').addClass('active').siblings().removeClass('active');
     })
 
     // 顶部导航栏切换

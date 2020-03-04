@@ -25,6 +25,24 @@ header::before {
     background-image: url(../images/search.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    z-index: 2;
+}
+
+header .input_box {
+    position: relative;
+    font-size: 0;
+}
+
+header .input_box .clear_btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -.17rem;
+    right: .1rem;
+    width: .34rem;
+    height: .34rem;
+    background-image: url(../images/close_btn.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 header input {
@@ -35,6 +53,10 @@ header input {
     color: #0A0F2D;
     background-color: #F5F6FA;
     border-radius: .35rem;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
 }
 
 header input::-webkit-input-placeholder {
@@ -371,10 +393,13 @@ section .content .top {
     text-align: center;
 }
 
-.no_result img {
-    margin-top: 1rem;
+.no_result .no_shop {
+    margin: 0 auto;
     width: 3.22rem;
     height: 3.22rem;
+    background-image: url(../images/no_result.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .no_result .text {
@@ -481,7 +506,10 @@ section .content .top {
 .association_popup ul li {
     padding: .32rem;
     font-size: .28rem;
-    color: #0A0F2D;
+    color: #878788;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     border-bottom: 1px dashed rgba(232,232,232,1);
 }
 /* 联想框 end */

@@ -105,3 +105,25 @@ var addCart = function(obj) {
         }   
     });
 }
+
+//获取url查询参数
+var getUrlParams = function() {
+    var href="",params;
+    return function(key,url) {
+        if(url) {
+            href = url;
+            params =null;
+        } else if(!url && !href) href = window.location;
+        // console.log(href);
+        if(!params) {
+            params = {};
+            var search = href.search.slice(1),
+                searchArr = search.split('&');
+            for(var i =searchArr.length;i--;) {
+                var temp = searchArr[i].split('=');
+                params[temp[0]] = temp[1];
+            }
+        } 
+        return key == undefined ? params : params[key];
+    }
+}();
