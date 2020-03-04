@@ -92,6 +92,42 @@
     background-image: url(../images/image.jpg);
 }
 
+.address_change .address_box .bottom .btn_box {
+    width: 2.2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.address_change .address_box .bottom .btn_box::after {
+    display: none;
+}
+
+.address_change .list_box .address_box {
+    border-bottom: unset;
+}
+
+.address_box .bottom .btn_box .right_arrow {
+    margin-right: .32rem;
+    width: .13rem;
+    height: .2rem;
+    background-image: url(../images/next_person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.address_change .address_box .bottom .btn_box .check {
+    margin-right: .32rem;
+    width: .34rem;
+    height: .34rem;
+    background-image: url(../images/check.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.address_change .address_box.active .bottom .btn_box .check {
+    background-image: url(../images/check_active.png);
+}
+
 /* 新建收货地址 */
 .address_add {
     background-color: #F5F6FA;
