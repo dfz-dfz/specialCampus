@@ -252,8 +252,10 @@ section .content .top {
 }
 
 .content .message .bottom {
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .content .message .collection,
@@ -409,7 +411,8 @@ section .content .top {
 }
 
 .store_box .list_box .shop_right {
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1;
 }
 
 .search .store_box .list_box .shop_img {
@@ -450,3 +453,35 @@ section .content .top {
 .search .store_box .price_box .price {
     font-size: .4rem;
 }
+
+/* 联想框 */
+.association_popup {
+    position: fixed;
+    top: 1.1rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 1.1rem);
+    background-color: #fff;
+}
+
+.association_popup .content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    overflow: hidden;
+}
+
+.association_popup ul {
+    -webkit-box-flex: 1;
+            flex: 1;
+    overflow-y: scroll;
+}
+
+.association_popup ul li {
+    padding: .32rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    border-bottom: 1px dashed rgba(232,232,232,1);
+}
+/* 联想框 end */

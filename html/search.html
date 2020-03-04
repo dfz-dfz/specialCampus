@@ -36,6 +36,18 @@
         <!-- 搜素标签 end -->
     </section>
     <!-- 搜索历史 end -->
+
+    <!-- 联想框 -->
+    <div class="association_popup hide">
+        <div class="content">
+            <ul>
+                <li>11111111111111</li>
+                <li>22222222222222</li>
+                <li>33333333333333</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 联想框 end -->
 </body>
 <script src="../script/jquery.min.js"></script>
 <script src="../script/public.js"></script>
@@ -45,6 +57,16 @@
     }
     $('.title_box').on('click','.detele',function() {
         choicePopup('是否清除历史记录？','取消','确定',cancle,'');
+    })
+
+    $('header input').on('input propertychange',function() {
+        if($(this).val() != ''){
+            $('.association_popup').show();
+        }
+    })
+
+    $('header').on('blur','input',function() {
+        $('.association_popup').hide();
     })
 </script>
 </html>
