@@ -134,7 +134,7 @@ section .tips {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: baseline;
-            align-items: baseline;
+            align-items: center;
 }
 
 .suggestion_area .img_box .img_boxs {
@@ -186,6 +186,7 @@ section .tips {
 
 .link_box {
     padding: .4rem 0;
+    padding-bottom: 1.5rem;
     margin-left: .32rem;
     font-size: 0;
     border-bottom: 1px solid rgba(232,232,232,.5);

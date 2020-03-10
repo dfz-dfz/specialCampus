@@ -78,18 +78,18 @@
 
 .address_box .bottom .btn_box .btn {
     margin: 0 .32rem;
-    width: .28rem;
-    height: .28rem;
+    width: .3rem;
+    height: .32rem;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .address_box .bottom .btn_box .edit_btn {
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/edit.png);
 }
 
 .address_box .bottom .btn_box .delete_btn {
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/delete.png);
 }
 
 .address_change .address_box .bottom .btn_box {

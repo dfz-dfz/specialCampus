@@ -54,6 +54,53 @@
         <div class="submit">立即结算</div>
     </footer>
 
+    <!-- 支付密码弹窗 -->
+    <div class="popup_box pay_password_popup">
+        <div class="masked"></div>
+        <div class="content_box">
+            <div class="top">
+                <p class="title">请输入支付密码</p>
+                <span class="close"></span>
+            </div>
+            <p class="name">向大表哥转账</p>
+            <div class="price_box">
+                <span>¥</span><span class="num">12.00</span>
+            </div>
+            <div class="pay_type">
+                <span class="title">支付方式</span>
+                <span class="type">零钱</span>
+            </div>
+            <div class="password_box">
+                <input id="password_input" class="hide" type="num" maxlength="6" readonly autofocus="autofocus">
+                <ul class="password_symbol">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 键盘 -->
+        <ul class="keyboard_box">
+            <li data-number="1" class="number">1</li>
+            <li data-number="2"  class="number">2</li>
+            <li data-number="3" class="no_right number">3</li>
+            <li data-number="4" class="number">4</li>
+            <li data-number="5" class="number">5</li>
+            <li data-number="6" class="no_right number">6</li>
+            <li data-number="7" class="number">7</li>
+            <li data-number="8" class="number">8</li>
+            <li data-number="9" class="no_right number">9</li>
+            <li class="no no_bottom gray"></li>
+            <li data-number="0" class="no_bottom number">0</li>
+            <li class="delete_btn no_bottom no_right gray"></li>
+        </ul>
+        <!-- 键盘 end -->
+    </div>
+    <!-- 支付密码弹窗 end -->
+
     <!-- loading toast -->
     <div id="loadingToast" style="display: none;">
         <div class="weui-mask_transparent"></div>
@@ -71,6 +118,62 @@
     $('.bottom').on('click','.type_box',function() {
         $(this).addClass('active').siblings().removeClass('active');
     })
+
+    //键盘输入
+    $('.keyboard_box li').on('click', function(event) {
+        event.stopPropagation();
+        var number = $(this).data('number') + '';
+        var password = $('#password_input').val();
+        var password_1;
+        var password_new = password.replace(/[^0-9]+/g, '');    //获取数字的长度
+        console.log("length:"+password_new.length);
+        
+        //删除按钮
+        if($(this).hasClass('delete_btn')) {
+            password_1 = password.substring(0, password.length - 1);
+            $('#password_input').val(password_1)
+            console.log(password_1);
+        }
+
+        // 在虚拟密码框加上符号
+        var symbol = $('.password_symbol li');
+        for(var i=0;i<symbol.length;i++) {
+            if(password_new.length >= i) {
+                symbol.eq(i).html('▪');
+            }else {
+                symbol.eq(i).html('');
+            }
+        }
+
+        if(password_new.length > 5) {
+            return;
+        }else {
+            if($(this).hasClass('number')){
+                password_1 = password + number;
+                $('#password_input').val(password_1)
+            }
+        }
+        console.log('password_1:'+password_1);
+    })
+
+    //点击键盘按钮变色
+    $(".keyboard_box li").on("touchstart", function() {
+        if($(this).hasClass('delete_btn')){
+            $(this).removeClass('gray');
+        }else if($(this).hasClass('no')) {
+            return;
+        }else {
+            $(this).addClass('gray');
+        }
+    }).on("touchend", function() {
+        if($(this).hasClass('delete_btn')){
+            $(this).addClass('gray');
+        }else if($(this).hasClass('no')) {
+            return;
+        }else {
+            $(this).removeClass('gray');
+        }
+    });
 
     // 支付中
     var $loadingToast = $('#loadingToast');

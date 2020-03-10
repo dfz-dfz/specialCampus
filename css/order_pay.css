@@ -153,3 +153,158 @@ footer .submit {
 .weui-toast__content {
     font-size: .34rem;
 }
+
+/* 支付密码弹窗 */
+.pay_password_popup .content_box {
+    position: absolute;
+    top: 50%;
+    margin-top: -3.1rem;
+    left: 50%;
+    margin-left: -3.2rem;
+    width: 6.4rem;
+    height: 6.2rem;
+    background-color: #fff;
+    border-radius: .16rem;
+}
+
+.pay_password_popup .top {
+    position: relative;
+    padding: .34rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay_password_popup .top .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    line-height: 1;
+}
+
+.pay_password_popup .top .close {
+    position: absolute;
+    right: .34rem;
+    width: .4rem;
+    height: .4rem;
+    background-image: url(../images/close_btn_gray.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pay_password_popup .name {
+    margin-top: .24rem;
+    margin-bottom: .56rem;
+    font-size: .34rem;
+    color: #0A0F2D;
+    line-height: 1;
+    text-align: center;
+}
+
+.pay_password_popup .price_box {
+    margin: 0 .32rem;
+    padding-bottom: .6rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-style: .4rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+}
+
+.pay_password_popup .price_box .num {
+    font-size: .8rem;
+}
+
+.pay_password_popup .pay_type {
+    margin-bottom: .32rem;
+    padding: .3rem .32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0A0F2D;
+    font-size: .28rem;
+    line-height: 1;
+}
+
+.pay_password_popup .pay_type .type {
+    position: relative;
+    padding-right: .22rem;
+}
+
+.pay_password_popup .pay_type .type::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.1rem;
+    right: 0;
+    width: .13rem;
+    height: .2rem;
+    background-image: url(../images/next_person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pay_password_popup .password_box ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay_password_popup .password_box ul li {
+    width: .96rem;
+    height: .96rem;
+    font-size: .35rem;
+    font-weight: bold;
+    line-height: .96rem;
+    text-align: center;
+    border: 1px solid rgba(232,232,232,1);
+    border-right: unset;
+}
+
+.pay_password_popup .password_box ul li:last-child {
+    border-right: 1px solid rgba(232,232,232,1);
+}
+
+.pay_password_popup .keyboard_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+.pay_password_popup .keyboard_box li {
+    width: calc((100% - 2px)/3);
+    height: 1.1rem;
+    font-size: .5rem;
+    color: #0A0F2D;
+    text-align: center;
+    line-height: 1.1rem;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+    border-right: 1px solid rgba(232,232,232,.5);
+}
+
+.pay_password_popup .keyboard_box .no_bottom {
+    border-bottom: unset;
+}
+
+.pay_password_popup .keyboard_box .no_right {
+    border-right: unset;
+}
+
+.pay_password_popup .keyboard_box .gray {
+    background-color: rgb(245, 245, 245);
+}
+
+.pay_password_popup .keyboard_box .delete_btn {
+    background-image: url(../images/keyboard_delete.png);
+    background-repeat: no-repeat;
+    background-size: .4rem .27rem;
+    background-position: center center;
+}
+/* 支付密码弹窗 end */

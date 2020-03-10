@@ -101,10 +101,10 @@ section .type_box .head_img {
 }
 
 section .type_box .code {
-    width: .3rem;
+    width: .29rem;
     height: .3rem;
     display: block;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/qr_code.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -286,13 +286,13 @@ section .phone_box::after {
 .member_code .btn_box li .wechat_icon {
     width: .52rem;
     height: .41rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/wechat_1.png);
 }
 
 .member_code .btn_box li .moments_icon {
     width: .41rem;
     height: .41rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/wechat_2.png);
 }
 
 .member_code .btn_box li .text {

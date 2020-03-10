@@ -418,8 +418,8 @@ section .content .top {
 }
 
 .search .search_store {
-    top: .88rem;
-    height: calc(100% - 2.42rem);
+    /* top: .88rem; */
+    /* height: calc(100% - 2.42rem); */
 }
 
 .search .store_box.index_search {
