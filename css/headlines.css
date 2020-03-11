@@ -1,0 +1,125 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+.nav_box {
+    overflow: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: .88rem;
+    left: 0;
+    padding: .3rem .32rem;
+    padding-bottom: unset;
+    width: calc(100% - .64rem);
+    background-color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+    z-index: 999;
+}
+
+.nav::-webkit-scrollbar {
+    opacity: 0;
+}
+
+.nav li {
+    position: relative;
+    margin-right: .6rem;
+    padding-bottom: .15rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    line-height: 1;
+}
+
+.nav li:last-child {
+    padding-right: .3rem;
+}
+
+.nav li.active {
+    color: #00A47C;
+    font-weight: bold;
+}
+
+.nav li.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -.15rem;
+    width: .3rem;
+    height: .06rem;
+    background-color: #00A47C;
+    border-radius: .03rem;
+}
+
+section {
+    padding: 1.92rem .32rem 0;
+}
+
+.haedlines_box {
+    padding: .32rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+}
+
+.haedlines_box .headlines_left .title {
+    margin-bottom: .3rem;
+    font-size: .34rem;
+    color: #0A0F2D;
+}
+
+.haedlines_box .headlines_left .message {
+    font-size: .24rem;
+    color: #AFB3C3;
+    line-height: 1;
+}
+
+.haedlines_box .headlines_left .message .name {
+    margin-right: .32rem;
+}
+
+.haedlines_box .headlines_img {
+    margin-left: .24rem;
+    width: 2.2rem;
+    height: 1.65rem;
+    border-radius: .16rem;
+    flex-shrink: 1;
+}

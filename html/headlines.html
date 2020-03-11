@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-校园头条</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/headlines.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">校园头条</p>
+    </header>
+
+    <div class="nav_box">
+        <ul class="nav">
+            <li class="active li_1">全部新闻</li>
+            <li class="li_2">便利商店</li>
+            <li class="li_3">旅游住宿</li>
+            <li class="li_4">餐饮美食</li>
+            <li class="li_4">美妆</li>
+            <li class="li_4">家居家具</li>
+        </ul>
+    </div>
+
+    <section>
+        <div class="haedlines_box">
+            <div class="headlines_left">
+                <p class="title ellipsis_2">做不再被智慧城市遗忘的市民物联网企业助力残障人士</p>
+                <div class="message">
+                    <span class="name">大表哥</span>
+                    <span class="time">17小时前</span>
+                </div>
+            </div>
+            <img class="headlines_img" src="../images/image.jpg" alt="">
+        </div>
+        <div class="haedlines_box">
+            <div class="headlines_left">
+                <p class="title ellipsis_2">边缘计算的喜与忧</p>
+                <div class="message">
+                    <span class="name">大表哥</span>
+                    <span class="time">17小时前</span>
+                </div>
+            </div>
+            <img class="headlines_img" src="../images/image.jpg" alt="">
+        </div>
+        <div class="haedlines_box">
+            <div class="headlines_left">
+                <p class="title ellipsis_2">校园安防市场巨大，但很难做大</p>
+                <div class="message">
+                    <span class="name">大表哥</span>
+                    <span class="time">17小时前</span>
+                </div>
+            </div>
+            <img class="headlines_img" src="../images/image.jpg" alt="">
+        </div>
+        <div class="haedlines_box">
+            <div class="headlines_left">
+                <p class="title ellipsis_2">四个城市七所学校同时上一堂课！这样的5G+MR太好了这样的5G+MR太好了</p>
+                <div class="message">
+                    <span class="name">大表哥</span>
+                    <span class="time">17小时前</span>
+                </div>
+            </div>
+            <img class="headlines_img" src="../images/image.jpg" alt="">
+        </div>
+    </section>
+
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $(function() {
+        
+    })
+
+    // 顶部导航栏切换
+    $('.nav').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+</script>
+</html>
