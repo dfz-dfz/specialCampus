@@ -1,0 +1,165 @@
+body {
+    background-color: #F5F6FA;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+header .right_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 .32rem;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.type_box {
+    position: relative;
+    padding: .4rem .32rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    background-color: #fff;
+    border-bottom: .16rem solid #F5F6FA;
+}
+
+.type_box .type {
+    font-size: .28rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.type_box .right {
+    margin-right: .38rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.type_box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -.1rem;
+    right: .32rem;
+    width: .13rem;
+    height: .2rem;
+    background-image: url(../images/next_person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.type_box .right .icon {
+    margin: 0 .16rem;
+    width: .56rem;
+    height: .56rem;
+    display: inline-block;
+    border-radius: .16rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.type_box .right .wechat {
+    background-image: url(../images/wechat_icon.png);
+}
+
+.type_box .right .txt {
+    margin-left: .1rem;
+    color: #AFB3C3;
+}
+
+.bottom {
+    margin-bottom: .56rem;
+    padding: .32rem;
+    background-color: #fff;
+}
+
+.bottom .cash_num {
+    padding-bottom: .32rem;
+    font-size: .26rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.bottom .input_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.bottom .input_box .symbol {
+    margin-right: .2rem;
+    font-size: .4rem;
+    color:#0A0F2D;
+    font-weight: bold;
+}
+
+.bottom .input_box input {
+    width: 1rem;
+    font-size: .7rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    flex: 1;
+}
+
+.bottom .input_box input::placeholder {
+    font-size: .28rem;
+    color: #AFB3C3;
+    font-weight: bold;
+}
+
+.submit {
+    margin: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #00A47C;
+    border-radius: .4rem;
+}
