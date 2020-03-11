@@ -94,9 +94,12 @@ section {
 
 .haedlines_box {
     padding: .32rem 0;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
     border-bottom: 1px solid rgba(232,232,232,.5);
 }
 
@@ -123,3 +126,82 @@ section {
     border-radius: .16rem;
     flex-shrink: 1;
 }
+
+/* 头条详情 */
+.headlines_details {
+    padding-top: .88rem;
+}
+
+.headlines_details .title {
+    padding-top: .2rem;
+    margin-bottom: .6rem;
+    font-size: .44rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.headlines_details .message_box {
+    margin-bottom: .6rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.headlines_details .message_box .head_img {
+    margin-right: .12rem;
+    width: .72rem;
+    height: .72rem;
+    border-radius: 50%;
+    flex-shrink: 1;
+}
+
+.headlines_details .message_mid {
+    margin-right: .25rem;
+    font-size: .24rem;
+    line-height: 1;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.headlines_details .message_mid .name {
+    margin-bottom: .12rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.headlines_details .message_mid .time {
+    color: #AFB3C3;
+}
+
+.headlines_details .follow_btn {
+    width: 1.1rem;
+    height: .56rem;
+    font-size: .28rem;
+    color: #fff;
+    line-height: .56rem;
+    text-align: center;
+    background-color: #cdcecf;
+    border-radius: .08rem;
+    cursor: pointer;
+}
+
+.headlines_details .follow_btn.active {
+    color: #fff;
+    background-color: #00A47C;
+}
+
+.headlines_details .content {
+    font-size: .32rem;
+    color: #0A0F2D;
+    line-height: .6rem;
+}
+
+.headlines_details .content img {
+    margin: .5rem 0;
+    width: 100%;
+    height: auto;
+}
+/* 头条详情 end */

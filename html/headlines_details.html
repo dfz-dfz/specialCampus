@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-校园头条</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/headlines.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">校园头条</p>
+    </header>
+
+    <section class="headlines_details">
+        <p class="title">做不再被智慧城市遗忘的市民，物联网企业助力残障人士融入数字社</p>
+
+        <div class="message_box">
+            <img src="../images/image.jpg" alt="" class="head_img">
+            <div class="message_mid">
+                <p class="name ellipsis_1">大表哥</p>
+                <p class="time">20小时前</p>
+            </div>
+            <span class="follow_btn">关注</span>
+        </div>
+
+        <div class="content">多年来，快速发展的技术步伐常常使残障人士无所适从。幸运的是，随着新技术的兴起，这种情况正在发生改变。物联网的出现有望改善残障人士的无障碍性，进而改善数百万人的生活。让我们来看一看物联网为残障人士带来美好生活的几种方式。
+
+            说出周围环境
+            微软一直处在技术的最前沿，其“ Seeing AI”的发布正在打开一个全新的世界。对于视障、弱视人士，这个应用程序将利用iphone上的摄像头来描述他们面前的景象。这项令人难以置信的物联网技术可以描述繁忙的十字路口、识别货币金额、定位和扫描产品条形码，并识别人们的情绪。使用方法是：使用者只需轻点拍摄的照片，手机就会说出照片中的内容，从而让影像得以在用户脑中大致“重现”。
+            
+            对于视障、弱视人士来说，这是一个不可思议的飞跃。现在他们可以以前所未有的方式与世界进行互动。而将世界转化为听觉体验只是物联网改善残障人士生活的众多方式之一。
+            </div>
+    </section>
+
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $(function() {
+        
+    })
+
+    // 顶部导航栏切换
+    $('.nav').on('click','li',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+    // 关注取消关注
+    $('.follow_btn').on('click',function() {
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')) {
+            tipsPopup('已关注');
+            $(this).html('已关注');
+        }else {
+            $(this).html('关注');
+        }
+    })
+</script>
+</html>
