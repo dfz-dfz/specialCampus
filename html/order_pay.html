@@ -55,7 +55,7 @@
     </footer>
 
     <!-- 支付密码弹窗 -->
-    <div class="popup_box pay_password_popup">
+    <div class="popup_box pay_password_popup hide">
         <div class="masked"></div>
         <div class="content_box">
             <div class="top">
@@ -120,32 +120,25 @@
     })
 
     //键盘输入
-    $('.keyboard_box li').on('click', function(event) {
+    $('.keyboard_box .number').on('click', function(event) {
         event.stopPropagation();
         var number = $(this).data('number') + '';
         var password = $('#password_input').val();
         var password_1;
         var password_new = password.replace(/[^0-9]+/g, '');    //获取数字的长度
-        console.log("length:"+password_new.length);
+        var number_length = password_new.length;
         
-        //删除按钮
-        if($(this).hasClass('delete_btn')) {
-            password_1 = password.substring(0, password.length - 1);
-            $('#password_input').val(password_1)
-            console.log(password_1);
-        }
-
         // 在虚拟密码框加上符号
         var symbol = $('.password_symbol li');
         for(var i=0;i<symbol.length;i++) {
-            if(password_new.length >= i) {
+            if(number_length >= i) {
                 symbol.eq(i).html('▪');
             }else {
                 symbol.eq(i).html('');
             }
         }
 
-        if(password_new.length > 5) {
+        if(number_length > 5) {
             return;
         }else {
             if($(this).hasClass('number')){
@@ -153,7 +146,28 @@
                 $('#password_input').val(password_1)
             }
         }
-        console.log('password_1:'+password_1);
+        console.log(password_1);    //输入框的值
+    })
+
+    $('.keyboard_box .delete_btn').on('click', function(event) {
+        var password = $('#password_input').val();
+        var password_new = password.replace(/[^0-9]+/g, '');    //获取数字的长度
+        var number_length = password_new.length;
+        
+        password_1 = password_new.substring(0, number_length - 1);
+        number_length = number_length - 1;
+        $('#password_input').val(password_1);
+
+        // 在虚拟密码框加上符号
+        var symbol = $('.password_symbol li');
+        for(var i=0;i<symbol.length;i++) {
+            if(number_length > i) {
+                symbol.eq(i).html('▪');
+            }else {
+                symbol.eq(i).html('');
+            }
+        }
+        console.log(password_1);    //输入框的值
     })
 
     //点击键盘按钮变色
@@ -174,6 +188,15 @@
             $(this).removeClass('gray');
         }
     });
+
+    //調起密码弹窗
+    $('.submit').on('click',function() {
+        $('.pay_password_popup').show();
+    });
+
+    $('.pay_password_popup').on('click','.masked,.close',function() {
+        $('.pay_password_popup').hide();
+    })
 
     // 支付中
     var $loadingToast = $('#loadingToast');
