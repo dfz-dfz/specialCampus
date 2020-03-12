@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-订单详情</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/order_details.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><div class="back"></div></a>
+        <p class="title hide">订单详情</p>
+    </header>
+
+	<div class="state_box wait_pay_box">
+		<div class="succeed"><span class="wait_pay"></span>等待付款</div>
+		<div class="tips">需付款：¥<span>120.00</span>剩余：20分钟</div>
+		<a href="./order_pay.html"><div class="btn">去支付</div></a>
+	</div>
+
+	<div class="state_box payed_box">
+		<div class="succeed"><span class="payed"></span>买家已付款</div>
+		<div class="tips">商家正在努力的给你发货</div>
+		<div class="btn">提醒发货</div>
+	</div>
+
+	<div class="state_box shipped_by">
+		<div class="succeed"><span class="shipped_by"></span>卖家已发货</div>
+		<div class="tips">还剩10天自动确认收货</div>
+		<div class="btn">确认收货</div>
+	</div>
+
+	<div class="state_box shipped_by">
+		<div class="succeed"><span class="canceled"></span>已取消</div>
+		<div class="tips">超时未支付</div>
+		<div class="btn">再次购买</div>
+    </div>
+    
+    <div class="state_box succeed">
+		<div class="succeed"><span class="succeed"></span>已完成</div>
+		<div class="tips">对于本次购物体验如何去评价一下吧</div>
+		<div class="btn">再次购买</div>
+	</div>
+
+	<section>
+        <div class="basics_box state">
+            <div class="text ellipsis_2">合肥双凤的极米快递员（1380013800)已揽
+收包裹</div>
+            <div class="time">2019-12-12  14:25:25</div>
+        </div>
+
+        <div class="basics_box">
+            <div class="top">
+                <span class="name">吴彦祖</span>
+                <span class="phone">138****2222</span>
+            </div>
+            <div class="address ellipsis_2">广东省广州市京溪南方医院地铁站白云区沙太路668号1001层整层</div>
+        </div>
+
+        <div class="shop_box">
+            <div class="store_name">大表哥的店铺</div>
+            <div class="shop_details">
+                <img src="../images/image.jpg" alt="">
+                <div class="details">
+                    <p class="shop_name ellipsis_1">进口男士洗面奶250mg一系列补装...</p>
+					<div class="size_box">
+						<p>数量:<span>1</span></p>
+						<p>产品:<span class="ellipsis_1">系列套装250ml</span></p>
+					</div>
+					<div class="price_box">¥16.00</div>
+                </div>
+            </div>
+            <div class="shop_details">
+                <img src="../images/image.jpg" alt="">
+                <div class="details">
+                    <p class="shop_name ellipsis_1">进口男士洗面奶250mg一系列补装...</p>
+					<div class="size_box">
+						<p>数量:<span>1</span></p>
+						<p>产品:<span class="ellipsis_1">系列套装250ml</span></p>
+					</div>
+					<div class="price_box">¥16.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="link_box">
+        	<div class="service"><span></span>联系客服</div>
+        	<div class="tel"><span></span>商家电话</div>
+        </div>
+
+        <div class="price_box">
+            <div class="type top">
+                <span class="title">商品金额:</span>
+                <span class="price">¥156.00</span>
+            </div>
+            <div class="type">
+                <span class="title">运费</span>
+                <span class="price">+¥5.00</span>
+            </div>
+            <div class="type">
+                <span class="title">折扣劵</span>
+                <span class="price">-¥5.00</span>
+            </div>
+            <div class="total">需支付：<span>¥156.00</span></div>
+        </div>
+
+        <div class="other_box">
+            <div class="line_box">
+	            <div class="type">
+	                <span class="title">订单编号：</span>
+	                <span class="txt">102466622<span class="copy_btn">复制</span></span>
+	            </div>
+	            <div class="type">
+	                <span class="title">下单时间：</span>
+	                <span class="txt">2019-10-09  09:25:25</span>
+	            </div>
+            </div>
+            <div class="line_box">
+	            <div class="type">
+	                <span class="title">配送方式：</span>
+	                <span class="txt">顺丰快递</span>
+	            </div>
+            </div>
+            <div class="line_box">
+	            <div class="type">
+	                <span class="title">发票类型：</span>
+	                <span class="txt">电子普通发票</span>
+	            </div>
+	            <div class="type">
+	                <span class="title">发票抬头：</span>
+	                <span class="txt">个人</span>
+	            </div>
+	            <div class="type">
+	                <span class="title">发票内容：</span>
+	                <span class="txt">商品明细</span>
+	            </div>
+            </div>
+            <div class="total">需支付：<span>¥156.00</span></div>
+        </div>
+	</section>
+
+	<footer>
+		<div class="btn btn_g cancle">取消订单</div>
+        <div class="btn btn_g refund">退款</div>
+        <div class="btn btn_g detele">删除订单</div>
+        <div class="btn btn_g after_sale">申请售后</div>
+		<a href="./order_pay.html"><div class="btn">立即支付</div></a>
+		<div class="btn btn_g check_logistics">查看物流</div>
+        <div class="btn sure_goods">确认收货</div>
+        <div class="btn by_again">再次购买</div>
+    </footer>
+
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $(document).on('scroll',function(){
+        var sectionTop = $('section').offset();
+        var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollTop = scrollHeight;
+        if(scrollTop >= sectionTop.top){
+            $('header').css('backgroundColor', '#fff');
+            $('.state_box').css('backgroundColor', '#f5f5f5');
+            $('header p').show();
+            $('header .back').addClass('active');
+        }else{
+            $('header').css('backgroundColor', '#00A47C');
+            $('.state_box').css('backgroundColor', '#00A47C');
+            $('header p').hide();
+            $('header .back').removeClass('active');
+        }
+    })
+
+    //提醒发货
+    $('.payed_box .btn').click(function(event) {
+        tipsPopup('提醒商家发货发送消息成功')
+    });
+
+    //复制按钮
+    $('.copy_btn').click(function(event) {
+        tipsPopup('复制成功');
+    });
+</script>
+</html>
