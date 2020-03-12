@@ -1,0 +1,88 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.cash_out_list {
+    padding: .25rem .32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(232,232,232,.5);
+}
+
+.cash_out_list .icon {
+    margin-right: .2rem;
+    width: .68rem;
+    height: .68rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-shrink: 1;
+}
+
+.cash_out_list .wechat_icon {
+    background-image: url(../images/wechat_icon.png);
+}
+
+.cash_out_list .bank_icon {
+    background-image: url(../images/bank_icon.png);
+}
+
+.cash_out_list .list_mid {
+    margin-right: .25rem;
+    flex: 1;
+}
+
+.cash_out_list .name {
+    margin-bottom: .1rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+}
+
+.cash_out_list .time,
+.cash_out_list .type {
+    font-size: .24rem;
+    color: #AFB3C3;
+}
+
+.cash_out_list .list_right {
+    width: 2rem;
+    text-align: right;
+}
+
+.cash_out_list .price {
+    margin-bottom: .1rem;
+    font-size: .28rem;
+    color: #00A47C;
+}
