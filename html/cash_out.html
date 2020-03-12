@@ -22,9 +22,10 @@
     <section>
         <div class="type_box">
             <p class="type">提现至：</p>
-            <p class="right">
+            <p class="right cash_out_type">
                 <span class="icon wechat"></span>
-                微信<span class="txt">(账号afwefwe)</span>
+                <span class="type">微信</span>
+                <span class="txt">(账号afwefwe)</span>
             </p>
         </div>
         <div class="bottom">
@@ -37,5 +38,40 @@
 
         <a href="./cash_out_details.html"><div class="submit">提现</div></a>
     </section>
+
+    <!-- 提现方式弹窗 -->
+    <div class="popup_box cash_out_type_popup hide">
+        <div class="masked"></div>
+        <div class="content">
+            <div class="top">选择提现方式<span class="close"></span></div>
+            <ul class="type_box">
+                <li class="type wechat"><span class="icon wechat"></span>微信</li>
+                <li class="type bank"><span class="icon bank"></span>银行卡</li>
+                <li class="type alipay"><span class="icon alipay"></span>支付宝</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 提现方式弹窗 end -->
 </body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    $('.cash_out_type').on('click',function() {
+        $('.cash_out_type_popup').show();
+    })
+
+    $('.cash_out_type_popup').on('click','.close,.masked,li',function() {
+        if($(this).is('.wechat')){
+            $('.cash_out_type .icon').removeClass().addClass('icon wechat');
+            $('.cash_out_type .type').html('微信');
+        }else if($(this).is('.bank')) {
+            $('.cash_out_type .icon').removeClass().addClass('icon bank');
+            $('.cash_out_type .type').html('银行卡');
+        }else if($(this).is('.alipay')) {
+            $('.cash_out_type .type').html('支付宝');
+            $('.cash_out_type .icon').removeClass().addClass('icon alipay');
+        }
+        $('.cash_out_type_popup').hide();
+    })
+</script>
 </html>
