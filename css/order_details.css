@@ -409,7 +409,7 @@ section .other_box {
 
 section .other_box .txt {
 	font-size: .26rem;
-	color: #000;
+	color: #0A0F2D;
 	font-weight: bold;
 	position: absolute;
 	left: 1.8rem;
