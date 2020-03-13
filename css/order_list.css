@@ -29,6 +29,10 @@ header .title {
     text-align: center;
 }
 
+object {
+    display: flex;
+}
+
 .nav {
     position: fixed;
     top: .88rem;
