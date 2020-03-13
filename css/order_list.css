@@ -110,7 +110,7 @@ section {
     left: 0;
     width: .24rem;
     height: .24rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/store_black.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -163,7 +163,7 @@ section {
     left: 0;
     width: .24rem;
     height: .26rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/order_type_1.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -176,7 +176,7 @@ section {
     left: 0;
     width: .26rem;
     height: .24rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/order_type_3.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -189,7 +189,7 @@ section {
     left: 0;
     width: .26rem;
     height: .22rem;
-    background-image: url(../images/image.jpg);
+    background-image: url(../images/order_type_2.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
