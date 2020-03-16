@@ -1,0 +1,277 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+header .right_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 .32rem;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .28rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+header .right_btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -.09rem;
+    width: .18rem;
+    height: .18rem;
+    background-image: url(../images/add_btn.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section {
+    padding: .88rem 0 0;
+}
+
+.card_box {
+    padding: .32rem .32rem 0;
+}
+
+.card_box:first-child {
+    padding-top: .3rem;
+}
+
+.card_box .card {
+    position: relative;
+    padding: .5rem .2rem .3rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius:.16rem .16rem 0 0;
+    -webkit-border-radius:.16rem .16rem 0 0;
+    -moz-border-radius:.16rem .16rem 0 0;
+    -ms-border-radius:.16rem .16rem 0 0;
+    -o-border-radius:.16rem .16rem 0 0;
+}
+
+.card_box .card.blue {
+    background-image: url(../images/bank_blue.png);
+}
+
+.card_box .card.red {
+    background-image: url(../images/bank_red.png);
+}
+
+.card_box .card.green {
+    background-image: url(../images/bank_green.png);
+}
+
+.card_box .card .bank_icon {
+    margin-right: .2rem;
+    width: .8rem;
+    height: .8rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    vertical-align: top;
+}
+
+.card_box .card .right {
+    width: calc(100% - 2rem);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+}
+
+.card_box .card p {
+    margin-bottom: .2rem;
+    width: 4.2rem;
+    color: #fff;
+    line-height: 1;
+    display: inline-block;
+}
+
+.card_box .card .name {
+    font-size: .34rem;
+    font-weight: bold;
+}
+
+.card_box .card .type {
+    font-size: .24rem;
+}
+
+.card_box .card .bank_num {
+    padding-top: .05rem;
+    font-size: .3rem;
+    color: #fff;
+    line-height: 1;
+    font-weight: bold;
+    white-space: pre;
+}
+
+.card_box .card .check {
+    position: absolute;
+    padding-left: .36rem;
+    right: .2rem;
+    top: .45rem;
+    font-size: .24rem;
+    color: #fff;
+    line-height: 1;
+    display: none;
+}
+
+.card_box.select_bank .card .check {
+    display: initial;
+}
+
+.card_box .card .check::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -.15rem;
+    width: .3rem;
+    height: .3rem;
+    background-image: url(../images/succeed.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.filtrate_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .32rem;
+    width: calc(100% - .64rem);
+}
+
+.filtrate_box .condition_box {
+    margin-bottom: .2rem;
+    background-color: #fff;
+    border-radius: .16rem;
+    -webkit-border-radius: .16rem;
+    -moz-border-radius: .16rem;
+    -ms-border-radius: .16rem;
+    -o-border-radius: .16rem;
+}
+
+.filtrate_box .condition_box .condition {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .32rem;
+    color: #000;
+    border-radius: .16rem;
+    border-bottom: 1px solid rgba(232,232,232,.3);
+}
+
+.filtrate_box .condition_box .condition:last-child {
+    border-bottom: none;
+}
+
+.filtrate_box .cancle {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .32rem;
+    color: #999;
+    border-radius: .16rem;
+    background-color: #fff;
+}
+
+.affirm_popup_box .affirm_popup {
+    width: 6.2rem;
+    height: 3.3rem;
+    position: absolute;
+    background-color: #fff;
+    border-radius: .12rem;
+    left: 50%;
+    margin-left: -3.2rem;
+    top: 50%;
+    margin-top: -1.65rem;
+    font-size: 0;
+}
+
+.affirm_popup .title {
+    text-align: center;
+    font-size: .32rem;
+    color: #000;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: .9rem;
+    margin-bottom: .8rem;
+}
+
+.affirm_popup span {
+    width: 2.5rem;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    border-radius: .4rem;
+    font-size: .3rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: .4rem;
+}
+
+.affirm_popup span.cancle {
+    color: #999;
+    background-color: #E7E6E9;
+}
+
+.affirm_popup span.sure {
+    color: #fff;
+    background-color: #00A47C;
+}
+
+.no_content {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0;
+}
+
+.no_content .no_bank {
+    width: 3.22rem;
+    height: 3.22rem;
+    display: inline-block;
+    background-image: url(../images/no_bank.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.no_content .tips {
+    font-size: .28rem;
+    color: #999;
+    line-height: 1;
+}

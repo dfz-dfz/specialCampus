@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-我的银行卡</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/bank_card.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">我的银行卡</p>
+        <a href="./bank_add.html">
+            <span class="right_btn">添加</span>
+        </a>
+    </header>
+
+    <section>
+        <div class="card_box select_bank">
+            <div class="card blue">
+                <span class="bank_icon" style="background-image: url(../images/bank_icon.png);"></span>
+                <div class="right">
+                    <p class="name">中国工商银行</p>
+                    <p class="type">储蓄卡</p>
+                    <div class="bank_num">●●●●    ●●●●    ●●●●    3417</div>
+                    <span class="check">默认</span>
+                </div>
+            </div>
+        </div>
+        <div class="card_box">
+            <div class="card red">
+                <span class="bank_icon" style="background-image: url(../images/bank_icon.png);"></span>
+                <div class="right">
+                    <p class="name">中国工商银行</p>
+                    <p class="type">储蓄卡</p>
+                    <div class="bank_num">●●●●    ●●●●    ●●●●    3417</div>
+                    <span class="check">默认</span>
+                </div>
+            </div>
+        </div>
+        <div class="card_box">
+            <div class="card green">
+                <span class="bank_icon" style="background-image: url(../images/bank_icon.png);"></span>
+                <div class="right">
+                    <p class="name">中国工商银行</p>
+                    <p class="type">储蓄卡</p>
+                    <div class="bank_num">●●●●    ●●●●    ●●●●    3417</div>
+                    <span class="check">默认</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 没有绑定银行卡的空白状态 -->
+        <div class="no_content">
+            <span class="no_bank"></span>
+            <p class="tips">您还没绑定银行卡</p>
+        </div>
+        <!-- 没有绑定银行卡的空白状态 end -->
+    </section>
+
+    <!-- 操作银行卡页面 -->
+    <div class="bank_card_popup popup_box hide">
+        <div class="masked"></div>
+        <div class="filtrate_box">
+            <div class="condition_box">
+                <div class="condition defalut">选为默认</div>
+                <div class="condition unbink">解绑</div>
+            </div>
+            <div class="cancle">取消</div>
+        </div>
+    </div>
+    <!-- 操作银行卡页面 end -->
+
+    <!-- 解绑银行卡 -->
+    <div class="affirm_popup_box popup_box hide">
+        <div class="masked"></div>
+        <div class="affirm_popup">
+            <div class="title">确定解绑此银行卡？</div>
+			<span class="cancle">取消</span>
+			<span class="sure">确定</span>
+        </div>
+    </div>
+    <!-- 解绑银行卡 end -->
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    var obj = $(this);
+
+    //操作银行卡
+    $('section').on('click','.card_box',function() {
+        $('.bank_card_popup').show();
+        obj = $(this)
+    })
+
+    $('.bank_card_popup').on('click','.cancle,.masked,.defalut,.unbink',function() {
+        $('.bank_card_popup').hide();
+        if($(this).is('.defalut')) {
+            obj.addClass('select_bank').siblings().removeClass('select_bank');
+        }
+        if($(this).is('.unbink')) {
+            $('.affirm_popup_box').show();
+        }
+    })
+
+    $('.affirm_popup_box').on('click','.masked,.cancle,.sure',function() {
+        $('.affirm_popup_box').hide();
+    })
+</script>
+</html>

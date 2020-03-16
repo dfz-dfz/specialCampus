@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-添加银行卡</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/bank_add.css">
+    <link rel="stylesheet" href="../css/weui.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">添加银行卡</p>
+    </header>
+
+    <nav>
+        <span class="person active">个人账号</span>
+        <span class="company">公司账号</span>
+    </nav>
+
+    <section class="person_box">
+        <div class="input_box">
+            <span class="type">银行账号</span>
+            <input type="text" name="person_account" placeholder="请输入您的银行账号">
+        </div>
+        <div class="input_box code_box">
+            <span class="type">验证码</span>
+            <input type="text" name="person_code" placeholder="请输入验证码">
+            <span class="btn code_btn" onclick="getCode()">获取验证码</span>
+        </div>
+        <div class="input_box">
+            <span class="type">所在地区</span>
+            <input type="text" class="area" name="person_area" placeholder="请选择开户银行所在地">
+        </div>
+        <div class="input_box">
+            <span class="type">银行名称</span>
+            <input type="text" name="person_bank_name" placeholder="开户银行，请填写具体到支行">
+        </div>
+        <div class="input_box">
+            <span class="type">真实姓名</span>
+            <input type="text" name="person_name" placeholder="请输入您的开户真实姓名">
+        </div>
+        <div class="input_box check_box">
+            <span class="check"></span>
+            <p>设为默认</p>
+        </div>
+
+        <div class="submit">提交</div>
+    </section>
+
+	<section class="company_box hide">
+        <div class="input_box">
+            <span class="type">对公账号</span>
+            <input type="text" name="company_account" placeholder="请输入您的对公银行卡账号">
+        </div>
+        <div class="input_box code_box">
+            <span class="type">验证码</span>
+            <input type="text" name="company_code" placeholder="请输入尾号为2452验证码">
+            <span class="btn code_btn" onclick="getCode()">获取验证码</span>
+        </div>
+        <div class="input_box">
+            <span class="type">所在地区</span>
+            <input type="text" class="area" name="company_area" placeholder="请选择开户银行所在地">
+        </div>
+        <div class="input_box">
+            <span class="type">银行名称</span>
+            <input type="text" name="company_bank_name" placeholder="开户银行，请填写具体到支行">
+        </div>
+        <div class="input_box">
+            <span class="type">公司名称</span>
+            <input type="text" name="company_name" placeholder="请输入您的开户公司名称">
+        </div>
+        <div class="input_box check_box">
+            <span class="check"></span>
+            <p>设为默认</p>
+        </div>
+
+        <div class="submit">提交</div>
+    </section>
+
+    <!-- 添加银行卡成功弹窗 -->
+    <div class="succeed_add_popup hide">
+        <span class="succeed_icon"></span>
+        <p class="tips">添加银行卡成功</p>
+        <div class="submit active">完成</div>
+    </div>
+    <!-- 添加银行卡成功弹窗 end -->
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script src="../script/weui.js"></script>
+<script>
+    var company_name=company_code=company_account=company_bank_name=company_area=
+        person_name=person_code=person_account=person_bank_name=person_area='';
+
+    $(function() {
+        // 监控提交按钮是否可点击
+        $('.person_box').on('input propertychange',function() {
+            person_name = $('input[name="person_name"]').val(),
+            person_code = $('input[name="person_code"]').val(),
+            person_account = $('input[name="person_account"]').val(),
+            person_bank_name = $('input[name="person_bank_name"]').val(),
+            person_area = $('input[name="person_area"]').val();
+            
+            if(person_name !== '' && person_code !== '' && person_account !== '' && person_bank_name !== '' && person_area !== '') {
+                $('.person_box .submit').addClass('active');
+            }else {
+                $('.person_box .submit').removeClass('active');
+            }
+        });
+
+        $('.company_box').on('input propertychange',function() {
+            company_name = $('input[name="company_name"]').val(),
+            company_code = $('input[name="company_code"]').val(),
+            company_account = $('input[name="company_account"]').val(),
+            company_bank_name = $('input[name="company_bank_name"]').val(),
+            company_area = $('input[name="company_area"]').val();
+            
+            if(company_name !== '' && company_code !== '' && company_account !== '' && company_bank_name !== '' && company_area !== '') {
+                $('.company_box .submit').addClass('active');
+            }else {
+                $('.company_box .submit').removeClass('active');
+            }
+        });
+    });
+
+    $('.area').on('click', function () {
+        var obj = this;
+        var data = [{
+                label: '广东省',
+                children: [
+                    {
+                        label: '广州市',
+                    },
+                    {
+                        label: '深圳市',
+                    }
+                ]
+            }, {
+                label: '北京市',
+                children: [
+                    {
+                        label: '朝阳区',
+                    },
+                    {
+                        label: '东城区',
+                    }
+                ]
+            }]
+        // 级联picker
+        
+        weui.picker(data, {
+            className: 'custom-classname',
+            container: 'body',
+            defaultValue: [1, 3],
+            onChange: function (result) {
+            },
+            onConfirm: function (result) {
+                $(obj).val(result[0]['label'] + result[1]['label']);
+                $(obj).attr('data-province', result[0]['label']);
+                $(obj).attr('data-city', result[1]['label']);
+
+                if(person_name != '' && person_code != '' && person_account != '' && person_bank_name != '') {
+                    $('.person_box .submit').addClass('active');
+                }
+                if(company_name != '' && company_code != '' && company_account != '' && company_bank_name != '') {
+                    $('.company_box .submit').addClass('active');
+                }
+            },
+            id: 'doubleLinePicker'
+        });
+    });
+
+    $('section').on('click','.submit.active',function() {
+        tipsPopup('开户行与真实姓名不符，请重新填写');
+        $('.succeed_add_popup').show();
+    })
+
+    $('.succeed_add_popup').on('click','.submit',function() {
+        $('.succeed_add_popup').hide();
+    })
+
+    $('nav').on('click','span',function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        if($('.person').hasClass('active')) {
+            $('.person_box').show();
+            $('.company_box').hide();
+        }else {
+            $('.person_box').hide();
+            $('.company_box').show();
+        }
+    })
+
+    //默认
+    $('.check').click(function() {
+        $(this).toggleClass('active');
+    })
+
+    var countdonwn = 60;
+    function setTime(param) {
+        if(countdonwn == 0) {
+            param.css('color','#00A47C');
+            param.attr('onclick','getCode()');
+            param.text('获取验证码');
+            countdonwn = 60;
+            return
+        }else {
+            param.css('color','#c9c7c7');
+            param.removeAttr('onclick');
+            param.text('重新发送'+countdonwn+'');
+            countdonwn--;
+        }
+        setTimeout(function(){setTime(param)},1000)
+    }
+
+    function getCode(param) {
+        setTime($('.code_btn'));
+    }
+</script>
+</html>
