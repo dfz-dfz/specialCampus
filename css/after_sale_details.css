@@ -1,0 +1,470 @@
+body {
+    background-color: #f6f6f6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.main .process {
+    height: 2rem;
+    background: #FF672A;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    padding-left: .6rem;
+}
+
+.main .process.finish {
+    background-color: #1DAF70;
+}
+
+.main .process.faile {
+    background-color: #F82938;
+}
+
+.main .process .status {
+    position: absolute;
+    top: .3rem;
+    font-size: .36rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.main .process ul li {
+    float: left;
+    width: .18rem;
+    height: .18rem;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 1.2rem;
+    position: relative;
+    opacity: .5;
+}
+
+.main .process ul li.active {
+    opacity: 1;
+}
+
+.main .process ul li::after {
+    position: absolute;
+    content: '';
+    width: 1.28rem;
+    border: .02rem solid #fff;
+    top: 50%;
+    right: .1rem;
+    opacity: .5;
+}
+
+.main .process ul li.active::after {
+    opacity: 1;
+}
+
+.main .process ul li:first-child::after {
+    display: none;
+}
+
+.main .process ul li p {
+    position: absolute;
+    top: .2rem;
+    font-size: .22rem;
+    color: #fff;
+    font-weight: 500;
+    width: 1.16rem;
+}
+
+.main .content {
+    padding: 0 .32rem;
+    margin-top: -.32rem;
+    position: relative;
+}
+
+.main .content .oddNum {
+    height: 4.01rem;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0 .32rem;
+    margin-bottom: .3rem;
+}
+
+.main .content .oddNum.finish {
+    height: .88rem;
+}
+
+.content .oddNum div {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.content .oddNum .top {
+    padding-top: .3rem;
+}
+
+.main .content .oddNum.finish .top {
+    display: -webkit-inline-box;
+}
+
+.main .content .oddNum.finish .top p:last-child {
+    margin-left: .08rem;
+    color: #FF672A;
+}
+
+.content .oddNum .top p {
+    font-size: .28rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.content .oddNum .top span {
+    width: 1.32rem;
+    font-size: .26rem;
+    font-weight: 500;
+    color: #FF672A;
+    background-image: url('../images/after_sale/jiantou.png');
+    -moz-background-size: 20% 70%;
+    background-size: 20% 70%;
+    background-position: 1.08rem .04rem;
+    background-repeat: no-repeat;
+}
+
+.content .oddNum .bottom {
+    display: block;
+}
+
+.content .oddNum .bottom p {
+    font-size: .26rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.content .oddNum .bottom span {
+    display: block;
+    width: 100%;
+    height: .8rem;
+    margin-top: .1rem;
+    line-height: .8rem;
+    background: #F5F5F5;
+    font-size: .26rem;
+    font-weight: 500;
+    color: #999;
+    text-align: center;
+}
+
+.content .oddNum .bottom span.active {
+    background-color: #FFDBCD;
+    color: #FF672A;
+}
+
+.content .oddNum .bottom input {
+    border: none;
+    width: 100%;
+    height: .96rem;
+    display: block;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: .28rem;
+    color: #333;
+}
+
+.main .content .record {
+    height: 1.5rem;
+    background-color: #fff;
+    padding: 0 .3rem;
+    margin-bottom: .3rem;
+}
+
+.content .record .top {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: .3rem;
+}
+
+.content .record .top p:first-child {
+    font-size: .28rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.content .record .top span {
+    width: .32rem;
+    height: .32rem;
+    background-image: url('../images/rightIcon.png');
+}
+
+.content .record .bottom {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: .3rem;
+    font-size: .26rem;
+    color: #333;
+}
+
+.content .record .bottom span {
+    font-size: .26rem;
+    color: #999;
+    position: absolute;
+}
+
+.content .record .bottom p {
+    font-size: .26rem;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    height: .3rem;
+    line-height: .3rem;
+    padding-left: .8rem;
+}
+
+.main .content .shoppInfo {
+    height: 2.4rem;
+    background-color: #fff;
+    margin-bottom: .3rem;
+    padding: 0 .3rem;
+    position: relative;
+}
+
+.main .content .shoppInfo .title {
+    font-size: .28rem;
+    font-weight: bold;
+    color: #333;
+    padding: .3rem 0;
+}
+
+.shoppInfo .detalis {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.shoppInfo .detalis .imgBox {
+    width: 1.2rem;
+    height: 1.2rem;
+    float: left;
+}
+
+.shoppInfo .detalis .describe {
+    float: left;
+    margin-left: .2rem;
+    width: 4.6rem;
+}
+
+.shoppInfo .detalis .describe p {
+    font-size: .24rem;
+    font-weight: 500;
+    color: #999;
+}
+
+.shoppInfo .detalis .describe div {
+    position: absolute;
+    bottom: .2rem;
+}
+
+.shoppInfo .detalis .describe span {
+    font-size: .24rem;
+    color: #999;
+}
+
+.shoppInfo .detalis .describe span:first-child {
+    margin-right: .16rem;
+}
+
+.shoppInfo .detalis .describe span>span {
+    font-size: .24rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.main .content .otherInfo {
+    min-height: 4.6rem;
+    background-color: #fff;
+    margin-bottom: .3rem;
+    padding: .3rem;
+}
+
+.main .content .otherInfo div {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: .3rem;
+}
+
+.main .content .otherInfo div:last-child {
+    margin-bottom: 0;
+}
+
+.main .content .otherInfo .refund {
+    margin-top: .5rem;
+    margin-bottom: .6rem;
+}
+
+.main .content .otherInfo div span {
+    font-size: .26rem;
+    color: #999;
+    position: absolute;
+    letter-spacing: .02rem;
+}
+
+.main .content .otherInfo div p {
+    font-size: .26rem;
+    color: #333;
+    padding-left: 1.6rem;
+}
+
+.cancel {
+    height: 1rem;
+    background-color: #fff;
+    margin-top: .6rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 0 .3rem;
+}
+
+.cancel span {
+    display: inline-block;
+    width: 1.44rem;
+    height: .6rem;
+    line-height: .6rem;
+    border: 1px solid #CCCCCC;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    font-size: .28rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    letter-spacing: .04rem;
+}
+
+.cancel .appraise {
+    margin-left: .2rem;
+    background-color: #FF672A;
+    border: 1px solid #FF672A;
+    color: #fff;
+}
+
+.main .content .address {
+    min-height: 2.24rem;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0 .32rem;
+    margin-bottom: .3rem;
+}
+
+.main .content .address .top {
+    padding: .32rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .content .address .top p {
+    font-size: .28rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.main .content .address .top span {
+    font-size: .24rem;
+    color: #FF672A;
+}
+
+.main .content .address .bottom {
+    display: flex;
+    align-items: center;
+}
+
+.main .content .address .bottom img{
+    width: .32rem;
+    height: .32rem;
+    margin-right: .28rem;
+    flex-shrink: 0;
+}
+
+.main .content .address .bottom .nameTel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .content .address .bottom p {
+    color: #666;
+    font-size: .28rem;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-选择售后类型</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/after_sale_details.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">选择售后类型</p>
+    </header>
+
+    <section class="main">
+        <!-- 处理流程 -->
+            <!-- 未完成 -->
+            <div class="process" style="display: none;">
+                <p class="status">处理中</p>
+                <ul>
+                    <li class="active">
+                        <p>提交申请</p>
+                    </li>
+                    <li class="active">
+                        <p>商家审核</p>
+                    </li>
+                    <li>
+                        <p>商家收货</p>
+                    </li>
+                    <li>
+                        <p>退款</p>
+                    </li>
+                    <li>
+                        <p>完成</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 未完成 end -->
+
+            <!-- 已完成 -->
+            <div class="process finish" style="display: none;">
+                <p class="status">处理中</p>
+                <ul>
+                    <li class="active">
+                        <p>提交申请</p>
+                    </li>
+                    <li class="active">
+                        <p>商家审核</p>
+                    </li>
+                    <li class="active">
+                        <p>商家收货</p>
+                    </li>
+                    <li class="active">
+                        <p>退款</p>
+                    </li>
+                    <li class="active">
+                        <p>完成</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 已完成 -->
+
+            <!-- 退货失败 -->
+            <div class="process faile">
+                <p class="status">退货失败</p>
+                <ul>
+                    <li class="active">
+                        <p>提交申请</p>
+                    </li>
+                    <li class="active">
+                        <p>商家审核</p>
+                    </li>
+                    <li class="active">
+                        <p>商家收货</p>
+                    </li>
+                    <li class="active">
+                        <p>退款</p>
+                    </li>
+                    <li class="active">
+                        <p>完成</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 退货失败 -->
+
+        <!-- 处理流程 end -->
+        <div class="content">
+            <!-- 商家地址 -->
+            <div class="address">
+                <div class="top">
+                    <p>商家地址</p>
+                    <span>商家已同意退货申请，请尽早退货</span>
+                </div>
+                <div class="bottom">
+                    <img src="../images/after_sale/bus_place_gray.png" alt="">
+                    <div>
+                        <div class="nameTel">
+                            <p>大表哥</p>
+                            <p>020-2522622</p>
+                        </div>
+                        <p>广东省广州市白云区沙太路668号现象工场附近右拐第一个路口</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 商家地址 end -->
+
+            <!-- 快递单号 -->
+                <!-- 填写完成 -->
+                <div class="oddNum" style="display: none;">
+                    <div class="top">
+                        <p>填写快递单号</p>
+                    </div>
+                    <div class="bottom">
+                        <input type="text" placeholder="请填写快递单号，以便商家查询">
+                        <input type="text" placeholder="请填写快递名称">
+                        <span>确定</span>
+                    </div>
+                </div>
+                <!-- 填写完成 end -->
+
+                <!-- 填写中 -->
+                <div class="oddNum">
+                    <div class="top">
+                        <p>填写快递单号</p>
+                        <span class="btnBg">查看物流</span>
+                    </div>
+                    <div class="bottom">
+                        <input type="text" placeholder="请填写快递单号，以便商家查询">
+                        <input type="text" placeholder="请填写快递名称">
+                        <span class="active">确定</span>
+                    </div>
+                </div>
+                <!-- 填写中 end -->
+
+                <!-- 完成退款 -->
+                <div class="oddNum finish" style="display: none;">
+                    <div class="top">
+                        <p>已退款</p>
+                        <p>¥52520.00</p>
+                    </div>
+                </div>
+                <!-- 完成退款 end -->
+
+            <!-- 快递单号 end -->
+
+            <!-- 失败原因 -->
+            <div class="record">
+                <div class="top">
+                    <p>失败原因</p>
+                </div>
+                <div class="bottom">
+                    <div>由于过了退货时间，商家拒绝退货</div>
+                </div>
+            </div>
+            <!-- 失败原因 end -->
+
+            <!-- 沟通记录 -->
+            <div class="record">
+                <div class="top">
+                    <p>沟通记录</p>
+                    <span class="btnBg"></span>
+                </div>
+                <div class="bottom">
+                    <span>留言：</span>
+                    <p>尊敬的客户，你可以联系店铺客服给手动阀发士大夫撒</p>
+                </div>
+            </div>
+            <!-- 沟通记录 end -->
+
+            <!-- 商品信息 -->
+            <div class="shoppInfo">
+                <p class="title">商品信息</p>
+                <div class="detalis">
+                    <img class="imgBox" src="http://www.zl-pay.com/upload/shop/1/20181221/859dc969bf2fcb17d0019b90a97ac03d.png" alt="">
+                    <div class="describe">
+                        <p>欧莱雅玩色派发彩喷雾01迷雾罗蓝750ml一次性彩色喷雾发剂小彩弹)</p>
+                        <div>
+                            <span>单价：<span>￥523.00</span></span>
+                            <span>申请数量：<span>1</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品信息 end -->
+
+            <!-- 其他信息 -->
+            <div class="otherInfo">
+                <div>
+                    <span>服务单号：</span>
+                    <p>544544315</p>
+                </div>
+                <div>
+                    <span>申请时间：</span>
+                    <p>2019-1-12 10:45:45</p>
+                </div>
+                <div>
+                    <span>服务类型：</span>
+                    <p>退货</p>
+                </div>
+                <div>
+                    <span>申请原因：</span>
+                    <p>零件少了</p>
+                </div>
+                <div class="refund">
+                    <span>退款方式：</span>
+                    <p>原返</p>
+                </div>
+                <div>
+                    <span>联系人：</span>
+                    <p>杨大姐</p>
+                </div>
+                <div>
+                    <span>联系电话：</span>
+                    <p>138****2120</p>
+                </div>
+            </div>
+            <!-- 其他信息 end -->
+        </div>
+
+        <!-- 退款未完成 -->
+        <div class="cancel" style="display: none;">
+            <span>取消</span>
+        </div>
+        <!-- 退款未完成 end -->
+    
+        <!-- 退款完成 -->
+        <div class="cancel">
+            <span>删除</span>
+            <span class="appraise">评价</span>
+        </div>
+    </section>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+     
+</script>
+</html>

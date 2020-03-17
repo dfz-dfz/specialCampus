@@ -1,0 +1,91 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding: .88rem .32rem 0;
+}
+
+.content ul li {
+    min-height: 2.4rem;
+    position: relative;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.content ul li:last-child {
+    border-bottom: none;
+}
+
+.content ul li .top {
+    margin-top: .4rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-bottom: 0.28rem;
+}
+
+.content ul li .top span {
+    width: .6rem;
+    height: .28rem;
+    line-height: .32rem;
+    background: #FF672A;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    padding: .02rem;
+    margin-right: .1rem;
+}
+
+.content ul li .top span.user {
+    background-color: #1DAF70;
+}
+
+.content ul li .top p {
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.content ul li .txt {
+    color: #666;
+    font-size: 0.26rem;
+    font-weight: 500;
+    padding-bottom: .8rem;
+}
+
+.content ul li .time {
+    position: absolute;
+    bottom: .4rem;
+    right: 0;
+    font-size: 0.24rem;
+    color: #666;
+}

@@ -1,0 +1,235 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+header .right_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 .32rem;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .28rem;
+    color: #00A47C;
+    font-weight: bold;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.goods_send {
+    padding: 0 .32rem;
+}
+
+.goods_send .inner {
+    position: relative;
+    height: 1.4rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.goods_send .inner .img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: -.8rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.goods_send .inner .txt {	
+    font-size: .28rem;
+    margin-right: .52rem;
+}
+
+.goods_send .inner .star {	
+    display: -webkit-box;	
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.goods_txtarea {
+    width: 90%;
+    background-color: #F5F5F5;
+    height: 2rem;
+    padding: .32rem 5%;
+    border: none;
+    resize: none;
+    outline: unset;
+}
+
+.goods_send_images_ul {
+    padding: .4rem .32rem .2rem;
+}
+
+.goods_send_images_ul li {
+    position: relative;
+    height: 1.56rem;
+    width: 1.56rem;
+    margin-right: .2rem;
+    margin-bottom: .3rem;
+    float: left;
+}
+
+.goods_send_images_ul li img {
+    vertical-align: top;
+}
+
+.goods_send_images_ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.goods_send_images_ul li .close {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: .3rem;
+    height: .3rem;
+    background: url(../images/after_sale/delete_img_bg.png) no-repeat;
+    background-size: cover;
+}
+
+.goods_send_images_ul li.last {
+    background: url(../images/after_sale/add_images.png) no-repeat;
+    background-size: cover;
+}
+
+.goods_send_type {
+    margin: 0 .32rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .28rem;
+    color: #333;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+
+.goods_send_type .send_radio {
+    margin-right: .1rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: .36rem;
+    height: .36rem;
+    background-image: url(../images/check.png);
+    background-size: cover;
+}
+
+.goods_send_type .send_radio.cur {
+    background-image: url(../images/check_r.png);
+}
+
+.goods_star_w {
+    border-top: .16rem solid #f6f6f6;
+    padding: 0 .32rem .32rem;
+}
+
+.goods_star_w .tit {
+    position: relative;
+    padding-left: .6rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .28rem;
+}
+
+.goods_star_w .tit:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -.22rem;
+    content: " ";
+    width: .44rem;
+    height: .44rem;
+    background-image: url(../images/after_sale/icon-shop.png);
+    background-size: cover;
+}
+
+.goods_star_w .star_list li {
+    padding: 3px 0;
+}
+
+.goods_star_w .star_list .sp {
+    width: 1.6rem;
+    text-align: left;
+    font-size: .28rem;
+    color: #999;
+}
+
+.ask_btn {
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.ask_btn a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 5.2rem;
+    height: .82rem;
+    line-height: .82rem;
+    background: rgba(255, 103, 42, 1);
+    border-radius: .41rem;
+    color: #FFF;
+    font-size: .32rem;
+}
+
+.star em.cur {
+    background-image: url(../images/after_sale/star_check.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.star em {
+    display: inline-block;
+    vertical-align: middle;
+    width: .32rem;
+    height: .32rem;
+    background-image: url(../images/after_sale/star.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: .42rem;
+}
+
+.goods_send_type .dib {
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.goods_send_type p {
+    color: #999;
+}

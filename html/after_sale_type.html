@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-退货</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/after_sale_type.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">退货</p>
+    </header>
+
+    <section>
+        <div class="product">
+            <div class="product-padding">
+              <img src="../images/after_sale/company_header.png" alt="">
+              <span class="productDetails">欧莱雅玩色派发彩喷雾01迷雾罗蓝750ml(一次性彩色喷雾发剂小彩弹)</span>
+                <div class="priceNum">
+                    <span class="danjia">单价：<i>¥523.00</i></span>
+                    <span class="shuliang">购买数量：<i>3</i></span>
+                    <span class="apply">申请数量：<i>3</i></span>                
+                </div>
+            </div>
+        </div>
+        
+        <div class="selectProduct">
+            <div class="selectProduct-content ">
+                <h2>以下商品可选择一起批量退货</h2>
+                <div class="checkAll">
+                    <i></i><span class="quanxuan">全选</span>
+                    <span class="orderNumber">订单号：85465446</span>
+                </div>
+            </div>
+            <div class="content">
+                <ul>
+                    <li class="singleProduct">
+                        <i class="active"></i>
+                        <img src="../images/after_sale/company_header.png" alt="">
+                        <div class="right_box">
+                            <span class="textDescription">欧莱雅玩色派发彩喷雾01迷雾罗蓝750ml(一次性彩色喷雾发剂小彩弹)</span>
+                            <div class="num_box">
+                                <span class="purchaseQuantity">购买数量：<em>3</em></span>
+                                <div class="increase" id="increase">
+                                    <span class="jiaoshao">-</span>
+                                    <span class="figure">1</span>
+                                    <span class="zengjia">+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="singleProduct">
+                        <i></i>
+                        <img src="../images/after_sale/company_header.png" alt="">
+                        <div class="right_box">
+                            <span class="textDescription">欧莱雅玩色派发彩喷雾01迷雾罗蓝750ml(一次性彩色喷雾发剂小彩弹)</span>
+                            <div class="num_box">
+                                <span class="purchaseQuantity">购买数量：<em>3</em></span>
+                                <div class="increase" id="increase">
+                                    <span class="jiaoshao">-</span>
+                                    <span class="figure">1</span>
+                                    <span class="zengjia">+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+        
+        <div class="reasonForApplying">
+            <span class="shenqing">申请原因</span>
+            <span class="neirong">内容与页面描述不符</span>
+        </div>
+        
+        <div class="problemDescription">
+            <div class="wenti">
+                <h2>问题描述</h2>
+                <div class="describeContent">
+                    <textarea placeholder="请陈述您遇到的问题..."></textarea>
+                    <ul class="existing" id="uploadUL">
+                        <div class="addPhoto">
+                            <label id="inputBtn" for="upload">
+                                <i></i>
+                                <span>添加照片</span>
+                                <input type="file" onchange="selectImage(this)" id="upload" accept="image/gif,image/jpeg,image/png" style="display: none;">
+                            </label>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="refund">
+          <div class="refundWay">
+             <h2>退款方式</h2>
+             <span class="originalRoad "><i></i>原支付返回</span>
+             <span class="payWay"><i></i>退回余额</span>
+          </div>
+        </div>
+        
+        <div class="exchangeGoods">
+            <div class="exchange">
+                <h2>收货地址</h2>
+                <span class="modificationAddress">修改地址</span>
+                <p>广州市白云区沙太路688号现象工场1001室</p>
+            </div>
+        </div>
+        <div class="serviceNnit">
+            <div class="serviceNumber">
+                <h2>服务单信息</h2>
+                <div class="nick" id="nick8">
+                    <input type="text" placeholder="请输入联系人姓名">
+                </div>
+                <div class="phone" id="phone8">
+                    <input type="text" placeholder="请输入联系人电话号码">
+                </div>
+            </div>
+        </div>
+        <span class="box2">提交</span>
+
+        <div class="box" style="display: none;">
+            <div class="returnReason">
+                <div class="shenqing">
+                    <span>申请原因</span>
+                    <i></i>
+                </div>
+               <ul>
+                   <li>
+                       <span>缺少件</span><i></i>
+                   </li>
+                   <li>
+                    <span>不想要了</span><i></i>
+                </li>
+                <li>
+                    <span>商品降价</span><i></i>
+                </li>
+                <li>
+                    <span>发错货</span><i></i>
+                </li>
+                <li>
+                    <span>质量问题</span><i></i>
+                </li>
+                <li>
+                    <span>商品与页面描述不符</span><i></i>
+                </li>
+                <li>
+                    <span>商品损坏</span><i></i>
+                </li>
+                <li>
+                    <span>其他</span><i></i>
+                </li>
+               </ul>
+               <a class="ensure">确定</a>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+    window.onload=function(){
+        var ids=window.location.href.split('=');
+        if(ids[1]==6){
+            $('header h1').text('ÍË»õ')
+            $(".exchangeGoods").css('display','none');
+            $("#nick8").css('display','none');
+            $("#phone8").css('display','none');
+        }else if(ids[1]==8){
+                $("#nick6").css('display','none');
+            $("#phone6").css('display','none');
+            $('header h1').text('»»»õ')
+        }
+        $(".increase .jiaoshao").css('color','#ccc');
+        $('.box').css('display','block');
+    }
+    
+    $(".refundWay .originalRoad").on('click',function(){
+        $(this).find('i').addClass('active2');
+        $(this).addClass('active');
+        $(".refundWay .payWay").removeClass('active');
+        $(".refundWay .payWay").find('i').removeClass('active2');
+    })
+    $(".refundWay .payWay").on('click',function(){
+        $(this).addClass('active');
+        $(this).find('i').addClass('active2');
+        $(".refundWay .originalRoad").removeClass('active');
+        $(".refundWay .originalRoad").find('i').removeClass('active2');
+    })
+    
+    $(".problemDescription .existing").on('click','li i',function(){
+        $(this).parent('li').remove();
+        var list=$('.problemDescription .existing li');
+        if(list.length<6){
+            $('.addPhoto').css('display','block');
+        }
+    })
+    
+    $(".reasonForApplying .neirong").on('click',function(){
+        $('.box').css('display','block');
+    })
+    
+    $('.content .singleProduct i').on('click',function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+        }else{
+            $(this).addClass('active');
+        }
+        var list=$('.content .singleProduct i');
+        var flag=false;
+        for(var i=0;i<list.length;i++){
+            if($(list[i]).hasClass('active')){
+
+            }else{
+                flag=true;
+            }
+        }
+        if(flag){
+            $(".checkAll i").removeClass('yixuan')
+        }else{
+            $(".checkAll i").addClass('yixuan')
+        }
+    })
+    
+    $(".checkAll i").on('click',function(){
+        if($(this).hasClass('yixuan')){
+            $(this).removeClass('yixuan');
+            $('.content .singleProduct i').removeClass('active');
+        }else{
+            $(this).addClass('yixuan')
+            $('.content .singleProduct i').addClass('active');
+        }
+    })
+    
+    $(".increase .jiaoshao").click(function(){
+        var zuida=parseInt($(this).parents('.singleProduct').find('.purchaseQuantity em').text());
+        var n=$(this).next().text();
+        var num=parseInt(n)-1;
+        if(n==2){
+        $(this).css('color','#ccc');
+        }
+        if(zuida>num&&zuida!=1){
+        $(this).parent().find('.zengjia').css('color','#333');
+        }
+        if(num==0){ 
+        return;
+        }
+        $(this).next().text(num);
+    });
+    
+    $(".increase .zengjia").click(function(){
+        var n=$(this).prev().text();
+        var zuida=parseInt($(this).parents('.singleProduct').find('.purchaseQuantity em').text());
+        var num=parseInt(n)+1;
+        if(num==0||n==zuida){ 
+        return;
+        }
+        if(num>1){
+        $(this).parent().find('.jiaoshao').css('color','#333');
+        }
+        if(num==zuida){
+        $(this).css('color','#ccc');
+        }
+        $(this).prev().text(num);
+    });
+    
+    $(".describeContent textarea").on('focus',function(){
+        $(this).css('outline','none');
+    })
+    
+    $(".returnReason ul li").on('click',function(){
+        var lis=$('.returnReason ul li i');
+        for(var i=0;i<lis.length;i++){
+            $(lis[i]).removeClass('active');
+        }
+        $(this).find('i').addClass('active');
+    })
+    
+    $(".box .returnReason .shenqing i").on('click',function(){
+        $('.box').css('display','none');
+    })
+    
+    $(".returnReason .ensure").on('click',function(){
+        $('.box').css('display','none');
+        var list=$(".returnReason ul li i");
+        for(var i=0;i<list.length;i++){
+            if($(list[i]).hasClass('active')){
+                var val=  $(list[i]).prev().text();
+                $(".reasonForApplying .neirong").css('color','#333').text(val);
+
+            }
+        }
+    })
+
+    var uploadImgIndex = 0;
+    var imgArr = [];
+    function selectImage(imgFile){
+        var list=$('.problemDescription .existing li');
+        var allFile = imgFile.files;
+        var totalLen = allFile.length;
+        if(imgArr.length && imgArr.length>0){
+            totalLen = totalLen + imgArr.length;
+        }
+        if(list.length>=5){
+            $('.addPhoto').css('display','none');
+        }
+
+        if(list.length > 0) {
+            console.log(1);
+            $('#inputBtn span').html('');
+            $('#inputBtn').css('width','.8rem');
+        }else {
+            console.log(2);
+            $('#inputBtn span').html('添加照片');
+            $('#inputBtn').css('width','1.6rem');
+        }
+
+        for(var i=0;i<allFile.length;i++){
+            var file = allFile[i];
+            if(imgArr.length && imgArr.length>0){
+                if(imgArr.length <6){
+                    imgArr.push(file);
+                }
+            }else{
+                imgArr.push(file);
+            }
+            var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
+            if(!rFilter.test(file.type)) {
+                alert("请选择正确的格式");
+                return;
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function(e) {
+                var innerHtml = '';
+                    innerHtml += '<li>';
+                    innerHtml += '<i></i>';
+                    innerHtml += '<img src="'+e.target.result+'" alt="">';
+                    innerHtml += '</li>';
+                $('#uploadUL').append(innerHtml);
+            };
+        }
+    }
+</script>
+</html>

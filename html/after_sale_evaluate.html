@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-售后评价</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/after_sale_evaluate.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">售后评价</p>
+        <span class="right_btn">提交</span>
+    </header>
+
+    <section>
+        <div class="goods_send">
+            <div class="inner">
+                <p class="txt">服务评价</p>
+                <span class="star">
+                    <em class="cur"></em>
+                    <em></em>
+                    <em></em>
+                    <em></em>
+                    <em></em>
+                </span>
+            </div>
+        </div>
+        <textarea class="goods_txtarea" placeholder="提供你的售后评价有助于商家优化服务"></textarea>
+    
+        <div class="goods_send_type">
+            <span class="send_radio J_send_type"></span>
+            <span class="dib">匿名</span>
+            <p>你的评价有助于其他的伙伴</p>
+        </div>
+    </section>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+   // 是否匿名
+   $('.J_send_type').on('click', function(event) {
+        $(this).toggleClass('cur');
+    });
+
+    //服务评价评分
+    $('.star em').on('click', function(event) {
+        var index = $(".star em").index(this);
+        $(this).nextAll().removeClass('cur')
+        if(index == 0){
+            $(this).toggleClass('cur');
+        }else{
+            $(this).addClass('cur').prevAll().addClass('cur')
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,723 @@
+body {
+    background-color: #f6f6f6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.product{
+    padding: 0 .32rem;
+    background: #fff;
+    height: 1.9rem;
+}
+.product-padding{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 1.5rem;
+    padding-top: .4rem;
+}
+.product img{
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    top: 0.4rem;
+}
+.product .priceNum{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: .28rem;
+    left: 1.4rem;
+    width:80%;
+    font-size: .24rem;
+}
+.product .danjia{
+    color: #999;
+}
+.product .danjia i{
+    color: #333;
+    font-weight: 550;
+}
+.product .shuliang{
+    color: #999;
+}
+.product .shuliang i,
+.product .apply i{
+    color: #333;
+    font-weight: 550;
+}
+.product .apply{
+    color: #999;
+}
+.product .productDetails{
+    position: absolute;
+    left: 1.4rem;
+    top: 0.32rem;
+    color: #999;
+    font-size: .24rem;
+}
+.applicationNum{
+    height: 1.08rem;
+    background-color: #fff;
+    padding: 0 .32rem;
+}
+.applicationNum-details{
+    width: 100%;
+    height: 1.08rem;
+}
+.applicationNum-details .application{
+    display: inline-block;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    color: #333;
+    font-size: .28rem;
+}
+.singleProduct .increase{
+   position: relative;
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+           align-items: center;
+   height: 100%;
+}
+.increase .jiaoshao{
+    border-radius: 3px 0 0 3px;
+}
+.increase .zengjia{
+    border-radius:0 3px 3px 0;
+}
+.increase .figure{
+    width: .7rem;
+    height: .48rem;
+    font-size: .28rem;
+    color: #333;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: .48rem;
+    text-align: center;
+}
+.increase .jiaoshao,.increase .zengjia{
+    height: .48rem;
+    width: .48rem;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: .4rem
+}
+
+.box{
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+.box .returnReason .shenqing span{
+    position: absolute;
+    top: .28rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: #333;
+    font-size: 18px;
+}
+.returnReason ul{
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 6rem;
+}
+.returnReason ul li{
+    padding: 0 .32rem;
+   height: .75rem;
+   width: calc(100% - .64rem);
+   color: #333;
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-align: center;
+           align-items: center;
+   -webkit-box-pack: justify;
+           justify-content: space-between;
+}
+.returnReason ul li span {
+    font-size: 15px;
+    color: #333;
+}
+.returnReason ul li i{
+    background-image: url(../images/check.png);
+    height: .36rem;
+    width: .36rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.returnReason ul li .active{
+    background-image: url(../images/check_r.png);
+}
+.box .returnReason .shenqing i{
+    position: absolute;
+    top: .4rem;
+    right: -0.04rem;
+    background:url(../images/after_sale/close.png) no-repeat;
+    background-size: 13px;
+    width: 13px;
+    height: 13px;
+    padding:.2rem;
+}
+.box .returnReason .ensure{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 16px;
+    height: 1rem;
+    width: 100%;
+    line-height: 1rem;
+    text-align: center;
+    background: #00A47C;
+}
+.box .returnReason{
+    position: absolute;
+    bottom: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: #fff;
+}
+.selectProduct{
+    margin-top: .3rem;
+    padding: 0 .32rem;
+
+}
+.selectProduct-content,content{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    min-height: 2rem;
+}
+.selectProduct-content h2 {
+    padding: .4rem .32rem .1rem;
+    color: #333;
+    font-size: .3rem;
+    font-weight: 600;
+}
+.selectProduct-content .checkAll {
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .7rem;
+    line-height: .7rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+.checkAll .quanxuan {
+    margin-left: .2rem;
+    width: .8rem;
+    display: inline-block;
+    color: #333;
+    font-size: .26rem;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+.checkAll .orderNumber {
+    text-align: right;
+    width: 4rem;
+    display: inline-block;
+    color: #999;
+    font-size: .24rem;
+}
+.checkAll i{
+    display: inline-block;
+    background-image: url(../images/check.png);
+    height: .36rem;
+    width: .36rem;
+    background-size: 100% 100%;
+}
+
+.checkAll .yixuan {
+    background-image: url(../images/check_r.png);
+}
+.content ul{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+.content ul li{
+    padding-bottom: .4rem;
+    height: 1.36rem;
+}
+.singleProduct{
+    padding: 0 .32rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+.singleProduct i {
+    margin-top: .32rem;
+    display: inline-block;
+    background-image: url(../images/check.png);
+    height: .36rem;
+    width: .36rem;
+    background-size: 100% 100%;
+}
+.singleProduct .active {
+background-image: url(../images/check_r.png);
+} 
+.singleProduct img{
+    margin-left: .2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+}
+.singleProduct .textDescription {
+    display: inline-block;
+    color: #999;
+    font-size: .24rem;
+}
+
+.singleProduct .right_box {
+    margin-left: .2rem;
+    font-size: 0;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.singleProduct .right_box .num_box {
+    margin-top: .2rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.singleProduct .purchaseQuantity {
+    bottom: 0.12rem;
+    left: 2.22rem;
+    color: #999;
+    font-size: .24rem;
+}
+
+.reasonForApplying {
+    margin: 0 .32rem;
+    padding: 0 .32rem;
+    height: .88rem;
+    width: calc(100% - 1.28rem);
+    margin-top: .3rem;
+    background-color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+
+.reasonForApplying .shenqing {
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .28rem;
+    color: #333;
+    font-weight: 600;
+}
+.reasonForApplying .neirong{
+    display: inline-block;
+    height: .88rem;
+    line-height: .88rem;
+    color: #999;
+    font-size: .24rem;
+}
+.reasonForApplying .neirong:after{
+    content: '';
+    display: inline-block;
+    background: url(../images/after_sale/rightIcon.png);
+    width: .26rem;
+    background-size: contain;
+    margin-left: .1rem;
+    height: .26rem;
+    -webkit-transform: translateY(0.04rem);
+            transform: translateY(0.04rem);
+}
+.problemDescription{
+    padding: 0 .32rem;
+    margin-top: .3rem;
+    height: 4.3rem;
+}
+.problemDescription .wenti{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+}
+.problemDescription .wenti h2{
+    font-weight:600;
+    position: absolute;
+    top: .3rem;
+    left: .32rem;
+    font-size: .28rem;
+    color: #333;
+}
+.describeContent{
+    position: absolute;
+    left: .32rem;
+    top: .88rem;
+    width: 6.26rem;
+    height: auto;
+    font-size: 0;
+    background-color: #f5f5f5;
+}
+.describeContent textarea{
+    resize: none;
+    width: 5.68rem;
+    height: 1.48rem;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    margin-left: .32rem;
+    padding-top: .2rem;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: .26rem;
+    outline: unset;
+}
+
+.describeContent .addPhoto {
+    font-size: 0;
+}
+
+.describeContent .addPhoto #inputBtn {
+    display: -webkit-inline-box;
+    display: inline-flex;
+    width: 1.6rem;
+    height: .5rem;
+    -webkit-box-align: center;
+            align-items: center;
+    z-index: 999;
+}
+.describeContent .addPhoto i {
+    bottom: .46rem;
+    left: .22rem;
+    background: url(../images/after_sale/zhaopian.png) no-repeat;
+    background-size: contain;
+    width: .36rem;
+    height: .36rem;
+    display: inline-block;
+    margin-right: .1rem;
+}
+.describeContent .addPhoto span {
+    color: #999;
+    font-size: .26rem;
+}
+.describeContent .existing {
+    padding: .1rem .2rem;
+    height: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.describeContent .existing li{
+    position: relative;
+    width: .8rem;
+    height: .8rem;
+    font-size: 0;
+    margin-right:.14rem;
+    border: 1px solid #ccc;
+    background-color: #999;
+}
+
+.describeContent .existing li img {
+    width: .8rem;
+    height: .8rem;
+}
+
+.describeContent .existing li:last-child{
+    margin-right: 0;
+}
+.describeContent .existing li i{
+    position: absolute;
+    top: -.1rem;
+    right: -.1rem;
+    height: .2rem;
+    width: .2rem;
+    display: inline-block;
+    background:url(../images/after_sale/shanchu.png);
+    background-size: contain;
+}
+.refund{
+    padding: 0 .32rem;
+    height: 2.08rem;
+    margin-top: .3rem;
+}
+.refund .refundWay{
+    height: 2.08rem;
+    background-color: #fff;
+    position: relative;
+}
+.refund .refundWay h2{
+    font-weight:600;
+    position: absolute;
+    top: .32rem;
+    left: .32rem;
+    color: #333;
+    font-size: .28rem;
+}
+.refund .refundWay .originalRoad{
+    position: absolute;
+    top: .88rem;
+    left: .32rem;
+    color: #333;
+    font-size: .26rem;
+    display: inline-block;
+    width: 2.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    border: 1px solid #ccc;
+    border-radius: .8rem;
+    text-align: center;
+}
+.refund .refundWay .originalRoad i{
+    background: url(../images/after_sale/zhifu2.png);
+    background-size: contain;
+    -webkit-transform: translateY(.04rem);
+            transform: translateY(.04rem);
+    width: .3rem;
+    height: .3rem;
+    display: inline-block;
+    margin-right: .04rem;
+}
+.refund .refundWay .originalRoad .active2{
+    background: url(../images/after_sale/zhifu1.png);
+    background-size: contain;
+    -webkit-transform: translateY(.04rem);
+            transform: translateY(.04rem);
+    width: .3rem;
+    height: .3rem;
+    display: inline-block;
+    margin-right: .04rem;
+}
+.refund .refundWay .payWay{
+    position: absolute;
+    top: .88rem;
+    left: 2.72rem;
+    color: #333;
+    font-size: .26rem;
+    display: inline-block;
+    width: 2.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    border: 1px solid #ccc;
+    border-radius: .8rem;
+    text-align: center;
+}
+.refund .refundWay .active{
+    border: 1px solid #00A47C;
+    color: #00A47C;
+}
+.refund .refundWay .payWay i{
+    background: url(../images/after_sale/yue2.png);
+    -webkit-transform: translateY(.04rem);
+            transform: translateY(.04rem);
+    background-size: contain;
+    width: .3rem;
+    height: .3rem;
+    display: inline-block;
+    margin-right: .04rem;
+}
+.refund .refundWay .payWay .active2{
+    background: url(../images/after_sale/yue1.png);
+    -webkit-transform: translateY(.04rem);
+            transform: translateY(.04rem);
+    background-size: contain;
+    width: .3rem;
+    height: .3rem;
+    display: inline-block;
+    margin-right: .04rem;
+}
+.serviceNnit{
+    padding: 0 .32rem;
+    margin: .3rem 0 1.2rem ;
+    height: 4.06rem;
+}
+.serviceNnit .serviceNumber{
+    height: 3.06rem;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+.serviceNnit .serviceNumber h2{
+    font-weight:600;
+    position: absolute;
+    top: .32rem;
+    left: .32rem;
+    color: #333;
+    font-size: 0.28rem;
+    padding-bottom: .28rem;
+}
+.serviceNnit .serviceNumber div{
+    position: absolute;
+    top: .86rem;
+    left: .32rem;
+    width: 6.24rem;
+    height: 1rem;
+    display: inline-block;
+    border-bottom: 1px solid #e8e8e8;
+    color: #333;
+    font-size: 0.28rem;
+}
+.serviceNnit .serviceNumber .nick{
+    top: .86rem;   
+}
+.serviceNnit .serviceNumber .nick p{
+    line-height: 1.3rem;   
+} 
+.serviceNnit .serviceNumber .nick input{
+    -webkit-transform: translateY(.5rem);
+            transform: translateY(.5rem);  
+    color: .28rem;
+} 
+.serviceNnit .serviceNumber .phone input{
+    -webkit-transform: translateY(.5rem);
+            transform: translateY(.5rem);  
+    color: .28rem;
+} 
+.serviceNnit .serviceNumber .phone p{
+    line-height: 1.3rem;   
+} 
+.serviceNnit .serviceNumber .phone{
+    top: 1.86rem;
+}
+.serviceNnit .serviceNumber div p{
+    display: inline-block;
+    width: 4rem;
+    line-height: 1rem;
+    overflow: hidden;
+
+}
+.serviceNnit .serviceNumber div span{
+    display: inline-block;
+    color: #00A47C;
+    float: right;
+    height: 1rem;
+    line-height: 1rem;
+}
+.serviceNnit .serviceNumber div span:after{
+    background: url(../images/jiantou.png) no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    width: .32rem;
+    height: .32rem;
+    margin-left: .08rem;
+    -webkit-transform: translateY(.06rem);
+            transform: translateY(.06rem);
+}
+.box2{
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    display: block;
+    width: 100%;
+    line-height: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    background-color: #00A47C;
+}
+.exchangeGoods{
+    padding: 0 .32rem;
+    height: 1.44rem;
+    margin-top: .3rem;
+}
+.exchange{
+    height: 1.44rem;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+.exchange h2{
+    position: absolute;
+    top: .32rem;
+    left: .32rem;
+    color: #333;
+    font-weight: 600;
+    font-size: .28rem;
+}
+.exchange .modificationAddress{
+    position: absolute;
+    top: .32rem;
+    right: .32rem;
+    padding-right: .2rem;
+    color: #00A47C;
+    font-size: .26rem;
+}
+.exchange .modificationAddress:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -.1rem;
+    width: .13rem;
+    height: .2rem;
+    background: url(../images/next_green.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.exchange p{
+    position: absolute;
+    bottom: .3rem;
+    left: .32rem;
+    color: #333;
+    font-size: .28rem;
+}

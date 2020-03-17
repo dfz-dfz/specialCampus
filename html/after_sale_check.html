@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-选择售后类型</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/after_sale_check.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">选择售后类型</p>
+    </header>
+
+    <section>
+        <div class="product">
+            <div class="product-padding">
+              <img src="../images/after_sale/company_header.png" alt="">
+              <span class="productDetails">欧莱雅玩色派发彩喷雾01迷雾罗蓝(一次性彩
+                    色喷雾发剂小彩弹)</span>
+                    <span class="danjia">单价：<i>￥523.00</i></span>
+                    <span class="shuliang">购买数量：<i>3</i></span>
+            </div>
+        </div>
+        <div class="applicationNum">
+           <div class="applicationNum-details">
+             <span class="application">申请数量</span>
+             <div class="increase">
+                <span class="jiaoshao">-</span>
+                <span class="figure">1</span>
+                <span class="zengjia">+</span>
+             </div>
+           </div>
+        </div>
+        <div class="salesReturn">
+            <div class="salesReturn-cotent">
+               <i class="xiaotubiao"></i><span class="tuihuo">退货</span>
+               <span class="tiaozhuan" id="tuihuo">已收货，需要退回该商品<i></i></span>
+            </div>
+        </div>
+        <div class="salesReturn">
+            <div class="salesReturn-cotent">
+               <i class="xiaotubiao"></i><span class="tuihuo">换货</span>
+               <span class="tiaozhuan" id="huanhuo">已收到货，需要更换已收到的商品<i></i></span>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script>
+     // 点击进行跳转到退货  如果是时间过来就给个提示
+     $("#tuihuo").on('click',function(){
+            var time=1;
+            if(time>6){
+                alert('时间过期了  点击不了')
+            }else{
+                location.href='./after_sale_type.html?id=6'
+            }
+        })
+        // 点击跳转到换货 如果是时间过来就给个提示
+        $("#huanhuo").on('click',function(){
+            var time=1;
+            if(time>6){
+                alert('时间过期了  点击不了')
+            }else{
+                location.href='./after_sale_type.html?id=8'
+            }
+        })
+         //减的效果
+        $(".increase .jiaoshao").click(function(){
+          var zuida=parseInt($('.product-padding .shuliang i').text());
+          var n=$('.increase .figure').text();
+          var num=parseInt(n)-1;
+          if(n==2){
+            $(this).css('color','#ccc');
+          }
+          if(zuida>num&&zuida!=1){
+            $(".increase .zengjia").css('color','#333');
+          }
+          if(num==0){ 
+            return;
+          }
+          $('.increase .figure').text(num);
+        });
+        // 点击加的时候加数字
+        $(".increase .zengjia").click(function(){
+          var n=$('.increase .figure').text();
+          var zuida=parseInt($('.product-padding .shuliang i').text());
+          var num=parseInt(n)+1;
+          if(num==0||n==zuida){ 
+            return;
+          }
+          if(num>1){
+            $(".increase .jiaoshao").css('color','#333');
+          }
+          if(num==zuida){
+            $(this).css('color','#ccc');
+          }
+          $('.increase .figure').text(num);
+        });
+        window.onload=function(){
+        // 进来进行判断，如果时间过了就不能进行点击跳转  给个提示
+            var lis2=$(".salesReturn .salesReturn-cotent .xiaotubiao");
+            var time=1;
+            if(time>2){
+                $(lis2[0]).addClass('tuihuo2');
+                $(lis2[0]).next().css('color','#999');
+                $(lis2[1]).addClass('huanhuo');
+                $(lis2[1]).next().css('color','#999');
+            }else{
+                $(lis2[0]).addClass('tuihuo8');
+                $(lis2[1]).addClass('huanhuo2');
+            }
+            // 对数字框进行判断
+            var zuida=parseInt($('.product-padding .shuliang i').text());
+            $(".increase .jiaoshao").css('color','#ccc');
+            if(zuida==1){
+                $(".increase .zengjia").css('color','#ccc');
+            }
+        }
+</script>
+</html>

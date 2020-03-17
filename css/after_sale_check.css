@@ -1,0 +1,282 @@
+body {
+    background-color: #f6f6f6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .title {
+    font-size: .34rem;
+    color: #0A0F2D;
+    font-weight: bold;
+    line-height: .88rem;
+    text-align: center;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+.product{
+    padding: 0 .32rem;
+    background: #fff;
+    height: 1.9rem;
+}
+.product-padding{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 1.5rem;
+    padding-top: .4rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+.product img{
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    top: 0.4rem;
+}
+.product .danjia{
+    position: absolute;
+    left: 1.4rem;
+    bottom: 0.28rem;
+    font-size: .24rem;
+    color: #999;
+}
+.product .danjia i{
+    color: #333;
+    font-weight: 550;
+}
+.product .shuliang{
+    position: absolute;
+    left: 4rem;
+    bottom: 0.28rem;
+    font-size: .24rem;
+    color: #999;
+}
+.product .shuliang i{
+    color: #333;
+    font-weight: 550;
+}
+.product .productDetails{
+    position: absolute;
+    left: 1.4rem;
+    top: 0.32rem;
+    color: #999;
+    font-size: .24rem;
+}
+.applicationNum {
+    height: 1.08rem;
+    background-color: #fff;
+    padding: 0 .32rem;
+}
+.applicationNum-details {
+    width: 100%;
+    height: 1.08rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    align-content: center;
+}
+.applicationNum-details .application{
+    line-height: 1.08rem;
+    color: #333;
+    font-size: .28rem;
+}
+.applicationNum-details .increase{
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+           align-items: center;
+   height: 100%;
+}
+.increase .jiaoshao{
+    border-radius: 3px 0 0 3px;
+}
+.increase .zengjia{
+    border-radius:0 3px 3px 0;
+}
+.increase .figure{
+    width: .7rem;
+    height: .48rem;
+    font-size: .24rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: .48rem;
+    text-align: center;
+}
+.increase .jiaoshao,.increase .zengjia{
+    height: .48rem;
+    width: .48rem;
+    line-height: .48rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: .4rem
+}
+.salesReturn{
+    margin-top: .38rem;
+    padding: 0 .32rem;
+}
+.salesReturn .salesReturn-cotent{
+    height: 1rem;
+    line-height: 1rem;
+    width: 100%;
+    background-color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+.salesReturn .salesReturn-cotent .tuihuo8{
+    background: url(../images/after_sale/tuihuo1.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: .28rem;
+    height: .3rem;
+    margin: 0 .2rem 0 .2rem;
+}
+.salesReturn .salesReturn-cotent .tuihuo2{
+    background: url(../images/after_sale/tuihuo2.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: .28rem;
+    height: .3rem;
+    margin: 0 .2rem 0 .2rem;
+}
+.salesReturn .salesReturn-cotent .huanhuo2{
+    background: url(../images/after_sale/huanhuo1.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: .28rem;
+    height: .3rem;
+    margin: 0 .2rem 0 .2rem;
+}
+.salesReturn .salesReturn-cotent .huanhuo{
+    background: url(../images/after_sale/huanhuo2.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: .28rem;
+    height: .3rem;
+    margin: 0 .2rem 0 .2rem;
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+
+}
+.salesReturn .salesReturn-cotent .tiaozhuan i{
+    background: url(../images/after_sale/rightIcon.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: .28rem;
+    height: .3rem;
+    margin: 0 .2rem 0 .06rem;
+    -webkit-transform: translateY(.06rem);
+            transform: translateY(.06rem);
+}
+.box{
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+.box .returnReason .shenqing span{
+    position: absolute;
+    top: .28rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: #333;
+    font-size: 18px;
+}
+.returnReason ul{
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+}
+.returnReason ul li{
+   height: .75rem;
+   width: 100%;
+   color: #333;
+}
+.returnReason ul li span{
+    padding-left: .32rem;
+    font-size: 15px;
+    color: #333;
+}
+.returnReason ul li i{
+    background: url(../images/check.png);
+    float: right;
+    height: .36rem;
+    width: .36rem;
+    background-size: 100% 100%;
+}
+.returnReason ul li .active{
+    background: url(../images/check_r.png);
+}
+.box .returnReason .shenqing i{
+    position: absolute;
+    top: .4rem;
+    right: -0.04rem;
+    background:url(../images/close.png) no-repeat;
+    background-size: 13px;
+    width: 13px;
+    height: 13px;
+    padding:.2rem;
+}
+.box .returnReason .ensure{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 16px;
+    height: 1rem;
+    width: 100%;
+    line-height: 1rem;
+    text-align: center;
+    background: #FF672A;
+}
+.box .returnReason{
+    position: absolute;
+    bottom: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: #fff;
+}
+.salesReturn .salesReturn-cotent .tuihuo{
+    font-size: .3rem;
+    color: #333;
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+.salesReturn .salesReturn-cotent .tiaozhuan{
+   float: right;
+   color: #999;
+   font-size: .24rem;
+}
