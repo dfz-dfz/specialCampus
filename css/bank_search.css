@@ -1,0 +1,120 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: .88rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+header .back {
+    position: absolute;
+    top: 50%;
+    margin-top: -.15rem;
+    left: .32rem;
+    width: .32rem;
+    height: .3rem;
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .search_box {
+    margin-left: .68rem;
+    width: 6.18rem;
+    height: .6rem;
+    font-size: .34rem;
+    color: #0A0F2D;
+    line-height: .6rem;
+    background-color: #EAEAEA;
+    border-radius: .08rem;
+}
+
+header .search_box input {
+    padding: 0 .32rem;
+    width: calc(100% - .64rem);
+    height: 100%;
+    background-color: #EAEAEA;
+    border-radius: .08rem;
+}
+
+header .search_box input::placeholder {
+    padding-left: .6rem;
+    color: #999;
+    text-align: center;
+    background-image: url(../images/search.png);
+    background-size: .3rem .3rem;
+    background-position: 40% center;
+    background-repeat: no-repeat;
+}
+
+section {
+    padding-top: .88rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list_box {
+    padding-top: .2rem;
+}
+
+.list_box li {
+    position: relative;
+    padding: .2rem .32rem;
+    font-size: .28rem;
+    color: #05081C;
+    border-bottom: 1px solid rgba(232,232,232,1);
+}
+
+.list_box .title {
+    font-size: .3rem;
+    color: #0A0F2D;
+    font-weight: bold;
+}
+
+.list_box .other {
+    border-bottom: unset;
+}
+
+.list_box .type {
+    padding: 0 .32rem;
+    height: .6rem;
+    line-height: .6rem;
+    background-color: #F5F6FA;
+    border-bottom: unset;
+}
+
+.list_box li span {
+    position: absolute;
+    right: .32rem;
+    font-size: .28rem;
+    color: #AFB3C3;
+}
+
+.initials {
+    position: fixed;
+    top: 47px;
+    right: 0px;
+    height: 100%;
+    width: 15px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 12px;
+    z-index: 99;
+    background: rgba(145,145,145,0);
+    display: flex;
+    align-items: center;
+}
+
+.initials li {
+    height: .3rem!important;
+    color: #999;
+    font-size: .24rem;
+    font-weight: bold;
+}

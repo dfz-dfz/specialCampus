@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园专场-银行卡搜索</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/bank_search.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <div class="search_box">
+            <input type="text" placeholder="搜索银行">
+        </div>
+    </header>
+
+    <section>
+        <ul class="list_box">
+            <li class="type">常用</li>
+            <li>中国工商银行</li>
+            <li>中国农业银行</li>
+            <li>中国银行</li>
+            <li>中国建设银行</li>
+            <li>中国农业发展银行</li>
+            <li>中国邮政储蓄银行</li>
+            <li>中信银行</li>
+            <li>招商银行</li>
+        </ul>
+        
+        <ul class="list_box" id="A">
+            <li class="type">A</li>
+            <li>澳大利亚和新西兰银行集团有限公司</li>
+            <li>鞍山市商业银行</li>
+            <li>安庆商业银行</li>
+            <li>奥地利中央合作银行股份有限公司</li>
+        </ul>
+        
+        <ul class="list_box" id="B">
+            <li class="type">B</li>
+            <li>渤海银行</li>
+            <li>北京银行</li>
+        </ul>
+
+        
+        <ul class="list_box" id="Z">
+            <li class="type">Z</li>
+            <li>渤海银行</li>
+            <li>北京银行</li>
+        </ul>
+
+        <div class="initials">
+            <ul>
+            </ul>
+        </div>
+    </section>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/public.js"></script>
+<script src="../script/weui.js"></script>
+<script>
+    $(function(){
+        
+        var Initials=$('.initials');
+        Initials.find('ul').append('<li>★</li><li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li><li>J</li><li>K</li><li>L</li><li>M</li><li>N</li><li>O</li><li>P</li><li>Q</li><li>R</li><li>S</li><li>T</li><li>U</li><li>V</li><li>W</li><li>X</li><li>Y</li><li>Z</li>');
+        
+        $(".initials ul li").click(function(){
+            var _this=$(this);
+            var LetterHtml=_this.html();
+
+            Initials.css('background','rgba(0,164,124,.6)');
+            
+            setTimeout(function(){
+                Initials.css('background','rgba(0,164,124,0)');
+            },1000);
+
+            var _index = _this.index();
+            
+            if(_index==0) {
+                $('html,body').animate({scrollTop: '0px'}, 300);//点击第一个滚到顶部
+            }else {
+                var letter = _this.text();
+                if($('#'+letter).length>0) {
+                    var LetterTop = $('#'+letter).position().top;
+                    $('html,body').animate({scrollTop: LetterTop-45+'px'}, 300);
+                }
+            }
+        })
+
+        var windowHeight=$(window).height();
+        var InitHeight=windowHeight-45;
+        Initials.height(InitHeight);
+        var LiHeight=InitHeight/28;
+        Initials.find('li').height(LiHeight);
+    })
+</script>
+</html>
