@@ -117,3 +117,57 @@ section {
     font-size: .28rem;
     color: #AFB3C3;
 }
+
+.location_search {
+    padding: 1.76rem .32rem 0;
+}
+
+.title_box {
+    padding-bottom: .3rem;
+    line-height: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.title_box .text {
+    font-size: .26rem;
+    color: #acafbd;
+}
+
+.title_box .detele {
+    width: .28rem;
+    height: .3rem;
+    display: block;
+    background-image: url(../images/detele.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.search_history {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search_history li {
+    margin-right: .2rem;
+    margin-bottom: .2rem;
+    padding: .18rem .2rem;
+    display: inline-block;
+    font-size: .24rem;
+    color: #05081C;
+    line-height: 1;
+    background-color: #F5F6FA;
+    border-radius: .3rem;
+}

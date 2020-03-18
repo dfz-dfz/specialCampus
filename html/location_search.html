@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/location.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)"><span class="back"></span></a>
+        <p class="title">选择所在学校</p>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="search_box">
+        <input class="search" type="text">
+        <p class="placeholder"><span class="icon"></span>搜索</p>
+    </div>
+    <!-- 搜索框 end -->
+
+    <section class="location_search">
+        <div class="title_box">
+            <p class="text">前选择学校所在地区</p>
+        </div>
+
+        <!-- 搜素标签 -->
+        <ul class="search_history">
+            <li>北京市</li>
+            <li>广东省</li>
+            <li>湖南省</li>
+            <li>江西省</li>
+            <li>福建省</li>
+        </ul>
+        <!-- 搜素标签 end -->
+    </section>
+</body>
+<script src="../script/jquery.min.js"></script>
+<script src="../script/swiper.js"></script>
+<script>
+    // 搜索框控制
+    $('.search_box .search').on('focus',function() {
+        $('.placeholder').hide();
+    })
+
+    $('.search_box .search').on('blur',function() {
+        if($(this).val() != '') {
+            return;
+        }
+        $('.placeholder').show();
+    })
+
+    $('.placeholder').on('click',function() {
+        $('.search_box .search').focus();
+        $(this).hide();
+    })
+
+</script>
+</html>
